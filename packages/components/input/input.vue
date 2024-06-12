@@ -1,10 +1,10 @@
 <template>
   <div
-    class="uv-input-wrap"
+    class="lz-input-wrap"
     :style="{border:border?'1px solid #eeeeee':''}"
   >
     <div
-      class="uv-input"
+      class="lz-input"
     >
       <input
         v-if="type!=='textarea'"
@@ -37,7 +37,7 @@
         @keydown="handleKeydown"
       />
 
-      <uv-icon
+      <lz-icon
         v-if="modelValue && clearable"
         @click="clearValueEvent"
         name="error"
@@ -48,7 +48,7 @@
       <slot name="right" />
     </div>
     <div
-      class="uv-input-word-limit"
+      class="lz-input-word-limit"
       v-if="showWordLimit && maxlength"
     >
       {{ textLength }} / {{ maxlength }}
@@ -203,58 +203,58 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-input-wrap-font-size: 14px;
-  --uv-input-wrap-padding: 0 10px;
-  --uv-input-word-limit-font-size: 12px;
-  --uv-input-word-limit-padding-bottom: 5px;
-  --uv-input-word-limit-color: #646566;
-  --uv-input-padding: 5px 0;
-  --uv-input-border-radius: 4px;
-  --uv-input-bg-color: #ffffff;
-  --uv-input-height: 32px;
-  --uv-input-placeholder-color: #d3c9d6;
-  --uv-input-disabled-color: #d3c9d6;
+  --lz-input-wrap-font-size: 14px;
+  --lz-input-wrap-padding: 0 10px;
+  --lz-input-word-limit-font-size: 12px;
+  --lz-input-word-limit-padding-bottom: 5px;
+  --lz-input-word-limit-color: #646566;
+  --lz-input-padding: 5px 0;
+  --lz-input-border-radius: 4px;
+  --lz-input-bg-color: #ffffff;
+  --lz-input-height: 32px;
+  --lz-input-placeholder-color: #d3c9d6;
+  --lz-input-disabled-color: #d3c9d6;
 }
-.uv-input-wrap {
+.lz-input-wrap {
   display: flex;
-  padding: var(--uv-input-wrap-padding);
-  font-size: var(--uv-input-wrap-font-size);
-  border-radius: var(--uv-input-border-radius);
-  background-color: var(--uv-input-bg-color);
+  padding: var(--lz-input-wrap-padding);
+  font-size: var(--lz-input-wrap-font-size);
+  border-radius: var(--lz-input-border-radius);
+  background-color: var(--lz-input-bg-color);
   flex-direction: column;
-  .uv-input {
+  .lz-input {
     position: relative;
     display: flex;
     align-items: center;
     input,
     textarea {
-      padding: var(--uv-input-padding);
+      padding: var(--lz-input-padding);
       width: 100%;
       border: none;
-      background-color: var(--uv-input-bg-color);
+      background-color: var(--lz-input-bg-color);
       outline: none;
     }
     input {
-      height: var(--uv-input-height);
+      height: var(--lz-input-height);
     }
     textarea {
       resize: none;
     }
     input::placeholder,
     textarea::placeholder {
-      color: var(--uv-input-placeholder-color);
+      color: var(--lz-input-placeholder-color);
     }
     input:disabled,
     textarea:disabled {
-      color: var(--uv-input-disabled-color);
+      color: var(--lz-input-disabled-color);
     }
   }
-  .uv-input-word-limit {
-    padding-bottom: var(--uv-input-word-limit-padding-bottom);
-    font-size: var(--uv-input-word-limit-font-size);
+  .lz-input-word-limit {
+    padding-bottom: var(--lz-input-word-limit-padding-bottom);
+    font-size: var(--lz-input-word-limit-font-size);
     text-align: right;
     white-space: nowrap;
-    color: var(--uv-input-word-limit-color);
+    color: var(--lz-input-word-limit-color);
   }
 }
 </style>

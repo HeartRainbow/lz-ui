@@ -15,7 +15,7 @@ onMounted(()=>{
 
 ```vue
 <template>
-    <uv-action-sheet
+    <lz-action-sheet
       v-model:show="show"
       v-model="value"
       :list="list"
@@ -41,7 +41,7 @@ const list = ref([
 
 ```vue
 <template>
-    <uv-action-sheet
+    <lz-action-sheet
       v-model:show="show"
       v-model="value"
       :list="list"
@@ -66,7 +66,7 @@ const list = ref([
 通过 `cancelText`设置该属性后开启，并且设置取消按钮的名称
 
 ```html
-<uv-action-sheet
+<lz-action-sheet
   v-model:show="show2"
   v-model="value1"
   :list="list1"
@@ -94,8 +94,8 @@ const list = ref([
 ## css变量
 
 ```css
-  --uv-action-sheet-item-bg-color: #ffffff;
-  --uv-action-sheet-item-padding: 14px 16px;
-  --uv-action-able-click-bg-color: #f2f3f5;
-  --uv-action-cancle-item-margin-top: 10px;
+  --lz-action-sheet-item-bg-color: #ffffff;
+  --lz-action-sheet-item-padding: 14px 16px;
+  --lz-action-able-click-bg-color: #f2f3f5;
+  --lz-action-cancle-item-margin-top: 10px;
 ```

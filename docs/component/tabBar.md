@@ -14,15 +14,15 @@ onMounted(()=>{
 通过 `activeColor` 设置
 
 ```html
-<uv-tab-bar active-color="green" v-model="active1">
-  <uv-tab-bar-item
+<lz-tab-bar active-color="green" v-model="active1">
+  <lz-tab-bar-item
     v-for="item in list"
     :key="item.name"
     :icon-size="item.iconSize"
     :icon-name="item.iconName"
     :text="item.name"
   />
-</uv-tab-bar>
+</lz-tab-bar>
 ```
 
 ##  tab-bar-item插槽
@@ -30,16 +30,16 @@ onMounted(()=>{
 通过插槽名为 `icon` 自定义图标,通过插槽名为 `text` 自定义文字效果
 
  ```html
-<uv-tab-bar :fixed="false" active-color="green" v-model="active1">
-  <uv-tab-bar-item v-for="item in 3" :key="item">
+<lz-tab-bar :fixed="false" active-color="green" v-model="active1">
+  <lz-tab-bar-item v-for="item in 3" :key="item">
     <template #icon>
       icon
     </template>
     <template #text>
       text
     </template>
-  </uv-tab-bar-item>
-</uv-tab-bar>
+  </lz-tab-bar-item>
+</lz-tab-bar>
  ```
 
  ## tab-bar props
@@ -66,7 +66,7 @@ onMounted(()=>{
 ## tab-bar css变量
 
 ```css
---uv-tab-bar-height: 50px;
+--lz-tab-bar-height: 50px;
 ```
 
  ## tab-bar-item props
@@ -82,6 +82,6 @@ onMounted(()=>{
 ## tab-bar css变量
 
 ```css
-  --uv-tab-bar-item-font-size: 12px;
-  --uv-tab-bar-item-text-margin-top: 5px;
+  --lz-tab-bar-item-font-size: 12px;
+  --lz-tab-bar-item-text-margin-top: 5px;
 ```

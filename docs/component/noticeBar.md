@@ -13,7 +13,7 @@ onMounted(()=>{
 
 
 ```html
-<uv-notice-bar text="无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。" />
+<lz-notice-bar text="无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。" />
 ```
 
 ## 是否滚动
@@ -21,7 +21,7 @@ onMounted(()=>{
 通过 `scrollable` 设置
 
  ```html
-<uv-notice-bar text="无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。" :scrollable="false"/>
+<lz-notice-bar text="无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。" :scrollable="false"/>
  ```
 
  ## 插槽
@@ -29,9 +29,9 @@ onMounted(()=>{
 自定义左侧图标插槽名 `icon` ,自定义内容，默认插槽
 
 ```html
-<uv-notice-bar :scrollable="false">
+<lz-notice-bar :scrollable="false">
   test
-</uv-notice-bar>
+</lz-notice-bar>
 ```
 
 ## 通知栏模式
@@ -39,7 +39,7 @@ onMounted(()=>{
 通过 `mode` 设置,可选值为 `close` 和 `link`
 
 ```html
-<uv-notice-bar
+<lz-notice-bar
   class="bottom"
   mode="close"
   speed="90"
@@ -47,7 +47,7 @@ onMounted(()=>{
   text="无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。"
   @close="close"
 />
-<uv-notice-bar
+<lz-notice-bar
   mode="link"
   text="米袋虽空——樱花开哉！"
   @click="test"
@@ -82,9 +82,9 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-notice-bar-padding: 0 16px;
-  --uv-notice-bar-height: 40px;
-  --uv-notice-bar-line-height: 24px;
-  --uv-notice-bar-icon-padding: 10px;
-  --uv-notice-bar-content-text-font-size: 14px;
+  --lz-notice-bar-padding: 0 16px;
+  --lz-notice-bar-height: 40px;
+  --lz-notice-bar-line-height: 24px;
+  --lz-notice-bar-icon-padding: 10px;
+  --lz-notice-bar-content-text-font-size: 14px;
 ```

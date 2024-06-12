@@ -13,16 +13,16 @@ onMounted(()=>{
 
 
 ```html
-<uv-collapse v-model="test">
-  <uv-collapse-item
+<lz-collapse v-model="test">
+  <lz-collapse-item
     v-for="item in 3"
     :title="'标题'+item"
     :name="item+''"
     :key="item"
   >
     内容
-  </uv-collapse-item>
-</uv-collapse>
+  </lz-collapse-item>
+</lz-collapse>
 ```
 
 ##  手风琴模式
@@ -30,16 +30,16 @@ onMounted(()=>{
 通过 `accordion` 开启
 
  ```html
-<uv-collapse accordion v-model="test">
-  <uv-collapse-item
+<lz-collapse accordion v-model="test">
+  <lz-collapse-item
     v-for="item in 3"
     :title="'标题'+item"
     :name="item+''"
     :key="item"
   >
     内容
-  </uv-collapse-item>
-</uv-collapse>
+  </lz-collapse-item>
+</lz-collapse>
  ```
 
  ## 禁用状态
@@ -47,17 +47,17 @@ onMounted(()=>{
  通过对子组件 `disabled` 属性开启
 
  ```html
-<uv-collapse v-model="test2">
-  <uv-collapse-item title="标题1" name="1">
+<lz-collapse v-model="test2">
+  <lz-collapse-item title="标题1" name="1">
     内容
-  </uv-collapse-item>
-  <uv-collapse-item title="标题2" name="2">
+  </lz-collapse-item>
+  <lz-collapse-item title="标题2" name="2">
     内容
-  </uv-collapse-item>
-  <uv-collapse-item title="标题3" name="3" disabled>
+  </lz-collapse-item>
+  <lz-collapse-item title="标题3" name="3" disabled>
     内容
-  </uv-collapse-item>
-</uv-collapse>
+  </lz-collapse-item>
+</lz-collapse>
  ```
 
  ## 插槽
@@ -65,8 +65,8 @@ onMounted(()=>{
  插槽名称 `title` 可以自定义标题 插槽名称 `right` 可以自定义标题右边内容 默认插槽自定义内容
 
  ```html
-<uv-collapse v-model="test3">
-  <uv-collapse-item name="1">
+<lz-collapse v-model="test3">
+  <lz-collapse-item name="1">
     <template #title>
       自定义title
     </template>
@@ -74,8 +74,8 @@ onMounted(()=>{
       自定义right
     </template>
     我是内容
-  </uv-collapse-item>
-  <uv-collapse-item name="2">
+  </lz-collapse-item>
+  <lz-collapse-item name="2">
     <template #title>
       自定义title
     </template>
@@ -83,8 +83,8 @@ onMounted(()=>{
       自定义right
     </template>
     我是内容
-  </uv-collapse-item>
-</uv-collapse>
+  </lz-collapse-item>
+</lz-collapse>
  ```
 
 
@@ -99,10 +99,10 @@ onMounted(()=>{
 ## collapse item css变量
 
 ```css
-  --uv-collapse-item-border-bottom: 1px solid #f5f6f7;
-  --uv-collapse-item-font-size: 14px;
-  --uv-collapse-item-title-padding: 10px 0;
-  --uv-collapse-item-content-padding: 12px 0;
-  --uv-collapse-item-bottom-line-border-bottom: 1px solid #f5f6f7;
-  --uv-collapse-item-transition-time: 0.3s;
+  --lz-collapse-item-border-bottom: 1px solid #f5f6f7;
+  --lz-collapse-item-font-size: 14px;
+  --lz-collapse-item-title-padding: 10px 0;
+  --lz-collapse-item-content-padding: 12px 0;
+  --lz-collapse-item-bottom-line-border-bottom: 1px solid #f5f6f7;
+  --lz-collapse-item-transition-time: 0.3s;
 ```

@@ -48,13 +48,13 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-floating-panel-border-radius: 16px 16px 0 0;
-  --uv-floating-panel-default-height: 100px;
-  --uv-floating-panel-header-height: 30px;
-  --uv-floating-panel-z-index: 999;
-  --uv-floating-panel-bg-color: #ffffff;
-  --uv-floating-panel-header-bar-bg-color: #c8c9cc;
-  --uv-floating-panel-header-bar-width: 20px;
-  --uv-floating-panel-header-bar-height: 3px;
-  --uv-floating-panel-header-border-radius: 4px;
+  --lz-floating-panel-border-radius: 16px 16px 0 0;
+  --lz-floating-panel-default-height: 100px;
+  --lz-floating-panel-header-height: 30px;
+  --lz-floating-panel-z-index: 999;
+  --lz-floating-panel-bg-color: #ffffff;
+  --lz-floating-panel-header-bar-bg-color: #c8c9cc;
+  --lz-floating-panel-header-bar-width: 20px;
+  --lz-floating-panel-header-bar-height: 3px;
+  --lz-floating-panel-header-border-radius: 4px;
 ```

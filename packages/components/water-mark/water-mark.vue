@@ -1,6 +1,6 @@
 <template>
-  <div class="uv-water-mark" :class="full?'uv-water-mark-full':''" :style="{backgroundImage:`url(${watermarkUrl})` }">
-    <div class="uv-water-mark-warp" ref="svgElRef">
+  <div class="lz-water-mark" :class="full?'lz-water-mark-full':''" :style="{backgroundImage:`url(${watermarkUrl})` }">
+    <div class="lz-water-mark-warp" ref="svgElRef">
       <svg
         :viewBox="`0 0 ${svgWidth} ${svgHeight}`"
         :width="svgWidth"
@@ -159,22 +159,22 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-water-mark-z-index: 100;
+  --lz-water-mark-z-index: 100;
 }
-.uv-water-mark {
+.lz-water-mark {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: var(--uv-water-mark-z-index);
+  z-index: var(--lz-water-mark-z-index);
   width: 100%;
   height: 100%;
   background-repeat: repeat;
   pointer-events: none;
-  .uv-water-mark-warp {
+  .lz-water-mark-warp {
     display: none;
   }
 }
-.uv-water-mark-full {
+.lz-water-mark-full {
   position: fixed;
 }
 

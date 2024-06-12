@@ -1,7 +1,7 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-count-to
+      <lz-count-to
         :start="0"
         :end="endCount"
         :auto-play="true"
@@ -11,7 +11,7 @@
       />
     </demoBlock>
     <demoBlock title="字体属性配置">
-      <uv-count-to
+      <lz-count-to
         :start="0"
         :end="endCount"
         :auto-play="true"
@@ -28,7 +28,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvCountTo } from 'uv-ui'
+import { uvCountTo } from 'lz-ui'
 import { ref } from 'vue'
 
 const endCount = ref(9033)

@@ -1,7 +1,7 @@
 <template>
-  <div class="uv-empty">
+  <div class="lz-empty">
     <slot name="image">
-      <div class="uv-empty-image" :style="{width:imageSize+'px',height:imageSize+'px'}">
+      <div class="lz-empty-image" :style="{width:imageSize+'px',height:imageSize+'px'}">
         <svg v-if="image==='default'" viewBox="0 0 160 160">
           <defs>
             <linearGradient
@@ -90,7 +90,7 @@
       </div>
     </slot>
     <slot>
-      <div class="uv-empty-label">
+      <div class="lz-empty-label">
         {{ label }}
       </div>
     </slot>
@@ -127,27 +127,27 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-empty-label-margin-top: 16px;
-  --uv-empty-label-font-size: 14px;
-  --uv-empty-label-color: #969799;
+  --lz-empty-label-margin-top: 16px;
+  --lz-empty-label-font-size: 14px;
+  --lz-empty-label-color: #969799;
 }
-.uv-empty {
+.lz-empty {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  .uv-empty-image {
+  .lz-empty-image {
     img {
       width: 100%;
       height: 100%;
     }
   }
-  .uv-empty-label {
-    margin-top: var(--uv-empty-label-margin-top);
-    font-size: var(--uv-empty-label-font-size);
-    color: var(--uv-empty-label-color);
+  .lz-empty-label {
+    margin-top: var(--lz-empty-label-margin-top);
+    font-size: var(--lz-empty-label-font-size);
+    color: var(--lz-empty-label-color);
   }
 }
 

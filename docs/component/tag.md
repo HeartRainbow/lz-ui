@@ -116,19 +116,19 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-tag-primary-color: #1989fa;
-  --uv-tag-success-color: #07c160;
-  --uv-tag-danger-color: #ee0a24;
-  --uv-tag-warning-color: #ff976a;
-  --uv-tag-plain-bg-color: #ffffff;
-  --uv-tag-mini-padding: 0 4px;
-  --uv-tag-mini-font-size: 12px;
-  --uv-tag-medium-padding: 2px 6px;
-  --uv-tag-large-padding: 4px 8px;
-  --uv-tag-large-font-size: 14px;
-  --uv-tag-line-height: 1.5;
-  --uv-tag-border-radius: 0;
-  --uv-tag-round-border-radius: 999px;
-  --uv-tag-transition-time: 0.3s;
-  --uv-tag-text-color: #ffffff;
+  --lz-tag-primary-color: #1989fa;
+  --lz-tag-success-color: #07c160;
+  --lz-tag-danger-color: #ee0a24;
+  --lz-tag-warning-color: #ff976a;
+  --lz-tag-plain-bg-color: #ffffff;
+  --lz-tag-mini-padding: 0 4px;
+  --lz-tag-mini-font-size: 12px;
+  --lz-tag-medium-padding: 2px 6px;
+  --lz-tag-large-padding: 4px 8px;
+  --lz-tag-large-font-size: 14px;
+  --lz-tag-line-height: 1.5;
+  --lz-tag-border-radius: 0;
+  --lz-tag-round-border-radius: 999px;
+  --lz-tag-transition-time: 0.3s;
+  --lz-tag-text-color: #ffffff;
 ```

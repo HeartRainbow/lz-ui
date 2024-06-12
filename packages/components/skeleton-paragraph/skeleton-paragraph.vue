@@ -1,5 +1,5 @@
 <template>
-  <div class="uv-skeleton-paragraph" :class="round?'uv-skeleton-paragraph-round':''" :style="{width:rowWidth}" />
+  <div class="lz-skeleton-paragraph" :class="round?'lz-skeleton-paragraph-round':''" :style="{width:rowWidth}" />
 </template>
 
 <script setup>
@@ -22,18 +22,18 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-skeleton-paragraph-height: 16px;
-  --uv-skeleton-paragraph-bg-color: #f2f3f5;
-  --uv-skeleton-paragraph-margin-top: 12px;
+  --lz-skeleton-paragraph-height: 16px;
+  --lz-skeleton-paragraph-bg-color: #f2f3f5;
+  --lz-skeleton-paragraph-margin-top: 12px;
 }
-.uv-skeleton-paragraph {
-  height: var(--uv-skeleton-paragraph-height);
-  background-color: var(--uv-skeleton-paragraph-bg-color);
+.lz-skeleton-paragraph {
+  height: var(--lz-skeleton-paragraph-height);
+  background-color: var(--lz-skeleton-paragraph-bg-color);
   &-round {
-    border-radius: var(--uv-skeleton-border-radius);
+    border-radius: var(--lz-skeleton-border-radius);
   }
   &:not(:first-child) {
-    margin-top: var(--uv-skeleton-paragraph-margin-top);
+    margin-top: var(--lz-skeleton-paragraph-margin-top);
   }
 }
 

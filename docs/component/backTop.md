@@ -45,13 +45,13 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-back-top-bg-color: #1989fa;
-  --uv-back-top-border-radius: 50%;
-  --uv-back-top-transition-time: 0.3s;
-  --uv-back-top-width: 40px;
-  --uv-back-top-height: 40px;
-  --uv-back-top-z-index: 100;
-  --uv-back-top-position-right: 30px;
-  --uv-back-top-position-bottom: 40px;
-  --uv-back-top-transform: scale(0);
+  --lz-back-top-bg-color: #1989fa;
+  --lz-back-top-border-radius: 50%;
+  --lz-back-top-transition-time: 0.3s;
+  --lz-back-top-width: 40px;
+  --lz-back-top-height: 40px;
+  --lz-back-top-z-index: 100;
+  --lz-back-top-position-right: 30px;
+  --lz-back-top-position-bottom: 40px;
+  --lz-back-top-transform: scale(0);
 ```

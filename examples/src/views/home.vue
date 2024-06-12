@@ -21,7 +21,7 @@
       >
         <div> {{ item.meta.name }}</div>
         <div>
-          <uv-icon
+          <lz-icon
             size="14"
             color="#bac6d4"
             name="arrow-right"
@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { uvIcon } from 'uv-ui'
+import { uvIcon } from 'lz-ui'
 import { ref, onActivated, nextTick } from 'vue'
 import { useRouter, onBeforeRouteLeave } from 'vue-router'
 import { useCommonStore } from '@/stores/common.js'

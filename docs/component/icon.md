@@ -33,16 +33,16 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-icon-info-top: 4px;
-  --uv-icon-info-right: 0;
-  --uv-icon-info-padding: 0 3px;
-  --uv-icon-info-min-width: 16px;
-  --uv-icon-info-font-size: 12px;
-  --uv-icon-info-font-weight: 500;
-  --uv-icon-info-border: 1px solid #ffffff;
-  --uv-icon-info-border-radius: 16px;
-  --uv-icon-info-color: #ffffff;
-  --uv-icon-info-bg-color: #ee0a24;
-  --uv-icon-dot-size: 8px;
-  --uv-icon-dot-bg-color: #ee0a24;
+  --lz-icon-info-top: 4px;
+  --lz-icon-info-right: 0;
+  --lz-icon-info-padding: 0 3px;
+  --lz-icon-info-min-width: 16px;
+  --lz-icon-info-font-size: 12px;
+  --lz-icon-info-font-weight: 500;
+  --lz-icon-info-border: 1px solid #ffffff;
+  --lz-icon-info-border-radius: 16px;
+  --lz-icon-info-color: #ffffff;
+  --lz-icon-info-bg-color: #ee0a24;
+  --lz-icon-dot-size: 8px;
+  --lz-icon-dot-bg-color: #ee0a24;
 ```

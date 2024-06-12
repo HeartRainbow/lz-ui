@@ -1,12 +1,12 @@
 <script setup>
-import { uvNavBar } from 'uv-ui'
+import { uvNavBar } from 'lz-ui'
 import { useRouter, useRoute } from 'vue-router'
 import { useCommonStore } from '@/stores/common.js'
 
 const menuStore = useCommonStore()
 const gitAddress = {
-  github: 'https://github.com/monsterxwx/uv-ui',
-  gitee: 'https://gitee.com/monsterwx/uv-ui'
+  github: 'https://github.com/monsterxwx/lz-ui',
+  gitee: 'https://gitee.com/monsterwx/lz-ui'
 }
 const router = useRouter()
 const route = useRoute()
@@ -14,7 +14,7 @@ const toPage = (url) => {
   window.open(gitAddress[url])
 }
 const backIndex = () => {
-  if (route.fullPath === '/uv-ui') return
+  if (route.fullPath === '/lz-ui') return
   router.back()
 }
 </script>
@@ -22,8 +22,8 @@ const backIndex = () => {
 <template>
   <div class="base-layout">
     <div class="layout-top">
-      <uv-nav-bar
-        :left-arrow="$route.fullPath!=='/uv-ui'"
+      <lz-nav-bar
+        :left-arrow="$route.fullPath!=='/lz-ui'"
         @click-left="backIndex"
         :title="menuStore.currentTitle"
       >
@@ -39,7 +39,7 @@ const backIndex = () => {
             >
           </div>
         </template>
-      </uv-nav-bar>
+      </lz-nav-bar>
     </div>
     <div class="layout-content">
       <router-view v-slot="{ Component }">

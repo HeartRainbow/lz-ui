@@ -1,17 +1,17 @@
 <template>
   <div
-    class="uv-picker-column"
+    class="lz-picker-column"
     @touchstart="touchstart"
     @touchmove="touchmove"
     @touchend="touchend"
   >
     <ul
-      class="uv-picker-content-box"
+      class="lz-picker-content-box"
       ref="pickerBoxRef"
       :style="getOffsetY"
     >
       <li
-        class="uv-picker-content-item"
+        class="lz-picker-content-item"
         v-for="(item, idx) in list"
         :key="idx"
         :style="pickerItemStyle(idx)"
@@ -172,14 +172,14 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-picker-content-item-font-size: 16px;
+  --lz-picker-content-item-font-size: 16px;
 }
-.uv-picker-column {
+.lz-picker-column {
   position: relative;
   min-width: 0;
   flex: 1 0;
   height: 100%;
-  .uv-picker-content-box {
+  .lz-picker-content-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -189,9 +189,9 @@ export default {
     list-style: none;
     transition: all 0.2s;
     transition-timing-function: cubic-bezier(0.23, 1, 0.68, 1);
-    .uv-picker-content-item {
+    .lz-picker-content-item {
       height: 36px;
-      font-size: var(--uv-picker-content-item-font-size);
+      font-size: var(--lz-picker-content-item-font-size);
       text-align: center;
       transition: color 0.5s;
       line-height: 36px;

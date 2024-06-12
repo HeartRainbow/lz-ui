@@ -15,27 +15,27 @@ onMounted(()=>{
 ```vue
 <template>
   <div>
-    <uv-table
+    <lz-table
       :data="tableData"
       :columns="columns"
     >
       <template #Date="scope">
-        <uv-button
+        <lz-button
           type="warning"
           size="mini"
         >
           {{ scope.data.title }}
-        </uv-button>
+        </lz-button>
       </template>
       <template #name="scope">
-        <uv-button
+        <lz-button
           type="primary"
           size="mini"
         >
           {{ scope.data }}
-        </uv-button>
+        </lz-button>
       </template>
-    </uv-table>
+    </lz-table>
     <div class="title">
       标题
     </div>

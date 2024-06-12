@@ -1,14 +1,14 @@
 <template>
-  <div class="uv-swipe-cell">
+  <div class="lz-swipe-cell">
     <div
-      class="uv-swipe-cell-wrapper"
+      class="lz-swipe-cell-wrapper"
       @touchstart="touchstart"
       @touchmove="touchmove"
       @touchend="touchend"
       :style="uvSwipeCellStyle"
     >
       <div
-        class="uv-swipe-cell-left uv-swipe-cell-position"
+        class="lz-swipe-cell-left lz-swipe-cell-position"
         ref="swipeCellLeftRef"
         v-if="left"
       >
@@ -25,16 +25,16 @@
         </slot>
       </div>
 
-      <div class="uv-swipe-cell-content">
+      <div class="lz-swipe-cell-content">
         <slot>
-          <div class="uv-swipe-cell-content-default">
+          <div class="lz-swipe-cell-content-default">
             <div>{{ title }}</div>
             <div>{{ content }}</div>
           </div>
         </slot>
       </div>
       <div
-        class="uv-swipe-cell-right uv-swipe-cell-position"
+        class="lz-swipe-cell-right lz-swipe-cell-position"
         ref="swipeCellRightRef"
         v-if="right"
       >
@@ -192,34 +192,34 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-swipe-cell-content-bg-color: #ffffff;
-  --uv-swipe-cell-left-right-content-common-color: #ffffff;
-  --uv-swipe-cell-left-right-content-common-width: 60px;
-  --uv-swipe-cell-left-right-content-common-font-size: 14px;
+  --lz-swipe-cell-content-bg-color: #ffffff;
+  --lz-swipe-cell-left-right-content-common-color: #ffffff;
+  --lz-swipe-cell-left-right-content-common-width: 60px;
+  --lz-swipe-cell-left-right-content-common-font-size: 14px;
 }
-.uv-swipe-cell {
+.lz-swipe-cell {
   position: relative;
   overflow: hidden;
   cursor: grab;
-  .uv-swipe-cell-wrapper {
+  .lz-swipe-cell-wrapper {
     transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1);
     transition-property: transform;
     transition-duration: 0.6s;
-    .uv-swipe-cell-position {
+    .lz-swipe-cell-position {
       position: absolute;
       top: 0;
       display: flex;
       height: 100%;
     }
-    .uv-swipe-cell-left {
+    .lz-swipe-cell-left {
       left: 0;
       transform: translate3d(-100%, 0, 0);
     }
-    .uv-swipe-cell-content {
+    .lz-swipe-cell-content {
       position: relative;
       width: 100%;
-      background-color: var(--uv-swipe-cell-content-bg-color);
-      .uv-swipe-cell-content-default {
+      background-color: var(--lz-swipe-cell-content-bg-color);
+      .lz-swipe-cell-content-default {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -228,7 +228,7 @@ export default {
         color: #323233;
       }
     }
-    .uv-swipe-cell-right {
+    .lz-swipe-cell-right {
       right: 0;
       transform: translate3d(100%, 0, 0);
     }
@@ -241,10 +241,10 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: var(--uv-swipe-cell-left-right-content-common-width);
+        width: var(--lz-swipe-cell-left-right-content-common-width);
         height: 100%;
-        font-size: var(--uv-swipe-cell-left-right-content-common-font-size);
-        color: var(--uv-swipe-cell-left-right-content-common-color);
+        font-size: var(--lz-swipe-cell-left-right-content-common-font-size);
+        color: var(--lz-swipe-cell-left-right-content-common-color);
       }
     }
   }

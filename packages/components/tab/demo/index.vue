@@ -1,29 +1,29 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-tab :list="list1" />
+      <lz-tab :list="list1" />
     </demoBlock>
     <demoBlock title="是否滚动">
-      <uv-tab
+      <lz-tab
         :list="list2"
         scroll
       />
     </demoBlock>
     <demoBlock title="修改下划线样式">
-      <uv-tab
+      <lz-tab
         line-height="6px"
         line-color="#07c160"
         :list="list1"
       />
     </demoBlock>
     <demoBlock title="收缩布局">
-      <uv-tab
+      <lz-tab
         shrink
         :list="list1"
       />
     </demoBlock>
     <demoBlock title="标签属性">
-      <uv-tab
+      <lz-tab
         bg-color="#07c160"
         active-color="#fff"
         :list="list1"
@@ -31,15 +31,15 @@
     </demoBlock>
     <demoBlock title="初始化活跃子项,父组件改变子组件也会改变">
       <div style="display: flex;gap: 10px;margin-bottom: 10px;">
-        <uv-button @click="acitveIndex=0">
+        <lz-button @click="acitveIndex=0">
           变成0
-        </uv-button>
-        <uv-button @click="acitveIndex=3">
+        </lz-button>
+        <lz-button @click="acitveIndex=3">
           变成3
-        </uv-button>
+        </lz-button>
       </div>
 
-      <uv-tab
+      <lz-tab
         :acitve-index="acitveIndex"
         :list="list1"
       />
@@ -49,7 +49,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvTab, uvButton } from 'uv-ui'
+import { uvTab, uvButton } from 'lz-ui'
 import { ref } from 'vue'
 const list1 = ref([
   '标签1', '标签2', '标签3', '标签4'

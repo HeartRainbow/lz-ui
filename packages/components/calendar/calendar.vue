@@ -1,36 +1,36 @@
 <template>
-  <div class="uv-calendar">
-    <div class="uv-calendar-header">
-      <div class="uv-calendar-header-action">
-        <div class="uv-calendar-pre" @click="MonthHandle(-1)">
-          <uv-icon size="16" name="arrow-left" />
+  <div class="lz-calendar">
+    <div class="lz-calendar-header">
+      <div class="lz-calendar-header-action">
+        <div class="lz-calendar-pre" @click="MonthHandle(-1)">
+          <lz-icon size="16" name="arrow-left" />
         </div>
-        <div class="uv-calendar-title">
+        <div class="lz-calendar-title">
           {{ calendarProps.target.year+ '年' +Number(calendarProps.target.month+1) +'月' }}
         </div>
-        <div class="uv-calendar-next" @click="MonthHandle(1)">
-          <uv-icon size="16" name="arrow-right" />
+        <div class="lz-calendar-next" @click="MonthHandle(1)">
+          <lz-icon size="16" name="arrow-right" />
         </div>
       </div>
-      <div class="uv-calendar-header-week">
-        <div class=" uv-calendar-header-week-item" v-for="item in dayNameList" :key="item.shortName">
+      <div class="lz-calendar-header-week">
+        <div class=" lz-calendar-header-week-item" v-for="item in dayNameList" :key="item.shortName">
           {{ item.chineseShortName }}
         </div>
       </div>
     </div>
-    <div class="uv-calendar-content">
+    <div class="lz-calendar-content">
       <div
         v-for="item,index in calendarData"
         :key="index"
-        class="uv-calendar-item"
+        class="lz-calendar-item"
         @click="selectItemHandle(item)"
       >
         <div
           :class="[
-            item.dateType==='previous'||item.dateType==='next'?'uv-calendar-disabled':'',
-            item.dateNumber ===calendarProps.target.date && !['previous','next'].includes(item.dateType)?'uv-calendar-selected':''
+            item.dateType==='previous'||item.dateType==='next'?'lz-calendar-disabled':'',
+            item.dateNumber ===calendarProps.target.date && !['previous','next'].includes(item.dateType)?'lz-calendar-selected':''
           ]"
-          class="uv-calendar-item-label"
+          class="lz-calendar-item-label"
         >
           {{ item.dateNumber }}
         </div>
@@ -354,10 +354,10 @@ export default {
 </script>
 <style lang="scss">
 :root {
-  --uv-calendar-bg-color: #ffffff;
-  --uv-calendar-header-shadow: 0 2px 10px rgb(125 126 128 / 16%);
+  --lz-calendar-bg-color: #ffffff;
+  --lz-calendar-header-shadow: 0 2px 10px rgb(125 126 128 / 16%);
 }
-.uv-calendar {
+.lz-calendar {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -365,17 +365,17 @@ export default {
   background-color: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  .uv-calendar-header {
+  .lz-calendar-header {
     display: flex;
     flex-direction: column;
-    box-shadow: var(--uv-calendar-header-shadow);
-    .uv-calendar-header-action {
+    box-shadow: var(--lz-calendar-header-shadow);
+    .lz-calendar-header-action {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px;
-      .uv-calendar-pre,
-      .uv-calendar-next {
+      .lz-calendar-pre,
+      .lz-calendar-next {
         padding: 10px;
         font-weight: 700;
         border-radius: 50%;
@@ -383,12 +383,12 @@ export default {
         background-color: #f9faff;
       }
     }
-    .uv-calendar-title {
+    .lz-calendar-title {
       font-weight: 700;
     }
-    .uv-calendar-header-week {
+    .lz-calendar-header-week {
       display: flex;
-      .uv-calendar-header-week-item {
+      .lz-calendar-header-week-item {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -397,26 +397,26 @@ export default {
       }
     }
   }
-  .uv-calendar-content {
+  .lz-calendar-content {
     display: flex;
     flex-wrap: wrap;
     padding: 5px 0;
     gap: 5px 0;
   }
-  .uv-calendar-item {
+  .lz-calendar-item {
     width: calc(100% / 7);
     height: 50px;
-    .uv-calendar-item-label {
+    .lz-calendar-item-label {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100%;
       color: #495067;
     }
-    .uv-calendar-disabled {
+    .lz-calendar-disabled {
       color: #92a5aa;
     }
-    .uv-calendar-selected {
+    .lz-calendar-selected {
       border-radius: 4px;
       color: #ffffff;
       background-color: #1989fa;

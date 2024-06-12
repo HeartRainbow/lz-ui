@@ -1,16 +1,16 @@
 <template>
   <div
-    class="uv-num-input"
+    class="lz-num-input"
   >
     <uvPopup
       v-model="showPop"
       :overlay="false"
       bg-color="#f2f3f5"
     >
-      <div class="uv-num-content">
-        <div class="uv-num-content-left">
+      <div class="lz-num-content">
+        <div class="lz-num-content-left">
           <div
-            class="uv-num-content-left-item"
+            class="lz-num-content-left-item"
             v-for="item in numArrComputer"
             @click="clickItem(item)"
             :key="item"
@@ -18,16 +18,16 @@
             {{ item }}
           </div>
         </div>
-        <div class="uv-num-content-right">
+        <div class="lz-num-content-right">
           <div
             @click="delNum"
-            class="uv-num-content-right-item"
+            class="lz-num-content-right-item"
           >
             x
           </div>
           <div
             @click="confim"
-            class="uv-num-content-right-item uv-num-input-confim"
+            class="lz-num-content-right-item lz-num-input-confim"
           >
             完成
           </div>
@@ -117,28 +117,28 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-num-input-font-size: 22px;
-  --uv-num-input-border-radius: 8px;
-  --uv-num-input-color: #323233;
-  --uv-num-input-bg-color: #ffffff;
-  --uv-num-input-active-bg-color: #ebedf0;
-  --uv-num-input-confim-color: #ffffff;
-  --uv-num-input-confim-bg-color: #1989fa;
+  --lz-num-input-font-size: 22px;
+  --lz-num-input-border-radius: 8px;
+  --lz-num-input-color: #323233;
+  --lz-num-input-bg-color: #ffffff;
+  --lz-num-input-active-bg-color: #ebedf0;
+  --lz-num-input-confim-color: #ffffff;
+  --lz-num-input-confim-bg-color: #1989fa;
 }
-.uv-num-input {
+.lz-num-input {
   @mixin common {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: var(--uv-num-input-font-size);
-    border-radius: var(--uv-num-input-border-radius);
-    color: var(--uv-num-input-color);
-    background-color: var(--uv-num-input-bg-color);
+    font-size: var(--lz-num-input-font-size);
+    border-radius: var(--lz-num-input-border-radius);
+    color: var(--lz-num-input-color);
+    background-color: var(--lz-num-input-bg-color);
     &:active {
-      background-color: var(--uv-num-input-active-bg-color);
+      background-color: var(--lz-num-input-active-bg-color);
     }
   }
-  .uv-num-content {
+  .lz-num-content {
     display: flex;
     &-left {
       flex: 1;
@@ -162,10 +162,10 @@ export default {
         padding: 0 22px;
         flex: 1;
       }
-      .uv-num-input-confim {
+      .lz-num-input-confim {
         font-size: 14px;
-        color: var(--uv-num-input-confim-color);
-        background-color: var(--uv-num-input-confim-bg-color);
+        color: var(--lz-num-input-confim-color);
+        background-color: var(--lz-num-input-confim-bg-color);
         &:active {
           opacity: 0.7;
         }

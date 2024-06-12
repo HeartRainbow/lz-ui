@@ -1,7 +1,7 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-form
+      <lz-form
         ref="formRef"
         :model="formInfo"
         :label-width="80"
@@ -9,76 +9,76 @@
         card
         gap
       >
-        <uv-form-item bg-color="#eee">
+        <lz-form-item bg-color="#eee">
           <template #label>
             <div style="color: red;">
               表单标题
             </div>
           </template>
-        </uv-form-item>
-        <uv-form-item label="描述文本">
+        </lz-form-item>
+        <lz-form-item label="描述文本">
           <div>无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。</div>
-        </uv-form-item>
+        </lz-form-item>
 
-        <uv-form-item
+        <lz-form-item
           label="无边框"
           prop="input1"
         >
-          <uv-input
+          <lz-input
             v-model="formInfo.input1"
           />
-        </uv-form-item>
-        <uv-form-item
+        </lz-form-item>
+        <lz-form-item
           label="文本域"
           label-position="top"
           prop="textarea"
         >
-          <uv-input
+          <lz-input
             type="textarea"
             border
             v-model="formInfo.textarea"
           />
-        </uv-form-item>
-        <uv-form-item
+        </lz-form-item>
+        <lz-form-item
           label="滑块"
           prop="test1"
         >
-          <uv-slider
+          <lz-slider
             style="width: 100%;"
             v-model="formInfo.test1"
           />
-        </uv-form-item>
-        <uv-form-item
+        </lz-form-item>
+        <lz-form-item
           label="输入框"
           prop="input"
         >
-          <uv-input
+          <lz-input
             border
             v-model="formInfo.input"
           />
-        </uv-form-item>
-        <uv-form-item
+        </lz-form-item>
+        <lz-form-item
           label="开关"
           prop="test2"
         >
-          <uv-switch
+          <lz-switch
             size="20"
             v-model="formInfo.test2"
           />
-        </uv-form-item>
-        <uv-form-item
+        </lz-form-item>
+        <lz-form-item
           label="步进器"
           prop="test3"
         >
-          <uv-stepper v-model="formInfo.test3" />
-        </uv-form-item>
-        <uv-form-item
+          <lz-stepper v-model="formInfo.test3" />
+        </lz-form-item>
+        <lz-form-item
           label="评分"
           prop="test4"
         >
-          <uv-rate v-model="formInfo.test4" />
-        </uv-form-item>
-        <uv-form-item
+          <lz-rate v-model="formInfo.test4" />
+        </lz-form-item>
+        <lz-form-item
           label="选择器"
           prop="currentValue"
           arrow
@@ -89,75 +89,75 @@
           >
             {{ formInfo.currentValue||'请选择地点' }}
           </div>
-          <uv-picker
+          <lz-picker
             v-model:show="openPicker"
             v-model="formInfo.currentValue"
             title="地点选择"
             :list="list"
             key-name="value"
           />
-        </uv-form-item>
-        <uv-form-item
+        </lz-form-item>
+        <lz-form-item
           label="单选框"
           prop="radioselect"
         >
-          <uv-radio-group
+          <lz-radio-group
             v-model="formInfo.radioselect"
           >
-            <uv-radio label="test1" />
-            <uv-radio label="test2" />
-            <uv-radio label="test3" />
-            <uv-radio label="test4" />
-            <uv-radio label="test5" />
-          </uv-radio-group>
-        </uv-form-item>
-        <uv-form-item
+            <lz-radio label="test1" />
+            <lz-radio label="test2" />
+            <lz-radio label="test3" />
+            <lz-radio label="test4" />
+            <lz-radio label="test5" />
+          </lz-radio-group>
+        </lz-form-item>
+        <lz-form-item
           label="多选框"
           prop="select"
         >
-          <uv-checkbox-group
+          <lz-checkbox-group
             v-model="formInfo.select"
             shape="square"
           >
-            <uv-checkbox label="test1" />
-            <uv-checkbox label="test2" />
-            <uv-checkbox label="test3" />
-            <uv-checkbox label="test4" />
-            <uv-checkbox label="test5" />
-          </uv-checkbox-group>
-        </uv-form-item>
-      </uv-form>
-      <uv-button
+            <lz-checkbox label="test1" />
+            <lz-checkbox label="test2" />
+            <lz-checkbox label="test3" />
+            <lz-checkbox label="test4" />
+            <lz-checkbox label="test5" />
+          </lz-checkbox-group>
+        </lz-form-item>
+      </lz-form>
+      <lz-button
         style="margin-top: 10px;padding: 0 10px;"
         type="success"
         block
         @click="submit"
       >
         提交
-      </uv-button>
-      <uv-button
+      </lz-button>
+      <lz-button
         style="margin-top: 10px;padding: 0 10px;"
         type="primary"
         block
         @click="clear"
       >
         清空验证
-      </uv-button>
-      <uv-button
+      </lz-button>
+      <lz-button
         style="margin-top: 10px;padding: 0 10px;"
         type="error"
         block
         @click=" resetFields"
       >
         重置数据
-      </uv-button>
+      </lz-button>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvForm, uvFormItem, uvButton, uvInput, uvSlider, uvSwitch, uvStepper, uvCheckbox, uvCheckboxGroup, uvRadio, uvRadioGroup, uvPicker, uvRate } from 'uv-ui'
+import { uvForm, uvFormItem, uvButton, uvInput, uvSlider, uvSwitch, uvStepper, uvCheckbox, uvCheckboxGroup, uvRadio, uvRadioGroup, uvPicker, uvRate } from 'lz-ui'
 import { reactive, ref } from 'vue'
 
 const formInfo = reactive({

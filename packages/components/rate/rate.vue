@@ -1,13 +1,13 @@
 <template>
   <div
-    class="uv-rate"
+    class="lz-rate"
     :style="{gap:gutter+'px'}"
   >
     <template
       v-for="item in count"
       :key="item"
     >
-      <uv-icon
+      <lz-icon
         @click="itemClick(item)"
         :size="size"
         :name="icon"
@@ -67,7 +67,7 @@ export default {
 }
 </script>
 <style lang="scss">
-.uv-rate {
+.lz-rate {
   display: flex;
 }
 </style>

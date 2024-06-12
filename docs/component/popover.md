@@ -14,13 +14,13 @@ onMounted(()=>{
 通过 `v-model` 绑定是否显示
 
 ```html
-<uv-popover v-model="test" :list="list" key-name="name">
+<lz-popover v-model="test" :list="list" key-name="name">
   <template #reference>
-    <uv-button @click="test=true">
+    <lz-button @click="test=true">
       打开
-    </uv-button>
+    </lz-button>
   </template>
-</uv-popover>
+</lz-popover>
 ```
 
 ## 配置渲染列表
@@ -29,15 +29,15 @@ onMounted(()=>{
 
  ```vue
 <template>
-    <uv-popover v-model="test1" :list="list" key-name="name">
+    <lz-popover v-model="test1" :list="list" key-name="name">
       <template #reference>
         <div style="margin-left: 100px;">
-          <uv-button @click="test1=true">
+          <lz-button @click="test1=true">
             打开
-          </uv-button>
+          </lz-button>
         </div>
       </template>
-    </uv-popover>
+    </lz-popover>
 </template>
 
 <script setup>
@@ -63,7 +63,7 @@ const list = ref([
 `closeOnClickAction` 是否在点击选项后关闭, `closeOnClickOutside` 是否在点击外部元素后关闭菜单
 
 ```html
-<uv-popover
+<lz-popover
   v-model="test2"
   :list="list"
   close-on-click-action
@@ -72,25 +72,25 @@ const list = ref([
 >
   <template #reference>
     <div style="margin-left: 200px;">
-      <uv-button @click="test2=true">
+      <lz-button @click="test2=true">
         打开
-      </uv-button>
+      </lz-button>
     </div>
   </template>
-</uv-popover>
+</lz-popover>
 ```
 
 ## 自定义内容
 
 ```html
-<uv-popover
+<lz-popover
   v-model="test3"
 >
   <template #reference>
     <div style="margin-left: 20px;">
-      <uv-button @click="test3=true">
+      <lz-button @click="test3=true">
         打开
-      </uv-button>
+      </lz-button>
     </div>
   </template>
   <template #default>
@@ -100,7 +100,7 @@ const list = ref([
       <div>我们能够享受的只有无法分割的此刻</div>
     </div>
   </template>
-</uv-popover>
+</lz-popover>
 ```
 
  ## props
@@ -122,16 +122,16 @@ const list = ref([
 ## css变量
 
 ```css
-  --uv-popover-z-index: 2000;
-  --uv-popover-color: #323233;
-  --uv-popover-bg-color: #ffffff;
-  --uv-popover-content-box-shadow: 0 2px 12px rgb(50 50 51 / 12%);
-  --uv-popover-content-border-radius: 8px;
-  --uv-popover-content-item-padding: 0 16px;
-  --uv-popover-content-item-width: 128px;
-  --uv-popover-content-item-height: 44px;
-  --uv-popover-content-item-active-bg-color: #f2f3f5;
-  --uv-popover-transition-time: 0.15s;
-  --uv-popover-arrow-postion-distance: 25px;
-  --uv-popover-content-item-text-border-bottom: 1px solid #f7f8f9;
+  --lz-popover-z-index: 2000;
+  --lz-popover-color: #323233;
+  --lz-popover-bg-color: #ffffff;
+  --lz-popover-content-box-shadow: 0 2px 12px rgb(50 50 51 / 12%);
+  --lz-popover-content-border-radius: 8px;
+  --lz-popover-content-item-padding: 0 16px;
+  --lz-popover-content-item-width: 128px;
+  --lz-popover-content-item-height: 44px;
+  --lz-popover-content-item-active-bg-color: #f2f3f5;
+  --lz-popover-transition-time: 0.15s;
+  --lz-popover-arrow-postion-distance: 25px;
+  --lz-popover-content-item-text-border-bottom: 1px solid #f7f8f9;
 ```

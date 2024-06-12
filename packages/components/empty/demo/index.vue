@@ -29,7 +29,7 @@
         <uvEmpty>
           我是自定义内容
           <div style="margin-top: 10px;">
-            <uv-button>按钮</uv-button>
+            <lz-button>按钮</lz-button>
           </div>
         </uvEmpty>
       </div>
@@ -39,7 +39,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvEmpty, uvButton } from 'uv-ui'
+import { uvEmpty, uvButton } from 'lz-ui'
 
 </script>
 

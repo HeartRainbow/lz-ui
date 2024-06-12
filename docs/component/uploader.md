@@ -167,19 +167,19 @@ before-read、after-read、before-delete 执行时会传递以下回调参数：
 ## css变量
 
 ```css
-  --uv-uploader-upload-size-width: 80px;
-  --uv-uploader-upload-size-height: 80px;
-  --uv-uploader-upload-gap: 8px;
-  --uv-uploader-delete-shadow-size: 14px;
-  --uv-uploader-delete-shadow-border-radius: 0 0 0 12px;
-  --uv-uploader-delete-shadow-background: rgb(0 0 0 / 70%);
-  --uv-uploader-delete-icon-transform: scale(0.6) translate(20%, -30%);
-  --uv-uploader-img-object-fit: cover;
-  --uv-uploader-upload-wrapper-bg-color: #f7f8fa;
-  --uv-uploader-mask-background: rgb(50 50 51 / 88%);
-  --uv-uploader-mask-color: #ffffff;
-  --uv-uploader-uploading-wrapper-gap: 10px;
-  --uv-uploader-uploading-wrapper-font-size: 12px;
-  --uv-uploader-uploading-size: 15px;
-  --uv-uploader-uploading-margin-right: 5px;
+  --lz-uploader-upload-size-width: 80px;
+  --lz-uploader-upload-size-height: 80px;
+  --lz-uploader-upload-gap: 8px;
+  --lz-uploader-delete-shadow-size: 14px;
+  --lz-uploader-delete-shadow-border-radius: 0 0 0 12px;
+  --lz-uploader-delete-shadow-background: rgb(0 0 0 / 70%);
+  --lz-uploader-delete-icon-transform: scale(0.6) translate(20%, -30%);
+  --lz-uploader-img-object-fit: cover;
+  --lz-uploader-upload-wrapper-bg-color: #f7f8fa;
+  --lz-uploader-mask-background: rgb(50 50 51 / 88%);
+  --lz-uploader-mask-color: #ffffff;
+  --lz-uploader-uploading-wrapper-gap: 10px;
+  --lz-uploader-uploading-wrapper-font-size: 12px;
+  --lz-uploader-uploading-size: 15px;
+  --lz-uploader-uploading-margin-right: 5px;
 ```

@@ -1,10 +1,10 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-button @click="show=true">
+      <lz-button @click="show=true">
         打开动作面板
-      </uv-button>
-      <uv-action-sheet
+      </lz-button>
+      <lz-action-sheet
         v-model:show="show"
         v-model="value"
         :list="list"
@@ -12,20 +12,20 @@
       {{ value }}
     </demoBlock>
     <demoBlock title="选项状态">
-      <uv-button @click="show1=true">
+      <lz-button @click="show1=true">
         打开动作面板
-      </uv-button>
-      <uv-action-sheet
+      </lz-button>
+      <lz-action-sheet
         v-model:show="show1"
         v-model="value1"
         :list="list1"
       />
     </demoBlock>
     <demoBlock title="展示取消按钮">
-      <uv-button @click="show2=true">
+      <lz-button @click="show2=true">
         打开动作面板
-      </uv-button>
-      <uv-action-sheet
+      </lz-button>
+      <lz-action-sheet
         v-model:show="show2"
         v-model="value1"
         :list="list1"
@@ -37,7 +37,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvActionSheet, uvButton } from 'uv-ui'
+import { uvActionSheet, uvButton } from 'lz-ui'
 import { ref } from 'vue'
 const show = ref(false)
 const show1 = ref(false)

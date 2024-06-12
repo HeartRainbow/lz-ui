@@ -1,21 +1,21 @@
 <template>
   <div
-    class="uv-side-bar"
+    class="lz-side-bar"
   >
-    <div class="uv-side-bar-left">
+    <div class="lz-side-bar-left">
       <div
-        class="uv-side-bar-left-cotent"
+        class="lz-side-bar-left-cotent"
         ref="contentRef"
       >
         <div
           ref="lineRef"
-          class="uv-side-bar-item-line"
+          class="lz-side-bar-item-line"
           :style="{width:lineWidth,backgroundColor:lineColor}"
         />
         <div
           @click="itemClick(index)"
-          class="uv-side-bar-left-cotent-item"
-          :class="modelValue===index?'uv-side-bar-left-cotent-item-active':''"
+          class="lz-side-bar-left-cotent-item"
+          :class="modelValue===index?'lz-side-bar-left-cotent-item-active':''"
           v-for="(item,index) in list"
           :key="item"
         >
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div class="uv-side-bar-right">
+    <div class="lz-side-bar-right">
       <slot />
     </div>
   </div>
@@ -72,7 +72,7 @@ onMounted(() => {
 })
 
 const initLine = () => {
-  contentItemListDom.value = contentRef.value.querySelectorAll('.uv-side-bar-left-cotent-item')
+  contentItemListDom.value = contentRef.value.querySelectorAll('.lz-side-bar-left-cotent-item')
   const { offsetHeight, offsetTop } = contentItemListDom.value[props.modelValue]
   setTimeout(() => {
     lineRef.value.style.transition = 'transform 0.3s'
@@ -88,47 +88,47 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-side-bar-left-width: 120px;
-  --uv-side-bar-left-bg-color: #f7f8fa;
-  --uv-side-bar-item-line-border-radius: 4px;
-  --uv-side-bar-left-cotent-item-padding: 14px 12px;
-  --uv-side-bar-left-cotent-item-font-size: 14px;
-  --uv-side-bar-left-cotent-item-color: #323233;
-  --uv-side-bar-left-cotent-item-active-bg-color: #ffffff;
-  --uv-side-bar-left-cotent-item-active-font-weight: 700;
-  --uv-side-bar-right-bg-color: #ffffff;
+  --lz-side-bar-left-width: 120px;
+  --lz-side-bar-left-bg-color: #f7f8fa;
+  --lz-side-bar-item-line-border-radius: 4px;
+  --lz-side-bar-left-cotent-item-padding: 14px 12px;
+  --lz-side-bar-left-cotent-item-font-size: 14px;
+  --lz-side-bar-left-cotent-item-color: #323233;
+  --lz-side-bar-left-cotent-item-active-bg-color: #ffffff;
+  --lz-side-bar-left-cotent-item-active-font-weight: 700;
+  --lz-side-bar-right-bg-color: #ffffff;
 }
-.uv-side-bar {
+.lz-side-bar {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  .uv-side-bar-left {
-    width: var(--uv-side-bar-left-width);
-    background-color: var(--uv-side-bar-left-bg-color);
-    .uv-side-bar-left-cotent {
+  .lz-side-bar-left {
+    width: var(--lz-side-bar-left-width);
+    background-color: var(--lz-side-bar-left-bg-color);
+    .lz-side-bar-left-cotent {
       position: relative;
-      .uv-side-bar-item-line {
+      .lz-side-bar-item-line {
         position: absolute;
         top: 0;
         left: 0;
         height: 16px;
-        border-radius: var(--uv-side-bar-item-line-border-radius);
+        border-radius: var(--lz-side-bar-item-line-border-radius);
       }
-      .uv-side-bar-left-cotent-item {
-        padding: var(--uv-side-bar-left-cotent-item-padding);
-        font-size: var(--uv-side-bar-left-cotent-item-font-size);
-        color: var(--uv-side-bar-left-cotent-item-color);
+      .lz-side-bar-left-cotent-item {
+        padding: var(--lz-side-bar-left-cotent-item-padding);
+        font-size: var(--lz-side-bar-left-cotent-item-font-size);
+        color: var(--lz-side-bar-left-cotent-item-color);
       }
-      .uv-side-bar-left-cotent-item-active {
-        font-weight: var(--uv-side-bar-left-cotent-item-active-font-weight);
-        background-color: var(--uv-side-bar-left-cotent-item-active-bg-color);
+      .lz-side-bar-left-cotent-item-active {
+        font-weight: var(--lz-side-bar-left-cotent-item-active-font-weight);
+        background-color: var(--lz-side-bar-left-cotent-item-active-bg-color);
       }
     }
   }
-  .uv-side-bar-right {
+  .lz-side-bar-right {
     overflow: auto;
-    background-color: var(--uv-side-bar-right-bg-color);
+    background-color: var(--lz-side-bar-right-bg-color);
     flex: 1;
   }
 }

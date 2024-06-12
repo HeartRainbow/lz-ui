@@ -12,9 +12,9 @@ onMounted(()=>{
 ## 通过v-model绑定开启或关闭的属性
 
 ```html
-<uv-popup v-model="show">
+<lz-popup v-model="show">
   dde
-</uv-popup>
+</lz-popup>
 ```
 
 ## 显示位置
@@ -22,7 +22,7 @@ onMounted(()=>{
 通过 `position` 设置,可选项为`bottom` `top` `center` `left` `right`，默认底部显示
 
 ```html
-<uv-popup
+<lz-popup
   position="bottom"
   v-model="show1"
   title="我是标题"
@@ -31,7 +31,7 @@ onMounted(()=>{
   <div class="test">
     标标题标标题标题标标标标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标题标标题标标题标题标标题标题标标题标题标标标标题标标题标题标标标标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标题标标题标标题标题标标题
   </div>
-</uv-popup>
+</lz-popup>
 ```
 
 ## 设置圆角
@@ -39,13 +39,13 @@ onMounted(()=>{
 通过 `round` 设置
 
 ```html
-<uv-popup
+<lz-popup
   round
   position="center"
   v-model="show2"
 >
   <div>标标题标标题标题标标标标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标题标标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标题题标题标标题标题标标题标题标标题标题标标题标题标标题标题标题</div>
-</uv-popup>
+</lz-popup>
 ```
 
 ## 开启关闭图标
@@ -53,14 +53,14 @@ onMounted(()=>{
 通过 `close` 设置开启或关闭，默认关闭
 
 ```html
-<uv-popup
+<lz-popup
   round
   close
   position="bottom"
   v-model="show33"
 >
   <div>标标题标标题标题标标标标标题标标题标标题标题</div>
-</uv-popup>
+</lz-popup>
 ```
 
 ## 是否显示遮罩
@@ -68,7 +68,7 @@ onMounted(()=>{
 通过 `overlay` 设置开启或关闭，默认开启
 
 ```html
-<uv-popup
+<lz-popup
   round
   close
   :overlay="false"
@@ -76,7 +76,7 @@ onMounted(()=>{
   v-model="show11"
 >
   <div>标标题标标题标题标标标标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标题标标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标题题标题标标题标题标标题标题标标题标题标标题标题标标题标题标题</div>
-</uv-popup>
+</lz-popup>
 ```
 
 ## 允许点击遮罩后关闭popup
@@ -84,7 +84,7 @@ onMounted(()=>{
 通过 `clickOverlayClose` 设置开启或关闭，默认开启
 
 ```html
-<uv-popup
+<lz-popup
   round
   close
   :click-overlay-close="false"
@@ -92,7 +92,7 @@ onMounted(()=>{
   v-model="show22"
 >
   <div>标标题标标题标题标标标标标题标标题标题标标标题标标标标题标标题标题标标标题标标题标题标标标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标标题标题标题</div>
-</uv-popup>
+</lz-popup>
 ```
 
 ## 是否开启操作按钮
@@ -100,14 +100,14 @@ onMounted(()=>{
 通过 `aciton` 设置开启或关闭，默认关闭。开启后可以通过 `leftName` 设置左边按钮名称，通过 `rightName` 设置右边按钮名称
 
 ```html
-<uv-popup
+<lz-popup
   round
   action
   position="bottom"
   v-model="show44"
 >
   <div>标标题标标题标题标标标标标题标标题标标题标题</div>
-</uv-popup>
+</lz-popup>
 ```
 
 ## props
@@ -139,21 +139,21 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-popup-transition-time: 0.3s;
-  --uv-popup-border-radius: 16px;
-  --uv-popup-left-right-max-width: 70%;
-  --uv-popup-button-font-size: 14px;
-  --uv-popup-button-border-radius: 6px;
-  --uv-popup-button-padding: 12px 45px;
-  --uv-popup-button-box-shadow: rgb(0 0 0 / 15%) 0 2px 8px;
-  --uv-popup-button-confim-color: #ffffff;
-  --uv-popup-button-cancle-color: #1fa45d;
-  --uv-popup-button-confim-bg-color: #07c160;
-  --uv-popup-button-cancle-bg-color: #f0f0f0;
-  --uv-popup-content-top-height: 30px;
-  --uv-popup-content-title-font-size: 16px;
-  --uv-popup-content-title-font-weight: 700;
-  --uv-popup-content-title-color: #323233;
-  --uv-popup-content-title-padding: 0;
+  --lz-popup-transition-time: 0.3s;
+  --lz-popup-border-radius: 16px;
+  --lz-popup-left-right-max-width: 70%;
+  --lz-popup-button-font-size: 14px;
+  --lz-popup-button-border-radius: 6px;
+  --lz-popup-button-padding: 12px 45px;
+  --lz-popup-button-box-shadow: rgb(0 0 0 / 15%) 0 2px 8px;
+  --lz-popup-button-confim-color: #ffffff;
+  --lz-popup-button-cancle-color: #1fa45d;
+  --lz-popup-button-confim-bg-color: #07c160;
+  --lz-popup-button-cancle-bg-color: #f0f0f0;
+  --lz-popup-content-top-height: 30px;
+  --lz-popup-content-title-font-size: 16px;
+  --lz-popup-content-title-font-weight: 700;
+  --lz-popup-content-title-color: #323233;
+  --lz-popup-content-title-padding: 0;
 ```
 

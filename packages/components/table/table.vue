@@ -1,11 +1,11 @@
 <template>
   <div
-    class="uv-table"
+    class="lz-table"
   >
-    <div class="uv-table-header-wrapper">
-      <div class="uv-table-tr">
+    <div class="lz-table-header-wrapper">
+      <div class="lz-table-tr">
         <div
-          class="uv-table-th"
+          class="lz-table-th"
           :style="{width:item.width,flex:item.width?'':1}"
           v-for="(item,index) in columns"
           :key="item.prop || index"
@@ -20,15 +20,15 @@
       </div>
     </div>
     <div
-      class="uv-table-body-wrapper"
+      class="lz-table-body-wrapper"
     >
       <div
-        class="uv-table-tr"
+        class="lz-table-tr"
         v-for="(item,indextr) in data"
         :key="indextr"
       >
         <div
-          class="uv-table-td"
+          class="lz-table-td"
           :style="{width:chil.width,flex:chil.width?'':1}"
           v-for="(chil,idx) in columns"
           :key="chil.prop || idx"
@@ -66,24 +66,24 @@ export default {
 }
 </script>
 <style lang="scss">
-.uv-table {
+.lz-table {
   display: flex;
   overflow-x: auto;
   width: 100%;
   height: 100%;
   flex-direction: column;
-  .uv-table-header-wrapper {
+  .lz-table-header-wrapper {
     width: 100%;
   }
-  .uv-table-body-wrapper {
+  .lz-table-body-wrapper {
     width: 100%;
   }
-  .uv-table-tr {
+  .lz-table-tr {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
-    .uv-table-th,
-    .uv-table-td {
+    .lz-table-th,
+    .lz-table-td {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -97,11 +97,11 @@ export default {
         border-right: none;
       }
     }
-    .uv-table-th {
+    .lz-table-th {
       font-weight: 700;
       color: #7f7f7f;
     }
-    .uv-table-td {
+    .lz-table-td {
       color: #333333;
     }
   }

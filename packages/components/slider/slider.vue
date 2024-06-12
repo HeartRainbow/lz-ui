@@ -1,17 +1,17 @@
 <template>
   <div
-    class="uv-slider"
+    class="lz-slider"
     :style="{backgroundColor:inactiveColor,height:barHeight+'px'}"
 
     ref="sliderRef"
   >
     <div
       :style="{width: `${current}%`,backgroundColor:activeColor,height:barHeight+'px'}"
-      class="uv-slider-value"
-      :class="disabled?'uv-slider-value-disabled':''"
+      class="lz-slider-value"
+      :class="disabled?'lz-slider-value-disabled':''"
     >
       <div
-        class="uv-slider-circle"
+        class="lz-slider-circle"
         ref="sliderValueRef"
         @touchstart="touchstart"
         @touchmove.stop="touchmove"
@@ -19,7 +19,7 @@
       >
         <slot name="button">
           <div
-            class="uv-slider-circle-content"
+            class="lz-slider-circle-content"
             :style="{width:buttonSize+'px',height:buttonSize+'px'}"
           />
         </slot>
@@ -131,47 +131,47 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-slider-height: 3px;
-  --uv-slider-border-radius: 50px;
-  --uv-slider-circle-content-size: 24px;
-  --uv-slider-circle-content-bg-color: #ffffff;
-  --uv-slider-circle-content-box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
-  --uv-slider-value-disabled-bg-color: #88c0fa !important;
-  --uv-slider-disabled-circle-content-box-shadow: 0 1px 2px rgb(0 0 0 / 40%);
+  --lz-slider-height: 3px;
+  --lz-slider-border-radius: 50px;
+  --lz-slider-circle-content-size: 24px;
+  --lz-slider-circle-content-bg-color: #ffffff;
+  --lz-slider-circle-content-box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
+  --lz-slider-value-disabled-bg-color: #88c0fa !important;
+  --lz-slider-disabled-circle-content-box-shadow: 0 1px 2px rgb(0 0 0 / 40%);
 }
-.uv-slider {
+.lz-slider {
   position: relative;
   margin: 10px 0;
   width: 100%;
-  height: var(--uv-slider-height);
-  border-radius: var(--uv-slider-border-radius);
-  .uv-slider-value {
+  height: var(--lz-slider-height);
+  border-radius: var(--lz-slider-border-radius);
+  .lz-slider-value {
     position: absolute;
     top: 0;
     left: 0;
     padding: 0 10px;
-    height: var(--uv-slider-height);
-    border-radius: var(--uv-slider-border-radius);
+    height: var(--lz-slider-height);
+    border-radius: var(--lz-slider-border-radius);
     transition: all 0.1s;
-    .uv-slider-circle {
+    .lz-slider-circle {
       position: absolute;
       right: -1px;
       cursor: grab;
       transform: translateY(-50%);
-      .uv-slider-circle-content {
-        width: var(--uv-slider-circle-content-size);
-        height: var(--uv-slider-circle-content-size);
+      .lz-slider-circle-content {
+        width: var(--lz-slider-circle-content-size);
+        height: var(--lz-slider-circle-content-size);
         border-radius: 50%;
-        background-color: var(--uv-slider-circle-content-bg-color);
-        box-shadow: var(--uv-slider-circle-content-box-shadow);
+        background-color: var(--lz-slider-circle-content-bg-color);
+        box-shadow: var(--lz-slider-circle-content-box-shadow);
       }
     }
   }
-  .uv-slider-value-disabled {
-    background-color: var(--uv-slider-value-disabled-bg-color);
-    .uv-slider-circle-content {
+  .lz-slider-value-disabled {
+    background-color: var(--lz-slider-value-disabled-bg-color);
+    .lz-slider-circle-content {
       cursor: not-allowed;
-      box-shadow: var(--uv-slider-disabled-circle-content-box-shadow);
+      box-shadow: var(--lz-slider-disabled-circle-content-box-shadow);
     }
   }
 }

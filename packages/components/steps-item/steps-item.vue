@@ -1,29 +1,29 @@
 <template>
   <div
-    class="uv-steps-item "
+    class="lz-steps-item "
 
     @click="clickItem"
     ref="itemRef"
   >
     <div
-      class="uv-steps-item-icon"
+      class="lz-steps-item-icon"
     >
       <slot name="icon">
         <div
-          class="uv-steps-item-icon-default"
+          class="lz-steps-item-icon-default"
           :style="{borderColor:context.isActive?activeColor:inactiveColor}"
         />
       </slot>
     </div>
 
     <div
-      class="uv-steps-item-text"
+      class="lz-steps-item-text"
       :style="{color:context.isActive?activeColor:inactiveColor}"
     >
       <slot>{{ title }}</slot>
     </div>
     <div
-      class="uv-steps-item-line"
+      class="lz-steps-item-line"
       :style="{backgroundColor:context.lineActive?activeColor:''}"
     />
   </div>
@@ -73,66 +73,66 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-steps-item-font-size: 12px;
-  --uv-steps-item-transition-time: 0.3s;
-  --uv-steps-item-icon-default-size: 9px;
-  --uv-steps-item-icon-default-border-size: 2px;
-  --uv-steps-item-text-padding-top: 20px;
-  --uv-steps-item-line-bg-color: #ebedf0;
-  --uv-steps-item-line-height: 1px;
+  --lz-steps-item-font-size: 12px;
+  --lz-steps-item-transition-time: 0.3s;
+  --lz-steps-item-icon-default-size: 9px;
+  --lz-steps-item-icon-default-border-size: 2px;
+  --lz-steps-item-text-padding-top: 20px;
+  --lz-steps-item-line-bg-color: #ebedf0;
+  --lz-steps-item-line-height: 1px;
 }
-.uv-steps-item {
+.lz-steps-item {
   position: relative;
-  font-size: var(--uv-steps-item-font-size);
+  font-size: var(--lz-steps-item-font-size);
   flex: 1;
-  .uv-steps-item-icon {
+  .lz-steps-item-icon {
     position: absolute;
     z-index: 1;
-    background-color: var(--uv-steps-bg-color);
-    transition: all var(--uv-steps-item-transition-time);
+    background-color: var(--lz-steps-bg-color);
+    transition: all var(--lz-steps-item-transition-time);
     transform: translateX(-50%);
-    .uv-steps-item-icon-default {
-      width: var(--uv-steps-item-icon-default-size);
-      height: var(--uv-steps-item-icon-default-size);
-      border: var(--uv-steps-item-icon-default-border-size) solid #999999;
+    .lz-steps-item-icon-default {
+      width: var(--lz-steps-item-icon-default-size);
+      height: var(--lz-steps-item-icon-default-size);
+      border: var(--lz-steps-item-icon-default-border-size) solid #999999;
       border-radius: 50%;
     }
   }
-  .uv-steps-item-text {
+  .lz-steps-item-text {
     position: relative;
-    padding-top: var(--uv-steps-item-text-padding-top);
+    padding-top: var(--lz-steps-item-text-padding-top);
     text-align: center;
     transform: translateX(-50%);
   }
-  .uv-steps-item-line {
+  .lz-steps-item-line {
     position: absolute;
-    top: calc(var(--uv-steps-item-icon-default-size) / 2);
+    top: calc(var(--lz-steps-item-icon-default-size) / 2);
     left: 0;
     width: 100%;
-    height: var(--uv-steps-item-line-height);
-    background-color: var(--uv-steps-item-line-bg-color);
-    transition: all var(--uv-steps-item-transition-time);
+    height: var(--lz-steps-item-line-height);
+    background-color: var(--lz-steps-item-line-bg-color);
+    transition: all var(--lz-steps-item-transition-time);
   }
   &:first-child {
-    .uv-steps-item-text {
+    .lz-steps-item-text {
       transform: none;
       text-align: left;
     }
-    .uv-steps-item-icon {
+    .lz-steps-item-icon {
       transform: none;
     }
   }
   &:last-child {
     position: absolute;
     right: 0;
-    .uv-steps-item-text {
+    .lz-steps-item-text {
       transform: none;
     }
-    .uv-steps-item-icon {
+    .lz-steps-item-icon {
       right: 0;
       transform: none;
     }
-    .uv-steps-item-line {
+    .lz-steps-item-line {
       width: 0;
     }
   }

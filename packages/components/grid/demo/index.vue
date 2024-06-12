@@ -1,61 +1,61 @@
 <template>
   <div>
     <demoBlock title="点击反馈">
-      <uv-grid
+      <lz-grid
         clickable
       >
-        <uv-grid-item
+        <lz-grid-item
           v-for="item in 8"
           :key="item"
           :text="'文字'+item"
           icon-name="modular"
         />
-      </uv-grid>
+      </lz-grid>
     </demoBlock>
     <demoBlock title="自定义列数">
-      <uv-grid
+      <lz-grid
         column-num="3"
       >
-        <uv-grid-item
+        <lz-grid-item
           v-for="item in 9"
           :key="item"
           :text="'文字'+item"
           icon-name="modular"
         />
-      </uv-grid>
+      </lz-grid>
     </demoBlock>
     <demoBlock title="格子间距">
-      <uv-grid
+      <lz-grid
         gutter="10"
       >
-        <uv-grid-item
+        <lz-grid-item
           v-for="item in 8"
           :key="item"
           :text="'文字'+item"
           icon-name="modular"
         />
-      </uv-grid>
+      </lz-grid>
     </demoBlock>
     <demoBlock title="内容横排">
-      <uv-grid
+      <lz-grid
         direction="row"
         reverse
       >
-        <uv-grid-item
+        <lz-grid-item
           v-for="item in 8"
           :key="item"
           :text="'文字'+item"
           icon-name="modular"
           @click="handleClick(item)"
         />
-      </uv-grid>
+      </lz-grid>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvGrid, uvGridItem } from 'uv-ui'
+import { uvGrid, uvGridItem } from 'lz-ui'
 const handleClick = (item) => {
   console.log(item)
 }

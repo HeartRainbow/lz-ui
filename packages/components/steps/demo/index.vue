@@ -1,80 +1,80 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-steps
+      <lz-steps
         v-model="active"
         @change="changeAc"
       >
-        <uv-steps-item>检查单信息</uv-steps-item>
-        <uv-steps-item>整改信息</uv-steps-item>
-        <uv-steps-item>复查信息</uv-steps-item>
-        <uv-steps-item>处罚决定</uv-steps-item>
-      </uv-steps>
+        <lz-steps-item>检查单信息</lz-steps-item>
+        <lz-steps-item>整改信息</lz-steps-item>
+        <lz-steps-item>复查信息</lz-steps-item>
+        <lz-steps-item>处罚决定</lz-steps-item>
+      </lz-steps>
     </demoBlock>
     <demoBlock title="禁止点击">
-      <uv-steps
+      <lz-steps
         :is-able-click="false"
         v-model="active1"
       >
-        <uv-steps-item>检查单信息</uv-steps-item>
-        <uv-steps-item>整改信息</uv-steps-item>
-        <uv-steps-item>复查信息</uv-steps-item>
-        <uv-steps-item>处罚决定</uv-steps-item>
-      </uv-steps>
+        <lz-steps-item>检查单信息</lz-steps-item>
+        <lz-steps-item>整改信息</lz-steps-item>
+        <lz-steps-item>复查信息</lz-steps-item>
+        <lz-steps-item>处罚决定</lz-steps-item>
+      </lz-steps>
       <div style="margin-top: 10px;">
-        <uv-button @click="change">
+        <lz-button @click="change">
           下一步
-        </uv-button>
+        </lz-button>
       </div>
     </demoBlock>
     <demoBlock title="自定义图标">
-      <uv-steps
+      <lz-steps
         v-model="active2"
       >
-        <uv-steps-item title="检查单信息">
+        <lz-steps-item title="检查单信息">
           <template #icon>
-            <uv-icon
+            <lz-icon
               size="16"
               :color="active2>=0?'#0078d4':'#666'"
               name="arrow-right"
             />
           </template>
-        </uv-steps-item>
-        <uv-steps-item title="整改信息">
+        </lz-steps-item>
+        <lz-steps-item title="整改信息">
           <template #icon>
-            <uv-icon
+            <lz-icon
               size="16"
               name="success"
               :color="active2>=1?'#0078d4':'#666'"
             />
           </template>
-        </uv-steps-item>
-        <uv-steps-item title="复查信息">
+        </lz-steps-item>
+        <lz-steps-item title="复查信息">
           <template #icon>
-            <uv-icon
+            <lz-icon
               size="16"
               name="love-fill"
               :color="active2>=2?'#0078d4':'#666'"
             />
           </template>
-        </uv-steps-item>
-        <uv-steps-item title="处罚决定">
+        </lz-steps-item>
+        <lz-steps-item title="处罚决定">
           <template #icon>
-            <uv-icon
+            <lz-icon
               size="16"
               name="star-fill"
               :color="active2>=3?'#0078d4':'#666'"
             />
           </template>
-        </uv-steps-item>
-      </uv-steps>
+        </lz-steps-item>
+      </lz-steps>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvSteps, uvStepsItem, uvButton, uvIcon } from 'uv-ui'
+import { uvSteps, uvStepsItem, uvButton, uvIcon } from 'lz-ui'
 import { ref } from 'vue'
 
 const active = ref(0)

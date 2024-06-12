@@ -1,17 +1,17 @@
 <template>
   <div
-    class="uv-floating-panel"
+    class="lz-floating-panel"
     :style="rootStyle"
     @touchstart="onTouchstart"
     @touchmove="onTouchmove"
     @touchend="onTouchend"
   >
     <div
-      class="uv-floating-panel-header"
+      class="lz-floating-panel-header"
     >
-      <div class="uv-floating-panel-header-bar" />
+      <div class="lz-floating-panel-header-bar" />
     </div>
-    <div class="uv-floating-panel-content" ref="contentRef">
+    <div class="lz-floating-panel-content" ref="contentRef">
       <slot />
     </div>
   </div>
@@ -120,25 +120,25 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-floating-panel-border-radius: 16px 16px 0 0;
-  --uv-floating-panel-default-height: 100px;
-  --uv-floating-panel-header-height: 30px;
-  --uv-floating-panel-z-index: 999;
-  --uv-floating-panel-bg-color: #ffffff;
-  --uv-floating-panel-header-bar-bg-color: #c8c9cc;
-  --uv-floating-panel-header-bar-width: 20px;
-  --uv-floating-panel-header-bar-height: 3px;
-  --uv-floating-panel-header-border-radius: 4px;
+  --lz-floating-panel-border-radius: 16px 16px 0 0;
+  --lz-floating-panel-default-height: 100px;
+  --lz-floating-panel-header-height: 30px;
+  --lz-floating-panel-z-index: 999;
+  --lz-floating-panel-bg-color: #ffffff;
+  --lz-floating-panel-header-bar-bg-color: #c8c9cc;
+  --lz-floating-panel-header-bar-width: 20px;
+  --lz-floating-panel-header-bar-height: 3px;
+  --lz-floating-panel-header-border-radius: 4px;
 }
-.uv-floating-panel {
+.lz-floating-panel {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: var(--uv-floating-panel-z-index);
+  z-index: var(--lz-floating-panel-z-index);
   display: flex;
   width: 100vw;
-  border-radius: var(--uv-floating-panel-border-radius);
-  background: var(--uv-floating-panel-bg-color);
+  border-radius: var(--lz-floating-panel-border-radius);
+  background: var(--lz-floating-panel-bg-color);
   flex-direction: column;
   touch-action: none;
   &::after {
@@ -150,25 +150,25 @@ export default {
     background-color: inherit;
     content: "";
   }
-  .uv-floating-panel-header {
+  .lz-floating-panel-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: var(--uv-floating-panel-header-height);
+    height: var(--lz-floating-panel-header-height);
     cursor: grab;
     user-select: none;
-    .uv-floating-panel-header-bar {
-      width: var(--uv-floating-panel-header-bar-width);
-      height: var(--uv-floating-panel-header-bar-height);
-      border-radius: var(--uv-floating-panel-header-border-radius);
-      background-color: var(--uv-floating-panel-header-bar-bg-color);
+    .lz-floating-panel-header-bar {
+      width: var(--lz-floating-panel-header-bar-width);
+      height: var(--lz-floating-panel-header-bar-height);
+      border-radius: var(--lz-floating-panel-header-border-radius);
+      background-color: var(--lz-floating-panel-header-bar-bg-color);
     }
   }
-  .uv-floating-panel-content {
+  .lz-floating-panel-content {
     overflow-y: auto;
     min-height: 0;
     flex: 1 0;
-    background-color: var(--uv-floating-panel-bg-color);
+    background-color: var(--lz-floating-panel-bg-color);
   }
 }
 

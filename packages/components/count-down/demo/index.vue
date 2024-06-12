@@ -52,7 +52,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvCountDown, Toast, uvGrid, uvGridItem } from 'uv-ui'
+import { uvCountDown, Toast, uvGrid, uvGridItem } from 'lz-ui'
 import { ref } from 'vue'
 
 const time = ref(30 * 60 * 60 * 1000)

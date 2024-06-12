@@ -15,8 +15,8 @@ const MessageVNode = (options) => {
 
   const close = () => {
     const dom = vm.el
-    if (dom.querySelector('.uv-message-value')) {
-      dom.querySelector('.uv-message-value')?.classList.add('remove') // 执行移除动画
+    if (dom.querySelector('.lz-message-value')) {
+      dom.querySelector('.lz-message-value')?.classList.add('remove') // 执行移除动画
       const t = setTimeout(() => { // 动画效果之后删除dom节点
         render(null, container)
         document.body.removeChild(container)

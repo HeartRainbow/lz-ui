@@ -15,24 +15,24 @@ onMounted(()=>{
 
 ```vue
 <template>
-    <uv-button
+    <lz-button
       type="primary"
       @click="openToast1('success')"
     >
       成功状态
-    </uv-button>
-    <uv-button
+    </lz-button>
+    <lz-button
       type="primary"
       @click="openToast1('error')"
     >
       失败状态
-    </uv-button>
-    <uv-button
+    </lz-button>
+    <lz-button
       type="primary"
       @click="openToast1('loading')"
     >
       等待状态
-    </uv-button>
+    </lz-button>
 </template>
 
 <script setup>
@@ -52,12 +52,12 @@ const openToast1 = (e) => {
 
 ```vue
 <template>
-    <uv-button
+    <lz-button
       type="primary"
       @click="openToast2"
     >
       6s后调用clear关闭
-    </uv-button>
+    </lz-button>
 </template>
 
 <script setup>
@@ -88,11 +88,11 @@ const openToast2 = () => {
 ## css变量
 
 ```css
-  --uv-toast-value-padding: 8px 10px;
-  --uv-toast-value-max-width: 150px;
-  --uv-toast-value-border-radius: 4px;
-  --uv-toast-message-font-size: 13px;
-  --uv-toast-message-min-width: 70px;
+  --lz-toast-value-padding: 8px 10px;
+  --lz-toast-value-max-width: 150px;
+  --lz-toast-value-border-radius: 4px;
+  --lz-toast-message-font-size: 13px;
+  --lz-toast-message-min-width: 70px;
 ```
 
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-side-bar
+      <lz-side-bar
         v-model="activeIndex"
         :list="list"
       >
@@ -20,10 +20,10 @@
         <div v-show="activeIndex===4">
           5
         </div>
-      </uv-side-bar>
+      </lz-side-bar>
     </demoBlock>
     <demoBlock title="配置左侧线属性">
-      <uv-side-bar
+      <lz-side-bar
         line-width="7px"
         line-color="green"
         v-model="activeIndex"
@@ -35,14 +35,14 @@
         <div v-show="activeIndex===1">
           2
         </div>
-      </uv-side-bar>
+      </lz-side-bar>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvSideBar } from 'uv-ui'
+import { uvSideBar } from 'lz-ui'
 import { ref } from 'vue'
 
 const activeIndex = ref(0)

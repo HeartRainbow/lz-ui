@@ -11,7 +11,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvCalendar } from 'uv-ui'
+import { uvCalendar } from 'lz-ui'
 import { ref } from 'vue'
 const dateData = ref(null)
 </script>

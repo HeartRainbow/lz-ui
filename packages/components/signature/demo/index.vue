@@ -22,7 +22,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvSignature } from 'uv-ui'
+import { uvSignature } from 'lz-ui'
 import { ref } from 'vue'
 
 const imgUrl = ref('')

@@ -1,4 +1,4 @@
-# uv-ui-examples
+# lz-ui-examples
 
 This template should help get you started developing with Vue 3 in Vite.
 

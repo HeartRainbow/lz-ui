@@ -14,25 +14,25 @@ onMounted(()=>{
 通过 `leftArrow` 开启返回按钮
 
 ```html
-<uv-nav-bar title="标题" left-title="返回" left-arrow/>
+<lz-nav-bar title="标题" left-title="返回" left-arrow/>
 ```
 
 ##  右侧插槽
 
 
  ```html
-<uv-nav-bar title="标题" left-title="返回" left-arrow>
+<lz-nav-bar title="标题" left-title="返回" left-arrow>
   <template #right>
-    <uv-icon size="18" name="search" color="#419dfb" />
+    <lz-icon size="18" name="search" color="#419dfb" />
   </template>
-</uv-nav-bar>
+</lz-nav-bar>
  ```
 
 ##  fixed定位
 
 通过 `fixed` 开启,通过 `placeholder` 生成等高占位元素
  ```html
-<uv-nav-bar fixed placeholder  />
+<lz-nav-bar fixed placeholder  />
  ```
 
  ## props
@@ -61,12 +61,12 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-nav-bar-height: 46px;
-  --uv-nav-bar-center-max-width: 60%;
-  --uv-nav-bar-center-font-size: 16px;
-  --uv-nav-bar-center-font-weight: 700;
-  --uv-nav-bar-center-color: #323233;
-  --uv-nav-bar-left-right-padding: 0 16px;
-  --uv-nav-bar-left-right-font-size: 14px;
-  --uv-nav-bar-left-text-padding-left: 5px;
+  --lz-nav-bar-height: 46px;
+  --lz-nav-bar-center-max-width: 60%;
+  --lz-nav-bar-center-font-size: 16px;
+  --lz-nav-bar-center-font-weight: 700;
+  --lz-nav-bar-center-color: #323233;
+  --lz-nav-bar-left-right-padding: 0 16px;
+  --lz-nav-bar-left-right-font-size: 14px;
+  --lz-nav-bar-left-text-padding-left: 5px;
 ```

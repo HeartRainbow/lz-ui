@@ -29,6 +29,6 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-calendar-bg-color: #ffffff;
-  --uv-calendar-header-shadow: 0 2px 10px rgb(125 126 128 / 16%);
+  --lz-calendar-bg-color: #ffffff;
+  --lz-calendar-header-shadow: 0 2px 10px rgb(125 126 128 / 16%);
 ```

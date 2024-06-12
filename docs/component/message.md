@@ -12,9 +12,9 @@ onMounted(()=>{
 ```vue
 <template>
   <div class="container">
-    <uv-button @click="showMessage">
+    <lz-button @click="showMessage">
       点击显示
-    </uv-button>
+    </lz-button>
   </div>
 </template>
 
@@ -41,13 +41,13 @@ const showMessage = () => {
 ## css变量
 
 ```css
-  --uv-message-value-top: 30px;
-  --uv-message-value-padding: 8px 10px;
-  --uv-message-value-width: 70%;
-  --uv-message-value-height: 40px;
-  --uv-message-value-border-radius: 4px;
-  --uv-message-value-bg-color: #ffffff;
-  --uv-message-value-box-shadow: 0 4px 12px #00000026;
-  --uv-message-animation-time: 0.5s;
-  --uv-message-animation-remove-time: 0.6s;
+  --lz-message-value-top: 30px;
+  --lz-message-value-padding: 8px 10px;
+  --lz-message-value-width: 70%;
+  --lz-message-value-height: 40px;
+  --lz-message-value-border-radius: 4px;
+  --lz-message-value-bg-color: #ffffff;
+  --lz-message-value-box-shadow: 0 4px 12px #00000026;
+  --lz-message-animation-time: 0.5s;
+  --lz-message-animation-remove-time: 0.6s;
 ```

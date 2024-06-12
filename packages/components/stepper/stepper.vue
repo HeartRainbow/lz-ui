@@ -1,15 +1,15 @@
 <template>
   <div
-    class="uv-stepper"
+    class="lz-stepper"
   >
     <div
-      class="uv-stepper-minus"
+      class="lz-stepper-minus"
       :style="{width:size+'px',height:size+'px'}"
-      :class="min===current || disabled?'uv-stepper-disabled':''"
+      :class="min===current || disabled?'lz-stepper-disabled':''"
       @click.stop="subClick"
     >
-      <uv-icon
-        class="uv-stepper-icon"
+      <lz-icon
+        class="lz-stepper-icon"
         size="20"
         name="minus"
         :color="min===current || disabled?'#c8c9cc':'#323233'"
@@ -18,7 +18,7 @@
 
     <div
       @click.stop
-      class="uv-stepper-input"
+      class="lz-stepper-input"
       :style="{width:inputWidth,height:size+'px'}"
     >
       <input
@@ -30,13 +30,13 @@
       >
     </div>
     <div
-      class="uv-stepper-add"
+      class="lz-stepper-add"
       :style="{width:size+'px',height:size+'px'}"
-      :class="max===current || disabled?'uv-stepper-disabled':''"
+      :class="max===current || disabled?'lz-stepper-disabled':''"
       @click.stop="addClick"
     >
-      <uv-icon
-        class="uv-stepper-icon"
+      <lz-icon
+        class="lz-stepper-icon"
         size="20"
         name="add"
         :color="max===current || disabled?'#c8c9cc':'#323233'"
@@ -142,24 +142,24 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-stepper-gap: 2px;
-  --uv-stepper-input-color: #323233;
-  --uv-stepper-bg-color: #f2f3f5;
-  --uv-stepper-active-bg-color: #f7f8f9;
-  --uv-stepper-disabled-bg-color: #f7f8fa;
-  --uv-stepper-border-radius: 4px;
+  --lz-stepper-gap: 2px;
+  --lz-stepper-input-color: #323233;
+  --lz-stepper-bg-color: #f2f3f5;
+  --lz-stepper-active-bg-color: #f7f8f9;
+  --lz-stepper-disabled-bg-color: #f7f8fa;
+  --lz-stepper-border-radius: 4px;
 }
-.uv-stepper {
+.lz-stepper {
   display: flex;
-  gap: var(--uv-stepper-gap);
+  gap: var(--lz-stepper-gap);
   align-items: center;
   input {
     width: 100%;
     height: 100%;
     border: none;
     text-align: center;
-    color: var(--uv-stepper-input-color);
-    background-color: var(--uv-stepper-bg-color);
+    color: var(--lz-stepper-input-color);
+    background-color: var(--lz-stepper-bg-color);
     outline: none;
   }
 
@@ -168,34 +168,34 @@ export default {
     justify-content: center;
     align-items: center;
     padding: 2px;
-    background-color: var(--uv-stepper-bg-color);
+    background-color: var(--lz-stepper-bg-color);
   }
-  .uv-stepper-icon {
+  .lz-stepper-icon {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .uv-stepper-minus {
+  .lz-stepper-minus {
     @include common;
 
-    border-radius: var(--uv-stepper-border-radius) 0 0 var(--uv-stepper-border-radius);
+    border-radius: var(--lz-stepper-border-radius) 0 0 var(--lz-stepper-border-radius);
     &:active {
-      background-color: var(--uv-stepper-active-bg-color);
+      background-color: var(--lz-stepper-active-bg-color);
     }
   }
-  .uv-stepper-input {
+  .lz-stepper-input {
     @include common;
   }
-  .uv-stepper-add {
+  .lz-stepper-add {
     @include common;
 
-    border-radius: 0 var(--uv-stepper-border-radius)  var(--uv-stepper-border-radius) 0;
+    border-radius: 0 var(--lz-stepper-border-radius)  var(--lz-stepper-border-radius) 0;
     &:active {
-      background-color: var(--uv-stepper-active-bg-color);
+      background-color: var(--lz-stepper-active-bg-color);
     }
   }
-  .uv-stepper-disabled {
-    background-color: var(--uv-stepper-disabled-bg-color);
+  .lz-stepper-disabled {
+    background-color: var(--lz-stepper-disabled-bg-color);
     cursor: not-allowed;
   }
 }

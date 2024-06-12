@@ -1,6 +1,6 @@
 <template>
-  <div class="uv-signature" :style="{height:height}">
-    <div class="uv-signature-content" ref="wrapRef">
+  <div class="lz-signature" :style="{height:height}">
+    <div class="lz-signature-content" ref="wrapRef">
       <canvas
         ref="canvasRef"
         :width="state.width"
@@ -11,11 +11,11 @@
       />
     </div>
     <slot name="footer">
-      <div class="uv-signature-footer">
-        <div class="uv-signature-footer-clear" @click="clear">
+      <div class="lz-signature-footer">
+        <div class="lz-signature-footer-clear" @click="clear">
           {{ clearButtonText }}
         </div>
-        <div class="uv-signature-footer-confim" @click="submit">
+        <div class="lz-signature-footer-confim" @click="submit">
           {{ confirmButtonText }}
         </div>
       </div>
@@ -160,53 +160,53 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-signature-default-gap: 5px;
-  --uv-signature-content-border: 1px dotted #dadada;
-  --uv-signature-content-border-radius: 8px;
-  --uv-signature-content-bg-color: #ffffff;
-  --uv-signature-footer-button-text-padding: 8px 16px;
-  --uv-signature-footer-button-text-size: 12px;
-  --uv-signature-footer-button-border-radius: 4px;
-  --uv-signature-footer-clear-button-border: 1px solid #dcdee0;
-  --uv-signature-footer-clear-button-color: #323233;
-  --uv-signature-footer-clear-button-bg-color: #ffffff;
-  --uv-signature-footer-confim-button-color: #ffffff;
-  --uv-signature-footer-confim-button-bg-color: #1989fa;
+  --lz-signature-default-gap: 5px;
+  --lz-signature-content-border: 1px dotted #dadada;
+  --lz-signature-content-border-radius: 8px;
+  --lz-signature-content-bg-color: #ffffff;
+  --lz-signature-footer-button-text-padding: 8px 16px;
+  --lz-signature-footer-button-text-size: 12px;
+  --lz-signature-footer-button-border-radius: 4px;
+  --lz-signature-footer-clear-button-border: 1px solid #dcdee0;
+  --lz-signature-footer-clear-button-color: #323233;
+  --lz-signature-footer-clear-button-bg-color: #ffffff;
+  --lz-signature-footer-confim-button-color: #ffffff;
+  --lz-signature-footer-confim-button-bg-color: #1989fa;
 }
-.uv-signature {
+.lz-signature {
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: var(--uv-signature-default-gap);
-  .uv-signature-content {
+  gap: var(--lz-signature-default-gap);
+  .lz-signature-content {
     overflow: hidden;
     width: 100%;
     height: 100%;
-    border: var(--uv-signature-content-border);
-    border-radius: var(--uv-signature-content-border-radius);
-    background-color: var(--uv-signature-content-bg-color);
+    border: var(--lz-signature-content-border);
+    border-radius: var(--lz-signature-content-border-radius);
+    background-color: var(--lz-signature-content-bg-color);
   }
-  .uv-signature-footer {
+  .lz-signature-footer {
     display: flex;
     justify-content: flex-end;
-    gap: var(--uv-signature-default-gap);
-    .uv-signature-footer-clear,
-    .uv-signature-footer-confim {
+    gap: var(--lz-signature-default-gap);
+    .lz-signature-footer-clear,
+    .lz-signature-footer-confim {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: var(--uv-signature-footer-button-text-padding);
-      font-size: var(--uv-signature-footer-button-text-size);
-      border-radius: var(--uv-signature-footer-button-border-radius);
+      padding: var(--lz-signature-footer-button-text-padding);
+      font-size: var(--lz-signature-footer-button-text-size);
+      border-radius: var(--lz-signature-footer-button-border-radius);
     }
-    .uv-signature-footer-clear {
-      border: var(--uv-signature-footer-clear-button-border);
-      color: var(--uv-signature-footer-clear-button-color);
-      background-color: var(--uv-signature-footer-clear-button-bg-color);
+    .lz-signature-footer-clear {
+      border: var(--lz-signature-footer-clear-button-border);
+      color: var(--lz-signature-footer-clear-button-color);
+      background-color: var(--lz-signature-footer-clear-button-bg-color);
     }
-    .uv-signature-footer-confim {
-      color: var(--uv-signature-footer-confim-button-color);
-      background-color: var(--uv-signature-footer-confim-button-bg-color);
+    .lz-signature-footer-confim {
+      color: var(--lz-signature-footer-confim-button-color);
+      background-color: var(--lz-signature-footer-confim-button-bg-color);
     }
   }
 }

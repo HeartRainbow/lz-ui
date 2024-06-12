@@ -14,7 +14,7 @@ onMounted(()=>{
 通过 `v-model` 进行双向绑定,通过 `label` 指定显示内容，也可以通过默认插槽进行自定义
 
 ```html
-<uv-checkbox v-model="test1" label="数据1"/>
+<lz-checkbox v-model="test1" label="数据1"/>
 ```
 
 ## 自定义形状
@@ -22,7 +22,7 @@ onMounted(()=>{
 通过 `shape` 设置，可选值为 `square` 、 `round`
 
  ```html
-<uv-checkbox
+<lz-checkbox
   v-model="test2"
   label="test2"
   shape="square"
@@ -34,7 +34,7 @@ onMounted(()=>{
 通过 `disabled` 设置
 
  ```html
-<uv-checkbox
+<lz-checkbox
   v-model="test2"
   disabled
   label="单选框"
@@ -46,12 +46,12 @@ onMounted(()=>{
 通过 `checkedColor` 设置
 
  ```html
-<uv-checkbox
+<lz-checkbox
   v-model="test2"
   checked-color="red"
 >
   单选框
-</uv-checkbox>
+</lz-checkbox>
  ``` 
 
 ## 文本位置
@@ -59,7 +59,7 @@ onMounted(()=>{
 通过 `labelPosition` 设置，可选值为 `left` 、 `right`，默认 `right`
 
  ```html
-<uv-checkbox
+<lz-checkbox
   v-model="test2"
   label="单选框"
   shape="square"
@@ -72,7 +72,7 @@ onMounted(()=>{
 通过 `spaceBetween` 开启
 
  ```html
-<uv-checkbox
+<lz-checkbox
   v-model="test3"
   label="单选框"
   space-between
@@ -81,32 +81,32 @@ onMounted(()=>{
  ```
 ## 多选组
 
-通过 `uv-checkbox-group` 组件包裹,通过 `v-model` 绑定数组类型数据
+通过 `lz-checkbox-group` 组件包裹,通过 `v-model` 绑定数组类型数据
 
  ```html
-<uv-checkbox-group v-model="checkArr">
-  <uv-checkbox
+<lz-checkbox-group v-model="checkArr">
+  <lz-checkbox
     label="test1"
   />
-  <uv-checkbox
+  <lz-checkbox
     label="test2"
   />
-  <uv-checkbox
+  <lz-checkbox
     label="test3"
   />
-  <uv-checkbox
+  <lz-checkbox
     label="test4"
   />
-  <uv-checkbox
+  <lz-checkbox
     label="test41"
   />
-  <uv-checkbox
+  <lz-checkbox
     label="test42"
   />
-  <uv-checkbox
+  <lz-checkbox
     label="test43"
   />
-</uv-checkbox-group>
+</lz-checkbox-group>
  ``` 
 
 ## 限制最大选择数量
@@ -114,20 +114,20 @@ onMounted(()=>{
 通过 `max` 属性设置
 
 ```html
-<uv-checkbox-group v-model="checkArr1" :max="2">
-  <uv-checkbox
+<lz-checkbox-group v-model="checkArr1" :max="2">
+  <lz-checkbox
     label="test1"
   />
-  <uv-checkbox
+  <lz-checkbox
     label="test2"
   />
-  <uv-checkbox
+  <lz-checkbox
     label="test3"
   />
-  <uv-checkbox
+  <lz-checkbox
     label="test4"
   />
-</uv-checkbox-group>
+</lz-checkbox-group>
 ````
 
 ## checkbox props
@@ -168,18 +168,18 @@ onMounted(()=>{
 ## checkbox css变量
 
 ```css
-    --uv-check-box-icon-border: 1px solid #c8c9cc;
-    --uv-check-box-icon-active-border: 1px solid #1989fa;
-    --uv-check-box-icon-active-bg-color: #1989fa;
-    --uv-check-box-icon-disabled-border: 1px solid #c8c9cc;
-    --uv-check-box-icon-disabled-bg-color: #ebedf0;
-    --uv-check-box-text-margin: 8px;
-    --uv-check-box-text-size: 14px;
-    --uv-check-box-space-between-padding: 0 10px;
+    --lz-check-box-icon-border: 1px solid #c8c9cc;
+    --lz-check-box-icon-active-border: 1px solid #1989fa;
+    --lz-check-box-icon-active-bg-color: #1989fa;
+    --lz-check-box-icon-disabled-border: 1px solid #c8c9cc;
+    --lz-check-box-icon-disabled-bg-color: #ebedf0;
+    --lz-check-box-text-margin: 8px;
+    --lz-check-box-text-size: 14px;
+    --lz-check-box-space-between-padding: 0 10px;
 ```
 
 ## checkbox-group css变量
 
 ```css
-    --uv-checkbox-group-gap: 10px;
+    --lz-checkbox-group-gap: 10px;
 ```

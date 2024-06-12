@@ -1,40 +1,40 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-divider>标题</uv-divider>
+      <lz-divider>标题</lz-divider>
     </demoBlock>
     <demoBlock title="使用 0.5px 线">
-      <uv-divider
+      <lz-divider
         hairline
       >
         标题
-      </uv-divider>
+      </lz-divider>
     </demoBlock>
     <demoBlock title="开启虚线">
-      <uv-divider
+      <lz-divider
         dashed
       >
         标题
-      </uv-divider>
+      </lz-divider>
     </demoBlock>
     <demoBlock title="内容位置">
-      <uv-divider
+      <lz-divider
         position="left"
       >
         标题
-      </uv-divider>
-      <uv-divider
+      </lz-divider>
+      <lz-divider
         position="right"
       >
         标题
-      </uv-divider>
+      </lz-divider>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvDivider } from 'uv-ui'
+import { uvDivider } from 'lz-ui'
 
 </script>
 

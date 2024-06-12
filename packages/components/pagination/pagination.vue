@@ -1,12 +1,12 @@
 <template>
   <div
-    class="uv-pagination"
+    class="lz-pagination"
   >
     <div
       @click="prevClick"
       :class="[
-        prevText?'uv-pagination-prev-text':'uv-pagination-prev',
-        modelValue===1?'uv-pagination-prev-disabled':''
+        prevText?'lz-pagination-prev-text':'lz-pagination-prev',
+        modelValue===1?'lz-pagination-prev-disabled':''
       ]"
     >
       <div v-if="prevText">
@@ -14,14 +14,14 @@
           {{ prevText }}
         </slot>
       </div>
-      <uv-icon
+      <lz-icon
         v-else
         :color="modelValue===1?disabledColor:defaultColor"
         size="14"
         name="arrow-left"
       />
     </div>
-    <div class="uv-pagination-content">
+    <div class="lz-pagination-content">
       <template
         v-for="item in pageNum"
         :key="item"
@@ -31,8 +31,8 @@
 
           v-if="isShow(item)"
 
-          :class="modelValue===item?'uv-pagination-content-item-active':''"
-          class="uv-pagination-content-item "
+          :class="modelValue===item?'lz-pagination-content-item-active':''"
+          class="lz-pagination-content-item "
         >
           {{ item }}
         </div>
@@ -41,8 +41,8 @@
     <div
       @click="nextClick"
       :class="[
-        nextText?'uv-pagination-next-text':'uv-pagination-next',
-        modelValue===pageNum?'uv-pagination-next-disabled':''
+        nextText?'lz-pagination-next-text':'lz-pagination-next',
+        modelValue===pageNum?'lz-pagination-next-disabled':''
       ]"
     >
       <div v-if="nextText">
@@ -50,7 +50,7 @@
           {{ nextText }}
         </slot>
       </div>
-      <uv-icon
+      <lz-icon
         v-else
         size="14"
         :color="modelValue===pageNum?disabledColor:defaultColor"
@@ -154,74 +154,74 @@ export default {
 </script>
 <style lang="scss">
 :root {
-  --uv-pagination-font-size: 14px;
-  --uv-pagination-content-item-size: 34px;
-  --uv-pagination-content-item-color: #606266;
-  --uv-pagination-content-item-gap: 8px;
-  --uv-pagination-content-item-border-radius: 2px;
-  --uv-pagination-content-item-active-color: #ffffff;
-  --uv-pagination-content-item-bg-color: #f0f2f5;
-  --uv-pagination-content-item-acitve-bg-color: #409eff;
-  --uv-pagination-disabled-color: #bbbec4;
-  --uv-pagination-text-padding: 0 5px;
+  --lz-pagination-font-size: 14px;
+  --lz-pagination-content-item-size: 34px;
+  --lz-pagination-content-item-color: #606266;
+  --lz-pagination-content-item-gap: 8px;
+  --lz-pagination-content-item-border-radius: 2px;
+  --lz-pagination-content-item-active-color: #ffffff;
+  --lz-pagination-content-item-bg-color: #f0f2f5;
+  --lz-pagination-content-item-acitve-bg-color: #409eff;
+  --lz-pagination-disabled-color: #bbbec4;
+  --lz-pagination-text-padding: 0 5px;
 }
-.uv-pagination {
+.lz-pagination {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: var(--uv-pagination-content-item-gap);
-  font-size: var(--uv-pagination-font-size);
-  .uv-pagination-content {
+  gap: var(--lz-pagination-content-item-gap);
+  font-size: var(--lz-pagination-font-size);
+  .lz-pagination-content {
     display: flex;
     align-items: center;
-    gap: var(--uv-pagination-content-item-gap);
-    .uv-pagination-content-item {
+    gap: var(--lz-pagination-content-item-gap);
+    .lz-pagination-content-item {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: var(--uv-pagination-content-item-size);
-      height: var(--uv-pagination-content-item-size);
-      border-radius: var(--uv-pagination-content-item-border-radius);
-      color: var(--uv-pagination-content-item-color);
-      background-color: var(--uv-pagination-content-item-bg-color);
+      width: var(--lz-pagination-content-item-size);
+      height: var(--lz-pagination-content-item-size);
+      border-radius: var(--lz-pagination-content-item-border-radius);
+      color: var(--lz-pagination-content-item-color);
+      background-color: var(--lz-pagination-content-item-bg-color);
     }
-    .uv-pagination-content-item-active {
-      color: var(--uv-pagination-content-item-active-color);
-      background-color: var(--uv-pagination-content-item-acitve-bg-color);
+    .lz-pagination-content-item-active {
+      color: var(--lz-pagination-content-item-active-color);
+      background-color: var(--lz-pagination-content-item-acitve-bg-color);
     }
   }
-  .uv-pagination-prev,
-  .uv-pagination-next {
+  .lz-pagination-prev,
+  .lz-pagination-next {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--uv-pagination-content-item-size);
-    height: var(--uv-pagination-content-item-size);
-    border-radius: var(--uv-pagination-content-item-border-radius);
-    background-color: var(--uv-pagination-content-item-bg-color);
+    width: var(--lz-pagination-content-item-size);
+    height: var(--lz-pagination-content-item-size);
+    border-radius: var(--lz-pagination-content-item-border-radius);
+    background-color: var(--lz-pagination-content-item-bg-color);
     &:active {
       opacity: 0.6;
     }
   }
-  .uv-pagination-prev-text,
-  .uv-pagination-next-text {
+  .lz-pagination-prev-text,
+  .lz-pagination-next-text {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--uv-pagination-text-padding);
-    height: var(--uv-pagination-content-item-size);
-    border-radius: var(--uv-pagination-content-item-border-radius);
+    padding: var(--lz-pagination-text-padding);
+    height: var(--lz-pagination-content-item-size);
+    border-radius: var(--lz-pagination-content-item-border-radius);
     white-space: nowrap;
-    color: var(--uv-pagination-content-item-color);
-    background-color: var(--uv-pagination-content-item-bg-color);
+    color: var(--lz-pagination-content-item-color);
+    background-color: var(--lz-pagination-content-item-bg-color);
     &:active {
       opacity: 0.6;
     }
   }
-  .uv-pagination-prev-disabled,
-  .uv-pagination-next-disabled {
-    color: var(--uv-pagination-disabled-color);
-    background-color: var(--uv-pagination-content-item-bg-color);
+  .lz-pagination-prev-disabled,
+  .lz-pagination-next-disabled {
+    color: var(--lz-pagination-disabled-color);
+    background-color: var(--lz-pagination-content-item-bg-color);
     &:active {
       opacity: 1;
     }

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="uv-slider-vertify"
+    class="lz-slider-vertify"
     :style="{
       width: width + 'px',
       margin: '0 auto',
@@ -15,7 +15,7 @@
       <canvas ref="canvasRef" :width="width" :height="height" />
       <canvas
         ref="blockRef"
-        class="uv-slider-vertify-block"
+        class="lz-slider-vertify-block"
         :width="width"
         :height="height"
         @mousedown="handleDragStart"
@@ -29,36 +29,36 @@
         width: width + 'px',
       }"
     >
-      <div class="uv-slider-vertify-slider-mask" :style="{ width: sliderLeft + 'px' }">
+      <div class="lz-slider-vertify-slider-mask" :style="{ width: sliderLeft + 'px' }">
         <div
-          class="uv-slider-vertify-slider"
+          class="lz-slider-vertify-slider"
           :style="{ left: sliderLeft + 'px' }"
           @mousedown="handleDragStart"
           @touchstart="handleDragStart"
         >
-          <div class="uv-slider-vertify-slider-icon">
+          <div class="lz-slider-vertify-slider-icon">
             &rarr;
           </div>
         </div>
       </div>
-      <div class="uv-slider-vertify-slider-text">
+      <div class="lz-slider-vertify-slider-text">
         {{ textTip }}
       </div>
     </div>
     <div
-      class="uv-slider-vertify-refresh-icon"
+      class="lz-slider-vertify-refresh-icon"
       @click="handleRefresh"
       :style="{ backgroundImage: `url(${refreshIcon})` }"
     />
     <div
-      class="uv-slider-vertify-loading-container"
+      class="lz-slider-vertify-loading-container"
       :style="{
         width: width + 'px',
         height: height + 'px',
         display: isLoading ? '' : 'none',
       }"
     >
-      <div class="uv-slider-vertify-loading-icon" />
+      <div class="lz-slider-vertify-loading-icon" />
       <span>加载中...</span>
     </div>
   </div>
@@ -139,7 +139,7 @@ const props = defineProps({
 
 const isLoading = ref(false)
 const sliderLeft = ref(0)
-const sliderClass = ref('uv-slider-vertify-container')
+const sliderClass = ref('lz-slider-vertify-container')
 const textTip = ref(props.text)
 const canvasRef = ref(null)
 const blockRef = ref(null)
@@ -242,7 +242,7 @@ const reset = () => {
   const blockCtx = blockRef.value.getContext('2d')
   // 重置样式
   sliderLeft.value = 0
-  sliderClass.value = 'uv-slider-vertify-container'
+  sliderClass.value = 'lz-slider-vertify-container'
   blockRef.value.width = width
   blockRef.value.style.left = 0 + 'px'
 
@@ -296,7 +296,7 @@ const handleDragMove = (e) => {
   const blockLeft = ((width - 40 - 20) / (width - 40)) * moveX
   blockRef.value.style.left = blockLeft + 'px'
 
-  sliderClass.value = 'uv-slider-vertify-container uv-slider-vertify-container-active'
+  sliderClass.value = 'lz-slider-vertify-container lz-slider-vertify-container-active'
   trailRef.value.push(moveY)
   onDraw && onDraw(blockLeft)
 }
@@ -307,19 +307,19 @@ const handleDragEnd = (e) => {
   isMouseDownRef.value = false
   const eventX = e.clientX || e.changedTouches[0].clientX
   if (eventX === originXRef.value) return false
-  sliderClass.value = 'uv-slider-vertify-container'
+  sliderClass.value = 'lz-slider-vertify-container'
   const { spliced, verified } = onCustomVertify ? onCustomVertify(verify()) : verify()
   if (spliced) {
     if (verified) {
-      sliderClass.value = 'uv-slider-vertify-container uv-slider-vertify-container-success'
+      sliderClass.value = 'lz-slider-vertify-container lz-slider-vertify-container-success'
       typeof onSuccess === 'function' && onSuccess()
     } else {
-      sliderClass.value = 'uv-slider-vertify-container uv-slider-vertify-container-fail'
+      sliderClass.value = 'lz-slider-vertify-container lz-slider-vertify-container-fail'
       textTip.value = '请再试一次'
       reset()
     }
   } else {
-    sliderClass.value = 'uv-slider-vertify-container uv-slider-vertify-container-fail'
+    sliderClass.value = 'lz-slider-vertify-container lz-slider-vertify-container-fail'
     typeof onFail === 'function' && onFail()
     setTimeout(reset.bind(this), 1000)
   }
@@ -346,19 +346,19 @@ export default {
 </script>
 
 <style lang="scss">
-.uv-slider-vertify {
+.lz-slider-vertify {
   position: relative;
-  .uv-slider-vertify-block {
+  .lz-slider-vertify-block {
     position: absolute;
     top: 0;
     left: 0;
     cursor: pointer;
     cursor: grab;
   }
-  .uv-slider-vertify-block:active {
+  .lz-slider-vertify-block:active {
     cursor: grabbing;
   }
-  .uv-slider-vertify-container {
+  .lz-slider-vertify-container {
     position: relative;
     margin-top: 15px;
     height: 40px;
@@ -367,7 +367,7 @@ export default {
     color: #45494c;
     background: #f7f9fa;
     line-height: 40px;
-    .uv-slider-vertify-slider-mask {
+    .lz-slider-vertify-slider-mask {
       position: absolute;
       top: 0;
       left: 0;
@@ -375,7 +375,7 @@ export default {
       border: 0 solid #486cd6;
       background: #d1e9fe;
     }
-    .uv-slider-vertify-slider {
+    .lz-slider-vertify-slider {
       position: absolute;
       top: 0;
       left: 0;
@@ -387,69 +387,69 @@ export default {
       cursor: pointer;
       cursor: grab;
     }
-    .uv-slider-vertify-slider-icon {
+    .lz-slider-vertify-slider-icon {
       font-size: 18px;
       color: #000000;
     }
-    .uv-slider-vertify-slider:active {
+    .lz-slider-vertify-slider:active {
       cursor: grabbing;
     }
-    .uv-slider-vertify-slider:hover {
+    .lz-slider-vertify-slider:hover {
       background: #486cd6;
-      .uv-slider-vertify-slider-icon {
+      .lz-slider-vertify-slider-icon {
         color: #ffffff;
       }
     }
   }
-  .uv-slider-vertify-container-active {
-    .uv-slider-vertify-slider {
+  .lz-slider-vertify-container-active {
+    .lz-slider-vertify-slider {
       top: -1px;
       height: 38px;
       border: 1px solid #486cd6;
     }
-    .uv-slider-vertify-slider-mask {
+    .lz-slider-vertify-slider-mask {
       height: 38px;
     }
-    .uv-slider-vertify-slider-text {
+    .lz-slider-vertify-slider-text {
       display: none;
     }
   }
-  .uv-slider-vertify-container-success {
-    .uv-slider-vertify-slider {
+  .lz-slider-vertify-container-success {
+    .lz-slider-vertify-slider {
       top: -1px;
       height: 38px;
       background-color: #0ca14a;
     }
-    .uv-slider-vertify-slider-mask {
+    .lz-slider-vertify-slider-mask {
       height: 38px;
       background-color: #d2f4ef;
     }
-    .uv-slider-vertify-slider-icon {
+    .lz-slider-vertify-slider-icon {
       background-position: 0 -26px;
     }
-    .uv-slider-vertify-slider-text {
+    .lz-slider-vertify-slider-text {
       display: none;
     }
   }
-  .uv-slider-vertify-container-fail {
-    .uv-slider-vertify-slider {
+  .lz-slider-vertify-container-fail {
+    .lz-slider-vertify-slider {
       top: -1px;
       height: 38px;
       background-color: #f57a7a;
     }
-    .uv-slider-vertify-slider-mask {
+    .lz-slider-vertify-slider-mask {
       height: 38px;
       background-color: #fce1e1;
     }
-    .uv-slider-vertify-slider-icon {
+    .lz-slider-vertify-slider-icon {
       top: 14px;
       background-position: 0 -82px;
     }
-    .uv-slider-vertify-slider-text {
+    .lz-slider-vertify-slider-text {
       display: none;
     }
   }
-  .uv-slider-vertify-refresh-icon {
+  .lz-slider-vertify-refresh-icon {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -458,7 +458,7 @@ export default {
     background-size: 32px;
     cursor: pointer;
   }
-  .uv-slider-vertify-loading-container {
+  .lz-slider-vertify-loading-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -473,16 +473,16 @@ export default {
     background: #edf0f2;
     flex-direction: column;
   }
-  .uv-slider-vertify-loading-icon {
+  .lz-slider-vertify-loading-icon {
     margin-bottom: 10px;
     width: 32px;
     height: 32px;
     background: url("http://cdn.dooring.cn/dr/icon12.png");
     background-size: 32px;
-    animation: uv-slider-vertify-rotate 0.8s linear infinite;
+    animation: lz-slider-vertify-rotate 0.8s linear infinite;
   }
 
-  @keyframes uv-slider-vertify-rotate {
+  @keyframes lz-slider-vertify-rotate {
     from {
       transform: rotate(0);
     }

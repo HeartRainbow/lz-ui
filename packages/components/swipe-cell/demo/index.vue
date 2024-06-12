@@ -1,23 +1,23 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-swipe-cell @cancle="cancleHandle" />
+      <lz-swipe-cell @cancle="cancleHandle" />
     </demoBlock>
     <demoBlock title="左右操作按钮">
-      <uv-swipe-cell left />
+      <lz-swipe-cell left />
     </demoBlock>
     <demoBlock title="自定义插槽">
-      <uv-swipe-cell style="margin-bottom: 10px;">
+      <lz-swipe-cell style="margin-bottom: 10px;">
         <template #right>
           <div class="delete-btn">
             删除
           </div>
         </template>
-      </uv-swipe-cell>
-      <uv-swipe-cell>
+      </lz-swipe-cell>
+      <lz-swipe-cell>
         <div class="content">
           <div class="iamge">
-            <uv-icon
+            <lz-icon
               size="40"
               name="electronics"
             />
@@ -34,14 +34,14 @@
             </div>
           </div>
         </div>
-      </uv-swipe-cell>
+      </lz-swipe-cell>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvSwipeCell } from 'uv-ui'
+import { uvSwipeCell } from 'lz-ui'
 function cancleHandle () {
   console.log('点击删除')
 }

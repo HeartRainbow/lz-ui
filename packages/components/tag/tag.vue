@@ -2,19 +2,19 @@
   <Transition name="tag-face">
     <div
       v-show="show"
-      class="uv-tag"
+      class="lz-tag"
       :style="{backgroundColor:bgColor,color:color}"
       :class="[
         type,
-        plain?'uv-tag-plain':'',
-        round?'uv-tag-round':'',
-        mark?'uv-tag-mark':'',
-        size==='medium'?'uv-tag-medium':'',
-        size==='large'?'uv-tag-large':''
+        plain?'lz-tag-plain':'',
+        round?'lz-tag-round':'',
+        mark?'lz-tag-mark':'',
+        size==='medium'?'lz-tag-medium':'',
+        size==='large'?'lz-tag-large':''
       ]"
     >
       <slot />
-      <div class="uv-tag-close" v-if="closeable" @click="handleClose">
+      <div class="lz-tag-close" v-if="closeable" @click="handleClose">
         <uvIcon name="close" size="12" :color="color?color:'#fff'" />
       </div>
     </div>
@@ -76,78 +76,78 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-tag-primary-color: #1989fa;
-  --uv-tag-success-color: #07c160;
-  --uv-tag-danger-color: #ee0a24;
-  --uv-tag-warning-color: #ff976a;
-  --uv-tag-plain-bg-color: #ffffff;
-  --uv-tag-mini-padding: 0 4px;
-  --uv-tag-mini-font-size: 12px;
-  --uv-tag-medium-padding: 2px 6px;
-  --uv-tag-large-padding: 4px 8px;
-  --uv-tag-large-font-size: 14px;
-  --uv-tag-line-height: 1.5;
-  --uv-tag-border-radius: 0;
-  --uv-tag-round-border-radius: 999px;
-  --uv-tag-transition-time: 0.3s;
-  --uv-tag-text-color: #ffffff;
+  --lz-tag-primary-color: #1989fa;
+  --lz-tag-success-color: #07c160;
+  --lz-tag-danger-color: #ee0a24;
+  --lz-tag-warning-color: #ff976a;
+  --lz-tag-plain-bg-color: #ffffff;
+  --lz-tag-mini-padding: 0 4px;
+  --lz-tag-mini-font-size: 12px;
+  --lz-tag-medium-padding: 2px 6px;
+  --lz-tag-large-padding: 4px 8px;
+  --lz-tag-large-font-size: 14px;
+  --lz-tag-line-height: 1.5;
+  --lz-tag-border-radius: 0;
+  --lz-tag-round-border-radius: 999px;
+  --lz-tag-transition-time: 0.3s;
+  --lz-tag-text-color: #ffffff;
 }
-.uv-tag {
+.lz-tag {
   display: inline-block;
   align-items: center;
-  padding: var(--uv-tag-mini-padding);
-  font-size: var(--uv-tag-mini-font-size);
-  border-radius: var(--uv-tag-border-radius);
-  color: var(--uv-tag-text-color);
-  line-height: var(--uv-tag-line-height);
-  transition: opacity var(--uv-tag-transition-time);
+  padding: var(--lz-tag-mini-padding);
+  font-size: var(--lz-tag-mini-font-size);
+  border-radius: var(--lz-tag-border-radius);
+  color: var(--lz-tag-text-color);
+  line-height: var(--lz-tag-line-height);
+  transition: opacity var(--lz-tag-transition-time);
   &.primary {
-    background-color: var(--uv-tag-primary-color);
-    &.uv-tag-plain {
-      color: var(--uv-tag-primary-color);
+    background-color: var(--lz-tag-primary-color);
+    &.lz-tag-plain {
+      color: var(--lz-tag-primary-color);
     }
   }
   &.success {
-    background-color: var(--uv-tag-success-color);
-    &.uv-tag-plain {
-      color: var(--uv-tag-success-color);
+    background-color: var(--lz-tag-success-color);
+    &.lz-tag-plain {
+      color: var(--lz-tag-success-color);
     }
   }
   &.danger {
-    background-color: var(--uv-tag-danger-color);
-    &.uv-tag-plain {
-      color: var(--uv-tag-danger-color);
+    background-color: var(--lz-tag-danger-color);
+    &.lz-tag-plain {
+      color: var(--lz-tag-danger-color);
     }
   }
   &.warning {
-    background-color: var(--uv-tag-warning-color);
-    &.uv-tag-plain {
-      color: var(--uv-tag-warning-color);
+    background-color: var(--lz-tag-warning-color);
+    &.lz-tag-plain {
+      color: var(--lz-tag-warning-color);
     }
   }
-  &.uv-tag-plain {
+  &.lz-tag-plain {
     border: 1px solid currentcolor;
-    background: var(--uv-tag-plain-bg-color);
+    background: var(--lz-tag-plain-bg-color);
   }
-  &.uv-tag-round {
-    border-radius: var(--uv-tag-round-border-radius);
+  &.lz-tag-round {
+    border-radius: var(--lz-tag-round-border-radius);
   }
-  &.uv-tag-mark {
-    border-radius: 0 var(--uv-tag-round-border-radius) var(--uv-tag-round-border-radius) 0;
+  &.lz-tag-mark {
+    border-radius: 0 var(--lz-tag-round-border-radius) var(--lz-tag-round-border-radius) 0;
     &::after {
       content: "";
       display: inline-block;
       width: 1px;
     }
   }
-  &.uv-tag-medium {
-    padding: var(--uv-tag-medium-padding);
+  &.lz-tag-medium {
+    padding: var(--lz-tag-medium-padding);
   }
-  &.uv-tag-large {
-    padding: var(--uv-tag-large-padding);
-    font-size: var(--uv-tag-large-font-size);
+  &.lz-tag-large {
+    padding: var(--lz-tag-large-padding);
+    font-size: var(--lz-tag-large-font-size);
   }
-  .uv-tag-close {
+  .lz-tag-close {
     display: inline-flex;
   }
 }

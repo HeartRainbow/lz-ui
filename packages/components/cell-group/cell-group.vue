@@ -1,8 +1,8 @@
 <template>
   <div
-    class="uv-cell-group"
+    class="lz-cell-group"
     :style="{width:gap?'95%':'100%'}"
-    :class="card?'uv-cell-group-card':''"
+    :class="card?'lz-cell-group-card':''"
   >
     <slot />
   </div>
@@ -29,19 +29,19 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-cell-group-border-top: 1px solid #f5f6f7;
-  --uv-cell-group-border-bottom: 1px solid #f5f6f7;
-  --uv-cell-group-bg-color: #ffffff;
-  --uv-cell-group-card-border-radius: 8px;
+  --lz-cell-group-border-top: 1px solid #f5f6f7;
+  --lz-cell-group-border-bottom: 1px solid #f5f6f7;
+  --lz-cell-group-bg-color: #ffffff;
+  --lz-cell-group-card-border-radius: 8px;
 }
-.uv-cell-group {
+.lz-cell-group {
   overflow: hidden;
   margin: 0 auto;
-  border-top: var(--uv-cell-group-border-top);
-  border-bottom: var(--uv-cell-group-border-bottom);
-  background-color: var(--uv-cell-group-bg-color);
+  border-top: var(--lz-cell-group-border-top);
+  border-bottom: var(--lz-cell-group-border-bottom);
+  background-color: var(--lz-cell-group-bg-color);
 }
-.uv-cell-group-card {
-  border-radius: var(--uv-cell-group-card-border-radius);
+.lz-cell-group-card {
+  border-radius: var(--lz-cell-group-card-border-radius);
 }
 </style>

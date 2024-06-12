@@ -4,10 +4,10 @@
       <div style="margin-bottom: 10px;font-size: 14px;">
         当前值：{{ value }}
       </div>
-      <uv-button @click="openPicker">
+      <lz-button @click="openPicker">
         打开picker
-      </uv-button>
-      <uv-picker
+      </lz-button>
+      <lz-picker
         round
         ref="pickerRef"
         v-model="value"
@@ -20,10 +20,10 @@
     </demoBlock>
     <demoBlock title="多列选择">
       {{ value1 }}
-      <uv-button @click="openPicker1">
+      <lz-button @click="openPicker1">
         打开picker
-      </uv-button>
-      <uv-picker
+      </lz-button>
+      <lz-picker
         round
         ref="pickerRef1"
         v-model="value1"
@@ -34,10 +34,10 @@
     </demoBlock>
     <demoBlock title="级联选择">
       {{ value2 }}
-      <uv-button @click="openPicker2">
+      <lz-button @click="openPicker2">
         打开picker
-      </uv-button>
-      <uv-picker
+      </lz-button>
+      <lz-picker
         round
         ref="pickerRef2"
         v-model="value2"
@@ -50,7 +50,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvPicker, uvButton } from 'uv-ui'
+import { uvPicker, uvButton } from 'lz-ui'
 import { ref } from 'vue'
 
 const pickerRef = ref(null)

@@ -8,7 +8,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvSliderVertify } from 'uv-ui'
+import { uvSliderVertify } from 'lz-ui'
 
 </script>
 

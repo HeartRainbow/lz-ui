@@ -128,7 +128,7 @@ const time = ref(30 * 60 * 60 * 1000)
 ## css变量
 
 ```css
-  --uv-count-down-font-size: 14px;
-  --uv-count-down-color: #323233;
-  --uv-count-down-line-height: 1.5;
+  --lz-count-down-font-size: 14px;
+  --lz-count-down-color: #323233;
+  --lz-count-down-line-height: 1.5;
 ```

@@ -1,20 +1,20 @@
 <template>
-  <div class="uv-tab-wrap">
+  <div class="lz-tab-wrap">
     <div
-      class="uv-tab"
+      class="lz-tab"
       :style="{backgroundColor:bgColor}"
-      :class="[scroll?'uv-tab-scroll':'',shrink?'uv-tab-shrink':'']"
+      :class="[scroll?'lz-tab-scroll':'',shrink?'lz-tab-shrink':'']"
       ref="uvTabRef"
     >
       <div
         ref="uvTabLineRef"
-        class="uv-tab-line"
+        class="lz-tab-line"
         :style="{height:lineHeight,backgroundColor:lineColor}"
       />
       <div
-        class="uv-tab-item"
+        class="lz-tab-item"
         @click="changeIndex(index)"
-        :class="placeholder? placeholder===item?'':'uv-tab-acitve-item': currentIndex===index?'uv-tab-acitve-item':''"
+        :class="placeholder? placeholder===item?'':'lz-tab-acitve-item': currentIndex===index?'lz-tab-acitve-item':''"
         :style="{color:placeholder? placeholder===item?color:activeColor:currentIndex===index?activeColor:color}"
         v-for="(item,index) in list"
         :key="item"
@@ -82,7 +82,7 @@ watch(() => props.acitveIndex, (newValue) => {
 })
 
 watch(currentIndex, (newValue) => {
-  uvTableItemListDom.value = uvTabRef.value.querySelectorAll('.uv-tab-item')
+  uvTableItemListDom.value = uvTabRef.value.querySelectorAll('.lz-tab-item')
   const { offsetWidth, offsetLeft } = uvTableItemListDom.value[newValue]
   setTabLine(offsetWidth, offsetLeft)
   if (props.scroll) {
@@ -103,7 +103,7 @@ onMounted(async () => {
 })
 
 const initTabLine = () => {
-  uvTableItemListDom.value = uvTabRef.value.querySelectorAll('.uv-tab-item')
+  uvTableItemListDom.value = uvTabRef.value.querySelectorAll('.lz-tab-item')
   const { offsetWidth, offsetLeft } = uvTableItemListDom.value[currentIndex.value]
   setTimeout(() => {
     uvTabLineRef.value.style.transition = 'transform 0.3s'
@@ -124,68 +124,68 @@ export default {
 </script>
 <style lang="scss">
 :root {
-  --uv-tab-bg-color: #ffffff;
-  --uv-tab-font-size: 14px;
-  --uv-tab-height: 44px;
-  --uv-tab-padding: 0 12px;
-  --uv-tab-line-bg-color: #1989fa;
-  --uv-tab-line-height: 3px;
-  --uv-tab-border-radius: 3px;
-  --uv-tab-item-color: #646566;
-  --uv-tab-acitve-item-color: #323233;
-  --uv-tab-acitve-item-font-weight: 700;
-  --uv-tab-item-margin: 10px;
+  --lz-tab-bg-color: #ffffff;
+  --lz-tab-font-size: 14px;
+  --lz-tab-height: 44px;
+  --lz-tab-padding: 0 12px;
+  --lz-tab-line-bg-color: #1989fa;
+  --lz-tab-line-height: 3px;
+  --lz-tab-border-radius: 3px;
+  --lz-tab-item-color: #646566;
+  --lz-tab-acitve-item-color: #323233;
+  --lz-tab-acitve-item-font-weight: 700;
+  --lz-tab-item-margin: 10px;
 }
-.uv-tab-wrap {
+.lz-tab-wrap {
   overflow: hidden;
-  .uv-tab {
+  .lz-tab {
     position: relative;
     display: flex;
     justify-content: space-around;
     width: 100%;
-    height: var(--uv-tab-height);
-    font-size: var(--uv-tab-font-size);
-    background-color: var(--uv-tab-bg-color);
-    .uv-tab-line {
+    height: var(--lz-tab-height);
+    font-size: var(--lz-tab-font-size);
+    background-color: var(--lz-tab-bg-color);
+    .lz-tab-line {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 40px;
-      height: var(--uv-tab-line-height);
-      border-radius: var(--uv-tab-border-radius);
-      background-color: var(--uv-tab-line-bg-color);
+      height: var(--lz-tab-line-height);
+      border-radius: var(--lz-tab-border-radius);
+      background-color: var(--lz-tab-line-bg-color);
     }
-    .uv-tab-item {
+    .lz-tab-item {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: var(--uv-tab-item-color);
+      color: var(--lz-tab-item-color);
     }
-    .uv-tab-acitve-item {
-      font-weight: var(--uv-tab-acitve-item-font-weight);
-      color: var(--uv-tab-acitve-item-color);
+    .lz-tab-acitve-item {
+      font-weight: var(--lz-tab-acitve-item-font-weight);
+      color: var(--lz-tab-acitve-item-color);
     }
   }
-  .uv-tab-scroll {
+  .lz-tab-scroll {
     justify-content: inherit;
     overflow-x: auto;
-    padding: var(--uv-tab-padding);
+    padding: var(--lz-tab-padding);
     transition: all 0.3s;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    gap: 0 var(--uv-tab-item-margin);
-    .uv-tab-item {
+    gap: 0 var(--lz-tab-item-margin);
+    .lz-tab-item {
       white-space: nowrap;
     }
     &::-webkit-scrollbar {
       display: none;
     }
   }
-  .uv-tab-shrink {
+  .lz-tab-shrink {
     justify-content: flex-start;
-    padding: var(--uv-tab-padding);
-    gap: 0 var(--uv-tab-item-margin);
+    padding: var(--lz-tab-padding);
+    gap: 0 var(--lz-tab-item-margin);
   }
 }
 </style>

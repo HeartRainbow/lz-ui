@@ -33,7 +33,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvProgress } from 'uv-ui'
+import { uvProgress } from 'lz-ui'
 import { ref } from 'vue'
 
 const curPercent = ref(30)

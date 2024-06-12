@@ -1,5 +1,5 @@
 <template>
-  <div class="uv-count-down">
+  <div class="lz-count-down">
     <slot :time-data="current">
       {{ timeText }}
     </slot>
@@ -118,14 +118,14 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-count-down-font-size: 14px;
-  --uv-count-down-color: #323233;
-  --uv-count-down-line-height: 1.5;
+  --lz-count-down-font-size: 14px;
+  --lz-count-down-color: #323233;
+  --lz-count-down-line-height: 1.5;
 }
-.uv-count-down {
-  font-size: var(--uv-count-down-font-size);
-  color: var(--uv-count-down-color);
-  line-height: var(--uv-count-down-line-height);
+.lz-count-down {
+  font-size: var(--lz-count-down-font-size);
+  color: var(--lz-count-down-color);
+  line-height: var(--lz-count-down-line-height);
 }
 
 </style>

@@ -14,7 +14,7 @@ onMounted(()=>{
 通过 `size` 设置球大小,通过 `progress` 设置进度
 
 ```html
-<uv-water-waves :progress="progress" size="250px"/>
+<lz-water-waves :progress="progress" size="250px"/>
 ```
 
 ## 内容插槽
@@ -22,9 +22,9 @@ onMounted(()=>{
 通过 `color` 设置字体颜色
 
  ```html
-<uv-water-waves :progress="progress1" color="#bfa">
+<lz-water-waves :progress="progress1" color="#bfa">
   <div>{{ progress1 }}</div>
-</uv-water-waves>
+</lz-water-waves>
  ```
 
 
@@ -40,7 +40,7 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-water-wave1-color: #a0edff;
-  --uv-water-wave2-color: rgb(40 187 255 / 50%);
-  --uv-water-wave3-color: #2084cc;
+  --lz-water-wave1-color: #a0edff;
+  --lz-water-wave2-color: rgb(40 187 255 / 50%);
+  --lz-water-wave3-color: #2084cc;
 ```

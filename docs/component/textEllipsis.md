@@ -57,8 +57,8 @@ onMounted(()=>{
 ## css 变量
 
 ```css
-  --uv-text-ellipsis-action-text-color: #1989fa;
-  --uv-text-ellipsis-line-height: 1.6;
-  --uv-text-ellipsis-color: #323233;
-  --uv-text-ellipsis-font-size: 14px;
+  --lz-text-ellipsis-action-text-color: #1989fa;
+  --lz-text-ellipsis-line-height: 1.6;
+  --lz-text-ellipsis-color: #323233;
+  --lz-text-ellipsis-font-size: 14px;
 ```

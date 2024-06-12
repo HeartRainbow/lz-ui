@@ -1,36 +1,36 @@
 <template>
   <div>
     <demoBlock title="点击反馈">
-      <uv-cell
+      <lz-cell
         clickable
         title="test"
         value="内容"
       />
     </demoBlock>
     <demoBlock title="卡片式">
-      <uv-cell-group
+      <lz-cell-group
         card
         gap
       >
-        <uv-cell
+        <lz-cell
           title="test"
           value="内容"
         />
-        <uv-cell
+        <lz-cell
           title="test"
           value="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"
         />
-      </uv-cell-group>
+      </lz-cell-group>
     </demoBlock>
     <demoBlock title="字体大小">
-      <uv-cell
+      <lz-cell
         size="16"
         title="test"
         value="内容"
       />
     </demoBlock>
     <demoBlock title="添加图标">
-      <uv-cell
+      <lz-cell
         icon="add"
         icon-color="#4fc0a7"
         size="16"
@@ -39,36 +39,36 @@
       />
     </demoBlock>
     <demoBlock title="显示箭头">
-      <uv-cell-group card>
-        <uv-cell
+      <lz-cell-group card>
+        <lz-cell
           arrow
           title="test"
           value="内容"
         />
-        <uv-cell
+        <lz-cell
           arrow
           arrow-direction="down"
           title="test"
           value="内容"
         />
-      </uv-cell-group>
+      </lz-cell-group>
     </demoBlock>
     <demoBlock title="使用插槽">
-      <uv-cell>
+      <lz-cell>
         <template #title>
           自定义title
         </template>
         <template #value>
           自定义value
         </template>
-      </uv-cell>
+      </lz-cell>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvCell, uvCellGroup } from 'uv-ui'
+import { uvCell, uvCellGroup } from 'lz-ui'
 
 </script>
 

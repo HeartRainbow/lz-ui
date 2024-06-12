@@ -19,7 +19,7 @@ onMounted(()=>{
 
 ```vue
 <template>
-  <uv-picker
+  <lz-picker
     round
     ref="pickerRef"
     v-model="value"
@@ -62,7 +62,7 @@ function change(value) {
 
 ```vue
 <template>
-<uv-picker
+<lz-picker
   round
   ref="pickerRef1"
   v-model="value1"
@@ -108,7 +108,7 @@ const list1 = ref(
 
 ```vue
 <template>
-<uv-picker
+<lz-picker
   round
   ref="pickerRef2"
   v-model="value2"
@@ -201,14 +201,14 @@ const list2 = [
 ## css 变量
 
 ```css
-  --uv-picker-title-btn-font-size: 14px;
-  --uv-picker-title-font-size: 16px;
-  --uv-picker-title-font-weight: 700;
-  --uv-picker-title-color: #323233;
-  --uv-picker-title-padding: 2px 0 12px;
-  --uv-picker-title-left-text-color: #969799;
-  --uv-picker-title-right-text-color: #576b95;
-  --uv-picker-content-height: 230px;
-  --uv-picker-content-wrapper-border-top-and-bottom: 1px solid #f7f8f9;
-  --uv-picker-content-wrapper-box-shadow: 0 0 5px #f7f8f9;
+  --lz-picker-title-btn-font-size: 14px;
+  --lz-picker-title-font-size: 16px;
+  --lz-picker-title-font-weight: 700;
+  --lz-picker-title-color: #323233;
+  --lz-picker-title-padding: 2px 0 12px;
+  --lz-picker-title-left-text-color: #969799;
+  --lz-picker-title-right-text-color: #576b95;
+  --lz-picker-content-height: 230px;
+  --lz-picker-content-wrapper-border-top-and-bottom: 1px solid #f7f8f9;
+  --lz-picker-content-wrapper-box-shadow: 0 0 5px #f7f8f9;
 ```

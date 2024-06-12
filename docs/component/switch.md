@@ -12,7 +12,7 @@ onMounted(()=>{
 ## 基本使用
 
 ```html
-<uv-switch v-model="test" />
+<lz-switch v-model="test" />
 ```
 
 ## 禁用状态
@@ -20,7 +20,7 @@ onMounted(()=>{
 通过 `disabled` 开启
 
 ```html
-<uv-switch v-model="test" disabled />
+<lz-switch v-model="test" disabled />
 ```
 
 ## 自定义尺寸
@@ -28,7 +28,7 @@ onMounted(()=>{
 通过 `size` 设置
 
 ```html
-<uv-switch v-model="test" :size="num" />
+<lz-switch v-model="test" :size="num" />
 ```
 
 ## 自定义活跃状态背景色和默认背景色
@@ -36,7 +36,7 @@ onMounted(()=>{
 通过 `activeColor` 和 `inactiveColor` 设置
 
 ```html
-<uv-switch v-model="test" active-color="#ee0a24" inactive-color="#88c1fa" />
+<lz-switch v-model="test" active-color="#ee0a24" inactive-color="#88c1fa" />
 ```
 
 ## 是否禁用
@@ -44,7 +44,7 @@ onMounted(()=>{
 通过 `disabled` 设置
 
 ```html
-<uv-search disabled />
+<lz-search disabled />
 ```
 
 ## 搜索框内容对齐
@@ -52,7 +52,7 @@ onMounted(()=>{
 通过 `inputAlign` 设置,默认为 `left`,可选 `center` `right`
 
 ```html
-<uv-search input-align="center" />
+<lz-search input-align="center" />
 ```
 
 ## 显示可清除图标
@@ -60,7 +60,7 @@ onMounted(()=>{
 通过 `clearable` 设置
 
 ```html
-<uv-search v-model="value" clearable />
+<lz-search v-model="value" clearable />
 ```
 
 ## props
@@ -80,13 +80,13 @@ onMounted(()=>{
 ## css 变量
 
 ```css
---uv-switch-width: calc(1.8em + 4px);
---uv-switch-height: calc(1em + 4px);
---uv-switch-background: #e2e3e7;
---uv-switch-on-background: #1989fa;
---uv-switch-transition-time: 0.3s;
---uv-switch-size: 26px;
---uv-switch-box-shadow: 0 3px 1px 0 rgb(0 0 0 / 5%);
---uv-switch-circle-size: 1em;
---uv-switch-circle-background: #ffffff;
+--lz-switch-width: calc(1.8em + 4px);
+--lz-switch-height: calc(1em + 4px);
+--lz-switch-background: #e2e3e7;
+--lz-switch-on-background: #1989fa;
+--lz-switch-transition-time: 0.3s;
+--lz-switch-size: 26px;
+--lz-switch-box-shadow: 0 3px 1px 0 rgb(0 0 0 / 5%);
+--lz-switch-circle-size: 1em;
+--lz-switch-circle-background: #ffffff;
 ```

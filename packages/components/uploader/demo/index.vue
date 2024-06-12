@@ -44,7 +44,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvUploader, Toast } from 'uv-ui'
+import { uvUploader, Toast } from 'lz-ui'
 import { ref } from 'vue'
 
 const picList = ref([
@@ -97,8 +97,8 @@ const onOversize = (file) => {
 
 <style lang="scss" scoped>
 .diy-uploader {
-  --uv-uploader-upload-size-width: 250px;
-  --uv-uploader-upload-size-height: 150px;
+  --lz-uploader-upload-size-width: 250px;
+  --lz-uploader-upload-size-height: 150px;
 }
 .diy-cover {
   position: absolute;

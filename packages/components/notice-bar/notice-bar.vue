@@ -1,15 +1,15 @@
 <template>
   <div
-    class="uv-notice-bar"
+    class="lz-notice-bar"
     :style="{backgroundColor:bgColor}"
     @click="handleClick"
   >
     <div
-      class="uv-notice-bar-icon"
+      class="lz-notice-bar-icon"
       v-if="showLeftIcon"
     >
       <slot name="icon">
-        <uv-icon
+        <lz-icon
           size="20"
           color="#ed6a0c"
           name="notice"
@@ -18,12 +18,12 @@
       </slot>
     </div>
     <div
-      class="uv-notice-bar-content"
+      class="lz-notice-bar-content"
 
       ref="contentRef"
     >
       <div
-        class="uv-notice-bar-content-text"
+        class="lz-notice-bar-content-text"
         :class="!scrollable?'ellipsis':''"
         :style="{
           color:color,
@@ -40,9 +40,9 @@
     </div>
     <div
       v-if="mode"
-      class="uv-notice-bar-content-right"
+      class="lz-notice-bar-content-right"
     >
-      <uv-icon
+      <lz-icon
         size="18"
         name="close"
         color="#ed6a0c"
@@ -50,7 +50,7 @@
         v-if="mode==='close'"
         @click="handleClose"
       />
-      <uv-icon
+      <lz-icon
         size="18"
         name="arrow-right"
         color="#ed6a0c"
@@ -166,35 +166,35 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-notice-bar-padding: 0 16px;
-  --uv-notice-bar-height: 40px;
-  --uv-notice-bar-line-height: 24px;
-  --uv-notice-bar-icon-padding: 10px;
-  --uv-notice-bar-content-text-font-size: 14px;
+  --lz-notice-bar-padding: 0 16px;
+  --lz-notice-bar-height: 40px;
+  --lz-notice-bar-line-height: 24px;
+  --lz-notice-bar-icon-padding: 10px;
+  --lz-notice-bar-content-text-font-size: 14px;
 }
-.uv-notice-bar {
+.lz-notice-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--uv-notice-bar-padding);
-  height: var(--uv-notice-bar-height);
-  line-height: var(--uv-notice-bar-line-height);
-  .uv-notice-bar-icon {
-    padding-right: var(--uv-notice-bar-icon-padding);
+  padding: var(--lz-notice-bar-padding);
+  height: var(--lz-notice-bar-height);
+  line-height: var(--lz-notice-bar-line-height);
+  .lz-notice-bar-icon {
+    padding-right: var(--lz-notice-bar-icon-padding);
   }
-  .uv-notice-bar-content-right {
-    padding-left: var(--uv-notice-bar-icon-padding);
+  .lz-notice-bar-content-right {
+    padding-left: var(--lz-notice-bar-icon-padding);
   }
-  .uv-notice-bar-content {
+  .lz-notice-bar-content {
     position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
     height: 100%;
     flex: 1;
-    .uv-notice-bar-content-text {
+    .lz-notice-bar-content-text {
       position: absolute;
-      font-size: var(--uv-notice-bar-content-text-font-size);
+      font-size: var(--lz-notice-bar-content-text-font-size);
       white-space: nowrap;
       transition-timing-function: linear;
     }

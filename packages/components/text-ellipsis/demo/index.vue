@@ -22,7 +22,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvTextEllipsis } from 'uv-ui'
+import { uvTextEllipsis } from 'lz-ui'
 
 </script>
 

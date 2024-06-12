@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { uvFloatingPanel, uvTab } from 'uv-ui'
+import { uvFloatingPanel, uvTab } from 'lz-ui'
 import { ref } from 'vue'
 
 const acitveIndex = ref(0)

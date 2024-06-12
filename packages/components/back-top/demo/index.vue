@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { uvBackTop, uvTab } from 'uv-ui'
+import { uvBackTop, uvTab } from 'lz-ui'
 import { ref } from 'vue'
 const acitveIndex = ref(0)
 const change = (idx) => {

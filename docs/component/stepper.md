@@ -12,7 +12,7 @@ onMounted(()=>{
 ## 基本使用
 
 ```html
-<uv-stepper :min="-5" v-model="value" />
+<lz-stepper :min="-5" v-model="value" />
 ```
 
 ## 限制为整数
@@ -20,7 +20,7 @@ onMounted(()=>{
 通过 `integer` 设置
 
 ```html
-<uv-stepper integer v-model="value11" />
+<lz-stepper integer v-model="value11" />
 ```
 
 ## 禁止输入框输入
@@ -28,7 +28,7 @@ onMounted(()=>{
 通过 `disable-input` 设置
 
 ```html
-<uv-stepper disable-input v-model="value22" />
+<lz-stepper disable-input v-model="value22" />
 ```
 
 ## 修改步长，每次+-3
@@ -36,7 +36,7 @@ onMounted(()=>{
 通过 `step` 设置
 
 ```html
-<uv-stepper :step="3" v-model="value2" />
+<lz-stepper :step="3" v-model="value2" />
 ```
 
 ## 修改尺寸
@@ -44,7 +44,7 @@ onMounted(()=>{
 通过 `size` 设置
 
 ```html
-<uv-stepper :size="34" input-width="40px" v-model="value2" />
+<lz-stepper :size="34" input-width="40px" v-model="value2" />
 ```
 
 ## 限制输入范围(-1,5)
@@ -52,7 +52,7 @@ onMounted(()=>{
 通过 `min` 和 `max` 设置
 
 ```html
-<uv-stepper :min="-1" :max="5" v-model="value1" />
+<lz-stepper :min="-1" :max="5" v-model="value1" />
 ```
 
 ## 显示可清除图标
@@ -60,7 +60,7 @@ onMounted(()=>{
 通过 `clearable` 设置
 
 ```html
-<uv-search v-model="value" clearable />
+<lz-search v-model="value" clearable />
 ```
 
 ## props
@@ -88,10 +88,10 @@ onMounted(()=>{
 ## css 变量
 
 ```css
---uv-stepper-gap: 2px;
---uv-stepper-input-color: #323233;
---uv-stepper-bg-color: #f2f3f5;
---uv-stepper-active-bg-color: #f7f8f9;
---uv-stepper-disabled-bg-color: #f7f8fa;
---uv-stepper-border-radius: 4px;
+--lz-stepper-gap: 2px;
+--lz-stepper-input-color: #323233;
+--lz-stepper-bg-color: #f2f3f5;
+--lz-stepper-active-bg-color: #f7f8f9;
+--lz-stepper-disabled-bg-color: #f7f8fa;
+--lz-stepper-border-radius: 4px;
 ```

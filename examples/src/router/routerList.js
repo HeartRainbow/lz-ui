@@ -4,11 +4,11 @@ export default [
     meta: {
       noShow: true
     },
-    redirect: '/uv-ui'
+    redirect: '/lz-ui'
   },
   {
-    path: '/uv-ui',
-    name: 'uv-ui',
+    path: '/lz-ui',
+    name: 'lz-ui',
     meta: {
       noShow: true,
       keepAlive: true

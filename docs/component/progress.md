@@ -62,15 +62,15 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-progress-height: 12px;
-  --uv-progress-content-border-radius: 100px;
-  --uv-progress-content-length-bg-color: #19be6b;
-  --uv-progress-transition-time: 0.3s;
-  --uv-progress-inset-num-color: #ffffff;
-  --uv-progress-inset-num-padding-right: 5px;
-  --uv-progress-inset-num-font-size: 12px;
-  --uv-progress-out-num-font-size: 14px;
-  --uv-progress-out-num-width: 40px;
-  --uv-progress-out-num-padding: 0 10px;
-  --uv-progress-out-num-color: #c8c9cc;
+  --lz-progress-height: 12px;
+  --lz-progress-content-border-radius: 100px;
+  --lz-progress-content-length-bg-color: #19be6b;
+  --lz-progress-transition-time: 0.3s;
+  --lz-progress-inset-num-color: #ffffff;
+  --lz-progress-inset-num-padding-right: 5px;
+  --lz-progress-inset-num-font-size: 12px;
+  --lz-progress-out-num-font-size: 14px;
+  --lz-progress-out-num-width: 40px;
+  --lz-progress-out-num-padding: 0 10px;
+  --lz-progress-out-num-color: #c8c9cc;
 ```

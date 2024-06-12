@@ -1,6 +1,6 @@
 <template>
   <div
-    class="uv-collapse"
+    class="lz-collapse"
   >
     <slot />
   </div>
@@ -66,7 +66,7 @@ export default {
 }
 </script>
 <style lang="scss">
-.uv-collapse {
+.lz-collapse {
   padding: 0 16px;
   background-color: #ffffff;
 }

@@ -1,14 +1,14 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-pagination
+      <lz-pagination
         v-model="activeIndex"
         @change="change"
         :total="100"
       />
     </demoBlock>
     <demoBlock title="替换翻页按钮">
-      <uv-pagination
+      <lz-pagination
         v-model="activeIndex1"
         prev-text="上一页"
         next-text="下一页"
@@ -20,7 +20,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvPagination } from 'uv-ui'
+import { uvPagination } from 'lz-ui'
 import { ref } from 'vue'
 
 const activeIndex = ref(1)

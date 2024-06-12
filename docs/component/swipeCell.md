@@ -12,7 +12,7 @@ onMounted(()=>{
 ## 基本使用
 
 ```html
-<uv-swipe-cell @cancle="cancleHandle" />
+<lz-swipe-cell @cancle="cancleHandle" />
 ```
 
 ##  左右操作按钮
@@ -20,7 +20,7 @@ onMounted(()=>{
 通过 `left` 开启左侧选项，通过 `right` 开启右侧选项，右侧默认开启
 
  ```html
-<uv-swipe-cell left />
+<lz-swipe-cell left />
  ```
 
 ## 自定义插槽
@@ -28,18 +28,18 @@ onMounted(()=>{
 左右插槽通过插槽名 `left` 和 `right` 设置, 内容插槽为默认
 
  ```html
-<uv-swipe-cell>
+<lz-swipe-cell>
   <template #right>
     <div class="deleteBtn">
       删除
     </div>
   </template>
-</uv-swipe-cell>
+</lz-swipe-cell>
 
-<uv-swipe-cell>
+<lz-swipe-cell>
   <div class="content">
     <div class="iamge">
-      <uv-icon
+      <lz-icon
         size="40"
         name="electronics"
       />
@@ -56,7 +56,7 @@ onMounted(()=>{
       </div>
     </div>
   </div>
-</uv-swipe-cell>
+</lz-swipe-cell>
  ```
 
  ## props
@@ -85,8 +85,8 @@ onMounted(()=>{
 ## css变量
 
 ```css
-    --uv-swipe-cell-content-bg-color: #ffffff;
-    --uv-swipe-cell-left-right-content-common-color: #ffffff;
-    --uv-swipe-cell-left-right-content-common-width: 60px;
-    --uv-swipe-cell-left-right-content-common-font-size: 14px;
+    --lz-swipe-cell-content-bg-color: #ffffff;
+    --lz-swipe-cell-left-right-content-common-color: #ffffff;
+    --lz-swipe-cell-left-right-content-common-width: 60px;
+    --lz-swipe-cell-left-right-content-common-font-size: 14px;
 ```

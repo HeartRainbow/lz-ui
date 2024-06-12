@@ -1,49 +1,49 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-swipe :autoplay="3000">
-        <uv-swipe-item>
+      <lz-swipe :autoplay="3000">
+        <lz-swipe-item>
           <div class="test color1">
             1
           </div>
-        </uv-swipe-item>
-        <uv-swipe-item>
+        </lz-swipe-item>
+        <lz-swipe-item>
           <div class="test color2">
             2
           </div>
-        </uv-swipe-item>
-        <uv-swipe-item>
+        </lz-swipe-item>
+        <lz-swipe-item>
           <div class="test color3">
             3
           </div>
-        </uv-swipe-item>
-      </uv-swipe>
+        </lz-swipe-item>
+      </lz-swipe>
     </demoBlock>
     <demoBlock title="关闭自动轮播">
-      <uv-swipe>
-        <uv-swipe-item>
+      <lz-swipe>
+        <lz-swipe-item>
           <div class="test color1">
             1
           </div>
-        </uv-swipe-item>
-        <uv-swipe-item>
+        </lz-swipe-item>
+        <lz-swipe-item>
           <div class="test color2">
             2
           </div>
-        </uv-swipe-item>
-        <uv-swipe-item>
+        </lz-swipe-item>
+        <lz-swipe-item>
           <div class="test color3">
             3
           </div>
-        </uv-swipe-item>
-      </uv-swipe>
+        </lz-swipe-item>
+      </lz-swipe>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvSwipe, uvSwipeItem } from 'uv-ui'
+import { uvSwipe, uvSwipeItem } from 'lz-ui'
 
 </script>
 

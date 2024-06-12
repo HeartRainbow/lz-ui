@@ -1,6 +1,6 @@
 <template>
   <div
-    class="uv-form"
+    class="lz-form"
   >
     <uvCellGroup
       :card="card"

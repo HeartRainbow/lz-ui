@@ -1,13 +1,13 @@
 <template>
   <div
-    class="uv-switch"
-    :class="[modelValue?'uv-switch-on':'',disabled?'uv-switch-disabled':'']"
+    class="lz-switch"
+    :class="[modelValue?'lz-switch-on':'',disabled?'lz-switch-disabled':'']"
     :style="uvSwitchStyle"
     @click="changeStatus"
   >
     <div
-      class="uv-switch-circle"
-      :class="modelValue?' uv-switch-circle-on':''"
+      class="lz-switch-circle"
+      :class="modelValue?' lz-switch-circle-on':''"
     />
   </div>
 </template>
@@ -58,45 +58,45 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-switch-width: calc(1.8em + 4px);
-  --uv-switch-height: calc(1em + 4px);
-  --uv-switch-background: #e2e3e7;
-  --uv-switch-on-background: #1989fa;
-  --uv-switch-transition-time: 0.3s;
-  --uv-switch-size: 26px;
-  --uv-switch-box-shadow: 0 3px 1px 0 rgb(0 0 0 / 5%);
-  --uv-switch-circle-size: 1em;
-  --uv-switch-circle-background: #ffffff;
+  --lz-switch-width: calc(1.8em + 4px);
+  --lz-switch-height: calc(1em + 4px);
+  --lz-switch-background: #e2e3e7;
+  --lz-switch-on-background: #1989fa;
+  --lz-switch-transition-time: 0.3s;
+  --lz-switch-size: 26px;
+  --lz-switch-box-shadow: 0 3px 1px 0 rgb(0 0 0 / 5%);
+  --lz-switch-circle-size: 1em;
+  --lz-switch-circle-background: #ffffff;
 }
-.uv-switch {
+.lz-switch {
   position: relative;
-  width: var(--uv-switch-width);
-  height: var(--uv-switch-height);
-  font-size: var(--uv-switch-size);
-  border-radius: var(--uv-switch-circle-size);
-  background-color: var(--uv-switch-background);
-  transition: background-color var(--uv-switch-transition-time);
+  width: var(--lz-switch-width);
+  height: var(--lz-switch-height);
+  font-size: var(--lz-switch-size);
+  border-radius: var(--lz-switch-circle-size);
+  background-color: var(--lz-switch-background);
+  transition: background-color var(--lz-switch-transition-time);
   box-sizing: content-box;
-  .uv-switch-circle {
+  .lz-switch-circle {
     position: absolute;
     top: 2px;
     left: 2px;
-    width: var(--uv-switch-circle-size);
-    height: var(--uv-switch-circle-size);
+    width: var(--lz-switch-circle-size);
+    height: var(--lz-switch-circle-size);
     font-size: inherit;
     border-radius: 100%;
-    background-color: var(--uv-switch-circle-background);
-    box-shadow: var(--uv-switch-box-shadow);
-    transition: transform var(--uv-switch-transition-time);
+    background-color: var(--lz-switch-circle-background);
+    box-shadow: var(--lz-switch-box-shadow);
+    transition: transform var(--lz-switch-transition-time);
   }
-  .uv-switch-circle-on {
-    transform: translate(calc(var(--uv-switch-width) - var(--uv-switch-circle-size) - 4px));
+  .lz-switch-circle-on {
+    transform: translate(calc(var(--lz-switch-width) - var(--lz-switch-circle-size) - 4px));
   }
 }
-.uv-switch-on {
-  background-color: var(--uv-switch-on-background);
+.lz-switch-on {
+  background-color: var(--lz-switch-on-background);
 }
-.uv-switch-disabled {
+.lz-switch-disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }

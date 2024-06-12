@@ -6,22 +6,22 @@
   />
   <div
     ref="selectRef"
-    class="uv-select"
-    :class="isActive?'uv-select-active':''"
+    class="lz-select"
+    :class="isActive?'lz-select-active':''"
     @click="openShow"
   >
     <div
       v-if="multiple"
-      class="uv-select-multiple"
+      class="lz-select-multiple"
     >
       <div
-        class="uv-select-multiple-item"
+        class="lz-select-multiple-item"
         v-if="multipleSelectArr.length>0"
       >
-        <div class="uv-select-multiple-item-text">
+        <div class="lz-select-multiple-item-text">
           {{ multipleSelectArr[0] }}
         </div>
-        <uv-icon
+        <lz-icon
           size="16"
           name="error"
           color="#f56c6c"
@@ -29,13 +29,13 @@
         />
       </div>
       <div
-        class="uv-select-multiple-placeholder"
+        class="lz-select-multiple-placeholder"
         v-else
       >
         {{ placeholder }}
       </div>
       <div
-        class="uv-select-multiple-item"
+        class="lz-select-multiple-item"
         v-if="multipleSelectArr.length>1"
       >
         +{{ multipleSelectArr.length-1 }}
@@ -43,7 +43,7 @@
     </div>
     <div
       v-else
-      class="uv-select-input"
+      class="lz-select-input"
     >
       <input
         :value="modelValue"
@@ -53,10 +53,10 @@
       >
     </div>
     <div
-      class="uv-select-arrow"
-      :class="isActive?'uv-select-arrow-up':''"
+      class="lz-select-arrow"
+      :class="isActive?'lz-select-arrow-up':''"
     >
-      <uv-icon
+      <lz-icon
         size="16"
         name="arrow-up-bold"
         color="#aaadb4"
@@ -65,31 +65,31 @@
     <Transition :name="contentPositon==='bottom'?'select-bottom':'select-top'">
       <div
         v-show="isActive"
-        class="uv-select-box"
-        :class="contentPositon==='bottom'?'uv-select-box-show-bottom':'uv-select-box-show-top'"
+        class="lz-select-box"
+        :class="contentPositon==='bottom'?'lz-select-box-show-bottom':'lz-select-box-show-top'"
       >
-        <div class="uv-select-box-arrow" />
+        <div class="lz-select-box-arrow" />
         <div
-          class="uv-select-box-content"
+          class="lz-select-box-content"
           v-if="filterList && filterList.length>0"
         >
           <div
-            class="uv-select-box-item"
+            class="lz-select-box-item"
             :style="{backgroundColor:itemBgColor}"
             v-for="(item,index) in filterList"
             :key="keyName?item[keyName]:index"
             @click.stop="itemClick(item)"
-            :class="multiple?modelValue.includes(item[keyName])?'uv-select-box-item-select':'' : item[keyName]===modelValue?'uv-select-box-item-select':''"
+            :class="multiple?modelValue.includes(item[keyName])?'lz-select-box-item-select':'' : item[keyName]===modelValue?'lz-select-box-item-select':''"
           >
             {{ item[keyName] }}
           </div>
         </div>
         <div
           v-else
-          class="uv-select-box-content-empty"
+          class="lz-select-box-content-empty"
         >
           <slot name="empty">
-            <div class="uv-select-box-content-empty-default">
+            <div class="lz-select-box-content-empty-default">
               无数据
             </div>
           </slot>
@@ -200,159 +200,159 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-select-height: 36px;
-  --uv-select-width: 200px;
-  --uv-select-border: 1px solid #dcdfe6;
-  --uv-select-bg-color: #ffffff;
-  --uv-select-border-radius: 4px;
-  --uv-select-padding: 0 10px 0 0;
-  --uv-select-active-border: 1px solid #409eff;
-  --uv-select-placeholder-color: #d3c9d6;
-  --uv-select-placeholder-font-size: 14px;
-  --uv-select-multiple-item-bg-color: #f0f2f5;
-  --uv-select-multiple-item-color: #909399;
-  --uv-select-input-color: #606266;
-  --uv-select-input-font-size: 14px;
-  --uv-select-box-box-shadow: 0 0 12px rgb(0 0 0 / 12%);
-  --uv-select-box-bg-color: #ffffff;
-  --uv-select-box-border-radius: 4px;
-  --uv-select-box-height: 150px;
-  --uv-select-box-z-index: 999;
-  --uv-select-box-content-padding-top: 10px;
-  --uv-select-box-item-margin-bottom: 10px;
-  --uv-select-box-item-padding: 10px 20px;
-  --uv-select-box-item-font-size: 14px;
-  --uv-select-box-item-color: #606266;
-  --uv-select-box-item-select-color: #409eff;
-  --uv-select-box-item-select-font-weight: 700;
-  --uv-select-box-content-empty-default-color: #606266;
-  --uv-select-box-content-empty-default-font-size: 14px;
+  --lz-select-height: 36px;
+  --lz-select-width: 200px;
+  --lz-select-border: 1px solid #dcdfe6;
+  --lz-select-bg-color: #ffffff;
+  --lz-select-border-radius: 4px;
+  --lz-select-padding: 0 10px 0 0;
+  --lz-select-active-border: 1px solid #409eff;
+  --lz-select-placeholder-color: #d3c9d6;
+  --lz-select-placeholder-font-size: 14px;
+  --lz-select-multiple-item-bg-color: #f0f2f5;
+  --lz-select-multiple-item-color: #909399;
+  --lz-select-input-color: #606266;
+  --lz-select-input-font-size: 14px;
+  --lz-select-box-box-shadow: 0 0 12px rgb(0 0 0 / 12%);
+  --lz-select-box-bg-color: #ffffff;
+  --lz-select-box-border-radius: 4px;
+  --lz-select-box-height: 150px;
+  --lz-select-box-z-index: 999;
+  --lz-select-box-content-padding-top: 10px;
+  --lz-select-box-item-margin-bottom: 10px;
+  --lz-select-box-item-padding: 10px 20px;
+  --lz-select-box-item-font-size: 14px;
+  --lz-select-box-item-color: #606266;
+  --lz-select-box-item-select-color: #409eff;
+  --lz-select-box-item-select-font-weight: 700;
+  --lz-select-box-content-empty-default-color: #606266;
+  --lz-select-box-content-empty-default-font-size: 14px;
 }
-.uv-select {
+.lz-select {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--uv-select-padding);
-  width: var(--uv-select-width);
-  height: var(--uv-select-height);
-  border: var(--uv-select-border);
-  border-radius: var(--uv-select-border-radius);
-  background-color: var(--uv-select-bg-color);
+  padding: var(--lz-select-padding);
+  width: var(--lz-select-width);
+  height: var(--lz-select-height);
+  border: var(--lz-select-border);
+  border-radius: var(--lz-select-border-radius);
+  background-color: var(--lz-select-bg-color);
   transition: all 0.3s;
-  .uv-select-multiple {
+  .lz-select-multiple {
     display: flex;
     align-items: center;
     padding-left: 5px;
-    .uv-select-multiple-placeholder {
+    .lz-select-multiple-placeholder {
       padding-left: 8px;
-      font-size: var(--uv-select-placeholder-font-size);
-      color: var(--uv-select-placeholder-color);
+      font-size: var(--lz-select-placeholder-font-size);
+      color: var(--lz-select-placeholder-color);
     }
-    .uv-select-multiple-item {
+    .lz-select-multiple-item {
       display: flex;
       align-items: center;
       margin-right: 5px;
       padding: 5px;
       font-size: 12px;
       border-radius: 4px;
-      color: var(--uv-select-multiple-item-color);
-      background-color: var(--uv-select-multiple-item-bg-color);
-      .uv-select-multiple-item-text {
+      color: var(--lz-select-multiple-item-color);
+      background-color: var(--lz-select-multiple-item-bg-color);
+      .lz-select-multiple-item-text {
         margin-right: 4px;
       }
     }
   }
-  .uv-select-input {
+  .lz-select-input {
     flex: 1;
     input {
       padding: 0 8px;
       width: 100%;
       height: 100%;
-      font-size: var(--uv-select-input-font-size);
+      font-size: var(--lz-select-input-font-size);
       border: none;
       border-radius: 4px;
-      color: var(--uv-select-input-color);
-      background-color: var(--uv-select-bg-color);
+      color: var(--lz-select-input-color);
+      background-color: var(--lz-select-bg-color);
       outline: none;
     }
     input::placeholder {
-      font-size: var(--uv-select-placeholder-font-size);
-      color: var(--uv-select-placeholder-color);
+      font-size: var(--lz-select-placeholder-font-size);
+      color: var(--lz-select-placeholder-color);
     }
     input:disabled {
-      font-size: var(--uv-select-placeholder-font-size);
-      color: var(--uv-select-input-color);
+      font-size: var(--lz-select-placeholder-font-size);
+      color: var(--lz-select-input-color);
     }
   }
-  .uv-select-arrow {
+  .lz-select-arrow {
     display: flex;
     align-items: center;
     height: 100%;
     transition: all 0.4s;
     transform: rotate(180deg);
   }
-  .uv-select-arrow-up {
+  .lz-select-arrow-up {
     transform: rotate(0);
   }
-  .uv-select-box {
+  .lz-select-box {
     position: absolute;
     right: 0;
     left: 0;
-    z-index: var(--uv-select-box-z-index);
-    height: var(--uv-select-box-height);
-    border-radius: var(--uv-select-box-border-radius);
-    background-color: var(--uv-select-box-bg-color);
-    box-shadow: var(--uv-select-box-box-shadow);
-    .uv-select-box-content {
+    z-index: var(--lz-select-box-z-index);
+    height: var(--lz-select-box-height);
+    border-radius: var(--lz-select-box-border-radius);
+    background-color: var(--lz-select-box-bg-color);
+    box-shadow: var(--lz-select-box-box-shadow);
+    .lz-select-box-content {
       overflow: auto;
-      padding-top: var(--uv-select-box-content-padding-top);
+      padding-top: var(--lz-select-box-content-padding-top);
       height: 100%;
-      .uv-select-box-item {
-        margin-bottom: var(--uv-select-box-item-margin-bottom);
-        padding: var(--uv-select-box-item-padding);
-        font-size: var(--uv-select-box-item-font-size);
-        color: var(--uv-select-box-item-color);
+      .lz-select-box-item {
+        margin-bottom: var(--lz-select-box-item-margin-bottom);
+        padding: var(--lz-select-box-item-padding);
+        font-size: var(--lz-select-box-item-font-size);
+        color: var(--lz-select-box-item-color);
       }
-      .uv-select-box-item-select {
-        font-weight: var(--uv-select-box-item-select-font-weight);
-        color: var(--uv-select-box-item-select-color);
+      .lz-select-box-item-select {
+        font-weight: var(--lz-select-box-item-select-font-weight);
+        color: var(--lz-select-box-item-select-color);
       }
     }
-    .uv-select-box-content-empty {
+    .lz-select-box-content-empty {
       height: 100%;
-      .uv-select-box-content-empty-default {
+      .lz-select-box-content-empty-default {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
-        font-size: var(--uv-select-box-content-empty-default-font-size);
-        color: var(--uv-select-box-content-empty-default-color);
+        font-size: var(--lz-select-box-content-empty-default-font-size);
+        color: var(--lz-select-box-content-empty-default-color);
       }
     }
   }
-  .uv-select-box-show-bottom {
-    top: calc(var(--uv-select-height) + 10px);
-    .uv-select-box-arrow {
+  .lz-select-box-show-bottom {
+    top: calc(var(--lz-select-height) + 10px);
+    .lz-select-box-arrow {
       position: absolute;
       top: -12px;
       left: 50%;
-      z-index: var(--uv-select-box-z-index);
+      z-index: var(--lz-select-box-z-index);
       border-top: 6px solid transparent;
       border-right: 6px solid transparent;
-      border-bottom: 6px solid var(--uv-select-box-bg-color);
+      border-bottom: 6px solid var(--lz-select-box-bg-color);
       border-left: 6px solid transparent;
       transform: translateX(-50%);
     }
   }
-  .uv-select-box-show-top {
-    bottom: calc(var(--uv-select-height) + 10px);
-    .uv-select-box-arrow {
+  .lz-select-box-show-top {
+    bottom: calc(var(--lz-select-height) + 10px);
+    .lz-select-box-arrow {
       position: absolute;
       bottom: -12px;
       left: 50%;
-      z-index: var(--uv-select-box-z-index);
-      border-top: 6px solid var(--uv-select-box-bg-color);
+      z-index: var(--lz-select-box-z-index);
+      border-top: 6px solid var(--lz-select-box-bg-color);
       border-right: 6px solid transparent;
       border-bottom: 6px solid transparent;
       border-left: 6px solid transparent;
@@ -360,8 +360,8 @@ export default {
     }
   }
 }
-.uv-select-active {
-  border: var(--uv-select-active-border);
+.lz-select-active {
+  border: var(--lz-select-active-border);
 }
 .select-bottom-enter-active,
 .select-bottom-leave-active {

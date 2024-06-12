@@ -1,8 +1,8 @@
 <template>
   <div
-    class="uv-steps"
+    class="lz-steps"
   >
-    <div class="uv-steps-content">
+    <div class="lz-steps-content">
       <slot />
     </div>
   </div>
@@ -70,13 +70,13 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-steps-padding: 10px;
-  --uv-steps-bg-color: #ffffff;
+  --lz-steps-padding: 10px;
+  --lz-steps-bg-color: #ffffff;
 }
-.uv-steps {
-  padding: var(--uv-steps-padding);
-  background-color: var(--uv-steps-bg-color);
-  .uv-steps-content {
+.lz-steps {
+  padding: var(--lz-steps-padding);
+  background-color: var(--lz-steps-bg-color);
+  .lz-steps-content {
     position: relative;
     display: flex;
   }

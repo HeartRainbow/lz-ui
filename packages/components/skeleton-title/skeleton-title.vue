@@ -1,5 +1,5 @@
 <template>
-  <div class="uv-skeleton-title" :class="round?'uv-skeleton-title-round':''" :style="{width:titleWidth}" />
+  <div class="lz-skeleton-title" :class="round?'lz-skeleton-title-round':''" :style="{width:titleWidth}" />
 </template>
 
 <script setup>
@@ -22,16 +22,16 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-skeleton-title-height: 16px;
-  --uv-skeleton-title-bg-color: #f2f3f5;
-  --uv-skeleton-title-margin-bottom: 12px;
+  --lz-skeleton-title-height: 16px;
+  --lz-skeleton-title-bg-color: #f2f3f5;
+  --lz-skeleton-title-margin-bottom: 12px;
 }
-.uv-skeleton-title {
-  margin-bottom: var(--uv-skeleton-title-margin-bottom);
-  height: var(--uv-skeleton-title-height);
-  background-color: var(--uv-skeleton-title-bg-color);
+.lz-skeleton-title {
+  margin-bottom: var(--lz-skeleton-title-margin-bottom);
+  height: var(--lz-skeleton-title-height);
+  background-color: var(--lz-skeleton-title-bg-color);
   &-round {
-    border-radius: var(--uv-skeleton-border-radius);
+    border-radius: var(--lz-skeleton-border-radius);
   }
 }
 

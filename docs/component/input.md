@@ -12,7 +12,7 @@ onMounted(()=>{
 ## 基本使用
 
 ```html
-<uv-input v-model="value"/>
+<lz-input v-model="value"/>
 ```
 
 ##  是否开启边框
@@ -20,7 +20,7 @@ onMounted(()=>{
 通过 `border` 设置
 
 ```html
-<uv-input border v-model="value"/>
+<lz-input border v-model="value"/>
 ```
 
 ##  禁用输入框
@@ -28,9 +28,9 @@ onMounted(()=>{
 通过 `readonly` 设置只读，通过  `disabled` 设置禁止填写
 
  ```html
-<uv-input readonly v-model="value2"/>
+<lz-input readonly v-model="value2"/>
 
-<uv-input disabled v-model="value1"/>
+<lz-input disabled v-model="value1"/>
  ```
 
 ##  是否显示关闭按钮
@@ -38,7 +38,7 @@ onMounted(()=>{
 通过 `clearable` 设置
 
  ```html
-<uv-input clearable v-model="value1"/>
+<lz-input clearable v-model="value1"/>
  ```
 
 ##  自定义右边内容
@@ -46,13 +46,13 @@ onMounted(()=>{
 通过插槽名称 `right` 设置
 
  ```html
-<uv-input v-model="value1">
+<lz-input v-model="value1">
   <template #right>
     <div class="diy">
       m
     </div>
   </template>
-</uv-input>
+</lz-input>
  ```
 
 ##  格式化
@@ -61,13 +61,13 @@ onMounted(()=>{
 
  ```vue
  <template>
-    <uv-input
+    <lz-input
       :formatter="formatterF"
       format-trigger="change"
       v-model="value3"
     />
 
-    <uv-input
+    <lz-input
       :formatter="formatterF"
       format-trigger="blur"
       v-model="value4"
@@ -86,9 +86,9 @@ const formatterF = (test) => {
 通过 `type` 设置,有 `password` `number` `textarea`
 
  ```html
-<uv-input type="password" v-model="value5"/>
+<lz-input type="password" v-model="value5"/>
 
-<uv-input type="number" v-model="value5"/>
+<lz-input type="number" v-model="value5"/>
  ```
 
 ##  输入框内容对齐方式
@@ -96,9 +96,9 @@ const formatterF = (test) => {
 通过 `inputAlign` 设置,有 `left` `center` `right`
 
  ```html
-<uv-input input-align="center" v-model="value5"/>
+<lz-input input-align="center" v-model="value5"/>
 
-<uv-input input-align="right" v-model="value5"/>
+<lz-input input-align="right" v-model="value5"/>
  ```
 
 ##  自动高度
@@ -106,9 +106,9 @@ const formatterF = (test) => {
 通过 `autosize` 设置,只对类型为 `textarea` 有效,可传入对象,如 { maxHeight: 100, minHeight: 50 }，单位为px
 
  ```html
-<uv-input type="textarea" autosize v-model="value6"/>
+<lz-input type="textarea" autosize v-model="value6"/>
 
-<uv-input type="textarea" :autosize="{maxHeight:100,minHeight:50}" v-model="value7"/>
+<lz-input type="textarea" :autosize="{maxHeight:100,minHeight:50}" v-model="value7"/>
  ```
 
 ##  显示字数统计
@@ -116,7 +116,7 @@ const formatterF = (test) => {
 通过 `showWordLimit` 设置,需要传入 `maxlength` 属性设置最大字数限制
 
  ```html
-<uv-input
+<lz-input
   type="textarea"
   show-word-limit
   :maxlength="90"
@@ -153,15 +153,15 @@ const formatterF = (test) => {
 
 ## css变量
 ```css
-  --uv-input-wrap-font-size: 14px;
-  --uv-input-wrap-padding: 0 10px;
-  --uv-input-word-limit-font-size: 12px;
-  --uv-input-word-limit-padding-bottom: 5px;
-  --uv-input-word-limit-color: #646566;
-  --uv-input-padding: 5px 0;
-  --uv-input-border-radius: 4px;
-  --uv-input-bg-color: #ffffff;
-  --uv-input-height: 32px;
-  --uv-input-placeholder-color: #d3c9d6;
-  --uv-input-disabled-color: #d3c9d6;
+  --lz-input-wrap-font-size: 14px;
+  --lz-input-wrap-padding: 0 10px;
+  --lz-input-word-limit-font-size: 12px;
+  --lz-input-word-limit-padding-bottom: 5px;
+  --lz-input-word-limit-color: #646566;
+  --lz-input-padding: 5px 0;
+  --lz-input-border-radius: 4px;
+  --lz-input-bg-color: #ffffff;
+  --lz-input-height: 32px;
+  --lz-input-placeholder-color: #d3c9d6;
+  --lz-input-disabled-color: #d3c9d6;
 ```

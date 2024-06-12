@@ -1,7 +1,7 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-select
+      <lz-select
         :list="list"
         key-name="name"
         placeholder="请选择"
@@ -9,7 +9,7 @@
       />
     </demoBlock>
     <demoBlock title="是否可搜索">
-      <uv-select
+      <lz-select
         v-model="test2"
         placeholder="请选择"
         item-bg-color="#f5f7fa"
@@ -19,11 +19,11 @@
       />
     </demoBlock>
     <demoBlock title="空数据">
-      <uv-select
+      <lz-select
         v-model="test2"
         placeholder="请选择"
       />
-      <uv-select
+      <lz-select
         v-model="test2"
         placeholder="请选择"
       >
@@ -32,10 +32,10 @@
             测试空数据
           </div>
         </template>
-      </uv-select>
+      </lz-select>
     </demoBlock>
     <demoBlock title="开启多选">
-      <uv-select
+      <lz-select
         :list="list"
         key-name="name"
         v-model="test3"
@@ -48,7 +48,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvSelect } from 'uv-ui'
+import { uvSelect } from 'lz-ui'
 import { ref } from 'vue'
 
 const test1 = ref('')

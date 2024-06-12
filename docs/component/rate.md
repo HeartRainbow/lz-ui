@@ -14,7 +14,7 @@ onMounted(()=>{
 通过 `v-model` 绑定数量
 
 ```html
-<uv-rate v-model="test" />
+<lz-rate v-model="test" />
 ```
 
 ##  自定义图标
@@ -22,7 +22,7 @@ onMounted(()=>{
 通过 `icon` 属性设置，图标在图标库中选择
 
  ```html
-<uv-rate v-model="test1" icon="love-fill"/>
+<lz-rate v-model="test1" icon="love-fill"/>
  ```
 
 ##  自定义样式
@@ -31,7 +31,7 @@ onMounted(()=>{
 通过 `gutter` 属性设置每个图标的间隔，通过 `size` 属性设置大小
 
  ```html
-<uv-rate v-model="test1" icon="love-fill" color="#ee0a24"/>
+<lz-rate v-model="test1" icon="love-fill" color="#ee0a24"/>
  ```
 
 ##  自定义数量
@@ -39,7 +39,7 @@ onMounted(()=>{
 通过 `count` 设置
 
  ```html
-<uv-rate v-model="test1" :count="10"/>
+<lz-rate v-model="test1" :count="10"/>
  ```
 
 ##  只读状态
@@ -47,7 +47,7 @@ onMounted(()=>{
 通过 `readonly` 设置，只能看，不能修改
 
  ```html
-<uv-rate v-model="test1" readonly :count="10"/>
+<lz-rate v-model="test1" readonly :count="10"/>
  ```
 
 ## props

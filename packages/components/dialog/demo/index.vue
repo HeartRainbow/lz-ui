@@ -1,19 +1,19 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-button
+      <lz-button
         type="primary"
         @click="openDialog"
       >
         打开dialog
-      </uv-button>
+      </lz-button>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { showDialog, uvButton } from 'uv-ui'
+import { showDialog, uvButton } from 'lz-ui'
 
 const openDialog = () => {
   showDialog({

@@ -14,7 +14,7 @@ onMounted(()=>{
 通过 `content` 属性来设置水印的文字。
 
 ```html
-<uvWaterMark content="uv-ui" />
+<uvWaterMark content="lz-ui" />
 ```
 
 ## 图片水印
@@ -74,5 +74,5 @@ onMounted(()=>{
 ## css变量
 
 ```css
-    --uv-water-mark-z-index: 100;
+    --lz-water-mark-z-index: 100;
 ```

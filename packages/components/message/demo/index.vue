@@ -1,21 +1,21 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-button @click="showMessage">
+      <lz-button @click="showMessage">
         点击显示
-      </uv-button>
+      </lz-button>
     </demoBlock>
     <demoBlock title="修改持续时间">
-      <uv-button @click="showMessage1">
+      <lz-button @click="showMessage1">
         点击显示
-      </uv-button>
+      </lz-button>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { Message, uvButton } from 'uv-ui'
+import { Message, uvButton } from 'lz-ui'
 const showMessage = () => {
   Message({
     content: 'test'

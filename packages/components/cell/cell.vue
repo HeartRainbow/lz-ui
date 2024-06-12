@@ -1,33 +1,33 @@
 <template>
   <div
-    class="uv-cell"
+    class="lz-cell"
 
     :style="{backgroundColor:bgColor,fontSize:size+'px'}"
   >
     <div
-      class="uv-cell-content"
-      :class="[clickable?'uv-cell-clickable':'',labelPosition==='top'?'uv-cell-content-top':'',labelPosition==='right'?'uv-cell-content-right':'']"
+      class="lz-cell-content"
+      :class="[clickable?'lz-cell-clickable':'',labelPosition==='top'?'lz-cell-content-top':'',labelPosition==='right'?'lz-cell-content-right':'']"
     >
       <div
-        class="uv-cell-content-title"
-        :class="required?'uv-cell-content-title-required':''"
+        class="lz-cell-content-title"
+        :class="required?'lz-cell-content-title-required':''"
         :style="{width:labelWidth+'px'}"
       >
         <slot name="title">
           <span
             v-if="icon!==''"
             style="margin-right: 5px;"
-          ><uv-icon
+          ><lz-icon
             :name="icon"
             :color="iconColor"
             :size="iconSize"
           /></span> {{ title }}
         </slot>
       </div>
-      <div class="uv-cell-content-value-wrap">
-        <div class="uv-cell-content-value">
+      <div class="lz-cell-content-value-wrap">
+        <div class="lz-cell-content-value">
           <div
-            class="uv-cell-content-value-slot"
+            class="lz-cell-content-value-slot"
             :style="{paddingRight:arrow? '20px':''}"
           >
             <slot name="value">
@@ -35,9 +35,9 @@
             </slot>
           </div>
           <span
-            class="uv-cell-arrow"
+            class="lz-cell-arrow"
             v-if="arrow"
-          ><uv-icon
+          ><lz-icon
             :name="'arrow-'+arrowDirection"
             color="#9699a6"
           /></span>
@@ -45,7 +45,7 @@
         <Transition name="cell-tips">
           <div
             v-if="tips"
-            class="uv-cell-tips"
+            class="lz-cell-tips"
           >
             <slot name="tips">
               {{ errorMsg }}
@@ -129,53 +129,53 @@ export default {
 </script>
 <style lang="scss">
 :root {
-  --uv-cell-after-right: 15px;
-  --uv-cell-after-left: 15px;
-  --uv-cell-after-border-bottom: 1px solid #f5f6f7;
-  --uv-cell-clickable-bg-color: #f2f3f5;
-  --uv-cell-content-padding: 10px 16px;
-  --uv-cell-content-title-margin-right: 20px;
-  --uv-cell-content-value-color: #969799;
-  --uv-cell-content-value-slot-text-align: right;
-  --uv-cell-content-justify-content: space-between;
-  --uv-cell-tips-color: #ee0a24;
-  --uv-cell-tips-font-size: 13px;
+  --lz-cell-after-right: 15px;
+  --lz-cell-after-left: 15px;
+  --lz-cell-after-border-bottom: 1px solid #f5f6f7;
+  --lz-cell-clickable-bg-color: #f2f3f5;
+  --lz-cell-content-padding: 10px 16px;
+  --lz-cell-content-title-margin-right: 20px;
+  --lz-cell-content-value-color: #969799;
+  --lz-cell-content-value-slot-text-align: right;
+  --lz-cell-content-justify-content: space-between;
+  --lz-cell-tips-color: #ee0a24;
+  --lz-cell-tips-font-size: 13px;
 }
-.uv-cell {
+.lz-cell {
   position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   &::after {
     position: absolute;
-    right: var(--uv-cell-after-right);
+    right: var(--lz-cell-after-right);
     bottom: 0;
-    left: var(--uv-cell-after-left);
-    border-bottom: var(--uv-cell-after-border-bottom);
+    left: var(--lz-cell-after-left);
+    border-bottom: var(--lz-cell-after-border-bottom);
     content: "";
     pointer-events: none;
   }
   &:last-child::after {
     display: none;
   }
-  .uv-cell-clickable {
+  .lz-cell-clickable {
     &:active {
-      background-color: var(--uv-cell-clickable-bg-color);
+      background-color: var(--lz-cell-clickable-bg-color);
     }
   }
-  .uv-cell-content {
+  .lz-cell-content {
     display: flex;
-    justify-content: var(--uv-cell-content-justify-content);
+    justify-content: var(--lz-cell-content-justify-content);
 
     // align-items: center;
-    padding: var(--uv-cell-content-padding);
-    .uv-cell-content-title {
-      margin-right: var(--uv-cell-content-title-margin-right);
+    padding: var(--lz-cell-content-padding);
+    .lz-cell-content-title {
+      margin-right: var(--lz-cell-content-title-margin-right);
       font-size: 14px;
       white-space: nowrap;
       line-height: 24px;
     }
-    .uv-cell-content-title-required {
+    .lz-cell-content-title-required {
       position: relative;
       &::before {
         position: absolute;
@@ -185,31 +185,31 @@ export default {
         content: "*";
       }
     }
-    .uv-cell-content-value-wrap {
+    .lz-cell-content-value-wrap {
       display: flex;
       justify-content: center;
       width: 100%;
       flex-direction: column;
-      .uv-cell-content-value {
+      .lz-cell-content-value {
         position: relative;
         display: flex;
         white-space: wrap;
-        color: var(--uv-cell-content-value-color);
+        color: var(--lz-cell-content-value-color);
         line-height: 24px;
-        .uv-cell-content-value-slot {
+        .lz-cell-content-value-slot {
           flex: 1;
-          text-align: var(--uv-cell-content-value-slot-text-align);
+          text-align: var(--lz-cell-content-value-slot-text-align);
         }
-        .uv-cell-arrow {
+        .lz-cell-arrow {
           position: absolute;
           right: 0;
         }
       }
-      .uv-cell-tips {
+      .lz-cell-tips {
         position: relative;
         display: flex;
-        font-size: var(--uv-cell-tips-font-size);
-        color: var(--uv-cell-tips-color);
+        font-size: var(--lz-cell-tips-font-size);
+        color: var(--lz-cell-tips-color);
         line-height: 24px;
       }
       .cell-tips-enter-active,
@@ -223,11 +223,11 @@ export default {
       }
     }
   }
-  .uv-cell-content-top {
+  .lz-cell-content-top {
     flex-direction: column;
     align-items: flex-start;
   }
-  .uv-cell-content-right {
+  .lz-cell-content-right {
     text-align: right;
   }
 }

@@ -1,22 +1,22 @@
 <template>
   <div
-    class="uv-search"
+    class="lz-search"
     :style="{backgroundColor:bgColor}"
   >
     <div
-      class="uv-search-content"
+      class="lz-search-content"
       :class="uvSearchClass"
       :style="{backgroundColor:searchBgColor}"
     >
       <div>
-        <uv-icon
+        <lz-icon
           name="search"
           size="22"
           color="#99a0ac"
         />
       </div>
       <div
-        class="uv-search-content-input"
+        class="lz-search-content-input"
       >
         <input
           :value="modelValue"
@@ -31,9 +31,9 @@
       <div
         @click="clearValueEvent"
         v-if="clearable && modelValue"
-        class="uv-search-content-close"
+        class="lz-search-content-close"
       >
-        <uv-icon
+        <lz-icon
           name="error"
           size="22"
           color="#99a0ac"
@@ -85,7 +85,7 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue', 'clear', 'focus', 'blur'])
 const uvSearchClass = computed(() => {
   return [
-    props.round ? 'uv-search-content-round' : ''
+    props.round ? 'lz-search-content-round' : ''
   ]
 })
 function clearValueEvent () {
@@ -112,44 +112,44 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-search-padding: 10px;
-  --uv-search-content-padding: 2px 10px;
-  --uv-search-content-border-radius: 4px;
-  --uv-search-input-placeholder-color: #d3c9d6;
-  --uv-search-input-padding: 8px;
-  --uv-search-input-font-size: 14px;
-  --uv-search-input-border-radius: 4px;
-  --uv-search-input-disabled-color: #d3c9d6;
-  --uv-search-content-round-border-radius: 40px;
+  --lz-search-padding: 10px;
+  --lz-search-content-padding: 2px 10px;
+  --lz-search-content-border-radius: 4px;
+  --lz-search-input-placeholder-color: #d3c9d6;
+  --lz-search-input-padding: 8px;
+  --lz-search-input-font-size: 14px;
+  --lz-search-input-border-radius: 4px;
+  --lz-search-input-disabled-color: #d3c9d6;
+  --lz-search-content-round-border-radius: 40px;
 }
-.uv-search {
+.lz-search {
   position: relative;
-  padding: var(--uv-search-padding);
-  .uv-search-content {
+  padding: var(--lz-search-padding);
+  .lz-search-content {
     display: flex;
     align-items: center;
-    padding: var(--uv-search-content-padding);
-    border-radius: var(--uv-search-content-border-radius);
+    padding: var(--lz-search-content-padding);
+    border-radius: var(--lz-search-content-border-radius);
     &-input {
       flex: 1;
-      font-size: var(--uv-search-input-font-size);
+      font-size: var(--lz-search-input-font-size);
       input {
-        padding: var(--uv-search-input-padding);
+        padding: var(--lz-search-input-padding);
         width: 100%;
         border: none;
-        border-radius: var(--uv-search-input-border-radius);
+        border-radius: var(--lz-search-input-border-radius);
         outline: none;
       }
       input::placeholder {
-        color: var(--uv-search-input-placeholder-color);
+        color: var(--lz-search-input-placeholder-color);
       }
       input:disabled {
-        color: var(--uv-search-input-disabled-color);
+        color: var(--lz-search-input-disabled-color);
       }
     }
   }
-  .uv-search-content-round {
-    border-radius: var(--uv-search-content-round-border-radius);
+  .lz-search-content-round {
+    border-radius: var(--lz-search-content-round-border-radius);
   }
 }
 

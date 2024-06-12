@@ -2,7 +2,7 @@
   <div>
     <demoBlock title="文字水印">
       <div style="position: relative;width: 100%;height: 300px;background-color: #ffffff;">
-        <uvWaterMark content="uv-ui" :opacity="0.6" />
+        <uvWaterMark content="lz-ui" :opacity="0.6" />
       </div>
     </demoBlock>
     <demoBlock title="图片水印">
@@ -15,7 +15,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvWaterMark } from 'uv-ui'
+import { uvWaterMark } from 'lz-ui'
 
 </script>
 

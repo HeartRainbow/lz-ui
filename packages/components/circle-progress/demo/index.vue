@@ -59,7 +59,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvCircleProgress, uvIcon } from 'uv-ui'
+import { uvCircleProgress, uvIcon } from 'lz-ui'
 import { ref } from 'vue'
 const gradientColor = {
   '0%': '#3fecff',
@@ -124,7 +124,7 @@ function startD () {
   border-radius: 50%;
   background-color: rgb(198 233 227 / 70%);
 
-  --uv-circle-progress-svg-z-index: 10;
+  --lz-circle-progress-svg-z-index: 10;
 }
 .rate-num {
   width: 107px;

@@ -14,7 +14,7 @@ onMounted(()=>{
 通过 `v-model` 进行双向绑定,通过 `label` 指定显示内容，也可以通过默认插槽进行自定义
 
 ```html
-<uv-radio v-model="test1" label="数据1"/>
+<lz-radio v-model="test1" label="数据1"/>
 ```
 
 ## 自定义形状
@@ -22,7 +22,7 @@ onMounted(()=>{
 通过 `shape` 设置，可选值为 `square` 、 `round`
 
  ```html
-<uv-radio
+<lz-radio
   v-model="test2"
   label="test2"
   shape="square"
@@ -34,7 +34,7 @@ onMounted(()=>{
 通过 `disabled` 设置
 
  ```html
-<uv-radio
+<lz-radio
   v-model="test2"
   disabled
   label="单选框"
@@ -46,12 +46,12 @@ onMounted(()=>{
 通过 `checkedColor` 设置
 
  ```html
-<uv-radio
+<lz-radio
   v-model="test2"
   checked-color="red"
 >
   单选框
-</uv-radio>
+</lz-radio>
  ``` 
 
 ## 文本位置
@@ -59,7 +59,7 @@ onMounted(()=>{
 通过 `labelPosition` 设置，可选值为 `left` 、 `right`，默认 `right`
 
  ```html
-<uv-radio
+<lz-radio
   v-model="test2"
   label="单选框"
   shape="square"
@@ -72,7 +72,7 @@ onMounted(()=>{
 通过 `spaceBetween` 开启
 
  ```html
-<uv-radio
+<lz-radio
   v-model="test3"
   label="单选框"
   space-between
@@ -81,32 +81,32 @@ onMounted(()=>{
  ```
 ## 单选组
 
-通过 `uv-radio-group` 组件包裹,通过 `v-model` 绑定字符串类型数据
+通过 `lz-radio-group` 组件包裹,通过 `v-model` 绑定字符串类型数据
 
  ```html
-<uv-radio-group v-model="checkStr">
-  <uv-radio
+<lz-radio-group v-model="checkStr">
+  <lz-radio
     label="test1"
   />
-  <uv-radio
+  <lz-radio
     label="test2"
   />
-  <uv-radio
+  <lz-radio
     label="test3"
   />
-  <uv-radio
+  <lz-radio
     label="test4"
   />
-  <uv-radio
+  <lz-radio
     label="test41"
   />
-  <uv-radio
+  <lz-radio
     label="test42"
   />
-  <uv-radio
+  <lz-radio
     label="test43"
   />
-</uv-radio-group>
+</lz-radio-group>
  ``` 
 
 
@@ -148,18 +148,18 @@ onMounted(()=>{
 ## radio css变量
 
 ```css
-    --uv-radio-icon-border: 1px solid #c8c9cc;
-    --uv-radio-icon-active-border: 1px solid #1989fa;
-    --uv-radio-icon-active-bg-color: #1989fa;
-    --uv-radio-icon-disabled-border: 1px solid #c8c9cc;
-    --uv-radio-icon-disabled-bg-color: #ebedf0;
-    --uv-radio-text-margin: 8px;
-    --uv-radio-text-size: 14px;
-    --uv-radio-space-between-padding: 0 10px;
+    --lz-radio-icon-border: 1px solid #c8c9cc;
+    --lz-radio-icon-active-border: 1px solid #1989fa;
+    --lz-radio-icon-active-bg-color: #1989fa;
+    --lz-radio-icon-disabled-border: 1px solid #c8c9cc;
+    --lz-radio-icon-disabled-bg-color: #ebedf0;
+    --lz-radio-text-margin: 8px;
+    --lz-radio-text-size: 14px;
+    --lz-radio-space-between-padding: 0 10px;
 ```
 
 ## radio-group css变量
 
 ```css
-    --uv-radio-group-gap: 10px;
+    --lz-radio-group-gap: 10px;
 ```

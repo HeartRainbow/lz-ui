@@ -76,17 +76,17 @@ onMounted(()=>{
 >
   <div style="display: flex;">
     <div style="margin-right: 10px;">
-      <uv-icon
+      <lz-icon
         size="30"
         name="help"
       />
     </div>
     <div style="flex: 1 0;">
       <div style="margin-bottom: 12px;font-size: 18px;font-weight: 700;">
-        关于 uv-ui
+        关于 lz-ui
       </div>
       <div style="line-height: 1.5;">
-        uv-ui 是一套轻量、可定制的移动端 Vue 组件库，提供了丰富的组件，帮助开发者快速搭建移动应用。
+        lz-ui 是一套轻量、可定制的移动端 Vue 组件库，提供了丰富的组件，帮助开发者快速搭建移动应用。
       </div>
     </div>
   </div>
@@ -101,12 +101,12 @@ onMounted(()=>{
 <uvSkeleton>
   <template #template>
     <div :style="{ display: 'flex', width: '100%' }">
-      <uv-skeleton-image />
+      <lz-skeleton-image />
       <div :style="{ flex: 1, marginLeft: '16px' }">
-        <uv-skeleton-paragraph row-width="60%" />
-        <uv-skeleton-paragraph />
-        <uv-skeleton-paragraph />
-        <uv-skeleton-paragraph />
+        <lz-skeleton-paragraph row-width="60%" />
+        <lz-skeleton-paragraph />
+        <lz-skeleton-paragraph />
+        <lz-skeleton-paragraph />
       </div>
     </div>
   </template>
@@ -120,8 +120,8 @@ onMounted(()=>{
 skeleton-image css变量：
 
 ```css
-  --uv-skeleton-image-size: 96px;
-  --uv-skeleton-image-bg-color: #f2f3f5;
+  --lz-skeleton-image-size: 96px;
+  --lz-skeleton-image-bg-color: #f2f3f5;
 ```
 
 `skeleton-avatar` 
@@ -131,9 +131,9 @@ skeleton-image css变量：
 skeleton-avatar css变量：
 
 ```css
-  --uv-skeleton-avatar-size: 32px;
-  --uv-skeleton-avatar-bg-color: #f2f3f5;
-  --uv-skeleton-avatar-margin-right: 12px;
+  --lz-skeleton-avatar-size: 32px;
+  --lz-skeleton-avatar-bg-color: #f2f3f5;
+  --lz-skeleton-avatar-margin-right: 12px;
 ```
 
 `skeleton-title` 
@@ -143,9 +143,9 @@ skeleton-avatar css变量：
 skeleton-title css变量：
 
 ```css
-  --uv-skeleton-title-height: 16px;
-  --uv-skeleton-title-bg-color: #f2f3f5;
-  --uv-skeleton-title-margin-bottom: 12px;
+  --lz-skeleton-title-height: 16px;
+  --lz-skeleton-title-bg-color: #f2f3f5;
+  --lz-skeleton-title-margin-bottom: 12px;
 ```
 
 `skeleton-paragraph` 
@@ -155,9 +155,9 @@ skeleton-title css变量：
 skeleton-paragraph css变量：
 
 ```css
-  --uv-skeleton-paragraph-height: 16px;
-  --uv-skeleton-paragraph-bg-color: #f2f3f5;
-  --uv-skeleton-paragraph-margin-top: 12px;
+  --lz-skeleton-paragraph-height: 16px;
+  --lz-skeleton-paragraph-bg-color: #f2f3f5;
+  --lz-skeleton-paragraph-margin-top: 12px;
 ```
 
  ## props
@@ -184,7 +184,7 @@ skeleton-paragraph css变量：
 ## css变量
 
 ```css
-  --uv-skeleton-duration: 1.2s;
-  --uv-skeleton-border-radius: 999px;
-  --uv-skeleton-blink-opacity: 0.6;
+  --lz-skeleton-duration: 1.2s;
+  --lz-skeleton-border-radius: 999px;
+  --lz-skeleton-blink-opacity: 0.6;
 ```

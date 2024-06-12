@@ -6,7 +6,7 @@ export const useCommonStore = defineStore({
   state: () => {
     return {
       menuList: routerList.filter(item => !item.meta.noShow),
-      currentTitle: 'UV-UI'
+      currentTitle: 'LZ-UI'
     }
   },
   actions: {

@@ -163,7 +163,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvTag, uvCellGroup, uvCell } from 'uv-ui'
+import { uvTag, uvCellGroup, uvCell } from 'lz-ui'
 import { ref } from 'vue'
 const show = ref(true)
 const show1 = ref(true)

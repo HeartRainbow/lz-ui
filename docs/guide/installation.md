@@ -1,6 +1,6 @@
 ### 安装
 ```
-npm install uv-ui
+npm install lz-ui
 ```
 
 

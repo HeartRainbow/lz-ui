@@ -28,7 +28,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvButton, uvCascader, Toast } from 'uv-ui'
+import { uvButton, uvCascader, Toast } from 'lz-ui'
 import { ref } from 'vue'
 
 const cascaderRef = ref(null)

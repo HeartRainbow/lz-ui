@@ -1,6 +1,6 @@
 <template>
   <span
-    class="uv-count-to"
+    class="lz-count-to"
     :style="{
       fontSize:fontSize,
       fontWeight:bold?'700':'500',

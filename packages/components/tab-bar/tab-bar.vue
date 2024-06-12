@@ -1,7 +1,7 @@
 <template>
   <div
-    class="uv-tab-bar"
-    :class="fixed?'uv-tab-bar-fixed':''"
+    class="lz-tab-bar"
+    :class="fixed?'lz-tab-bar-fixed':''"
     :style="{
       zIndex:zIndex,
       backgroundColor:bgColor,
@@ -11,7 +11,7 @@
     <slot />
     <!-- <div
       v-if="fixed && placeholder "
-      class="uv-tab-bar-placeholder"
+      class="lz-tab-bar-placeholder"
     /> -->
   </div>
 </template>
@@ -83,19 +83,19 @@ export default {
 </script>
 <style lang="scss">
 :root {
-  --uv-tab-bar-height: 50px;
+  --lz-tab-bar-height: 50px;
 }
-.uv-tab-bar {
+.lz-tab-bar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: var(--uv-tab-bar-height);
-  .uv-tab-bar-placeholder {
-    height: var(--uv-tab-bar-height);
+  height: var(--lz-tab-bar-height);
+  .lz-tab-bar-placeholder {
+    height: var(--lz-tab-bar-height);
   }
 }
-.uv-tab-bar-fixed {
+.lz-tab-bar-fixed {
   position: fixed;
   bottom: 0;
   left: 0;

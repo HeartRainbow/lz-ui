@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #aside-outline-before>
-      <div class="uv-ui-iframe" :style="iframeStyle">
+      <div class="lz-ui-iframe" :style="iframeStyle">
         <iframe
           width="100%"
           height="100%"
@@ -22,7 +22,7 @@ const { Layout } = DefaultTheme
 const compStore = useCompStore()
 
 const iframeSrc = computed(() => {
-  let src = 'https://monsterwx.gitee.io/uv-ui-example'
+  let src = 'https://monsterwx.gitee.io/lz-ui-example'
   if (compStore.currentName) {
     src += '#' + compStore.currentName
   }
@@ -56,7 +56,7 @@ const iframeStyle = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-.uv-ui-iframe {
+.lz-ui-iframe {
   position: fixed;
   z-index: 9999;
   top: 15%;

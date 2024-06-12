@@ -14,21 +14,21 @@ onMounted(()=>{
 通过`clickable` 属性开启
 
 ```html
-<uv-cell clickable title="test" value="内容"/>
+<lz-cell clickable title="test" value="内容"/>
 ```
 
 ## 卡片式
 
-通过使用`uv-cell-group` 组件包裹，并传入`card`属性即可,两边需要间隙可以开启`gap`属性
+通过使用`lz-cell-group` 组件包裹，并传入`card`属性即可,两边需要间隙可以开启`gap`属性
 
 ```html
-<uv-cell-group card gap>
-  <uv-cell title="test" value="内容"/>
-  <uv-cell
+<lz-cell-group card gap>
+  <lz-cell title="test" value="内容"/>
+  <lz-cell
     title="test"
     value="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"
   />
-</uv-cell-group>
+</lz-cell-group>
 ```
 
 ## 字体大小
@@ -36,7 +36,7 @@ onMounted(()=>{
 通过`size` 设置
 
 ```html
-<uv-cell size="16" title="test" value="内容"/>
+<lz-cell size="16" title="test" value="内容"/>
 ```
 
 ## 添加图标
@@ -44,7 +44,7 @@ onMounted(()=>{
 通过`icon` 设置
 
 ```html
-<uv-cell icon="add" icon-color="#4fc0a7" size="16" title="test" value="内容"/>
+<lz-cell icon="add" icon-color="#4fc0a7" size="16" title="test" value="内容"/>
 ```
 
 ## 显示箭头
@@ -52,19 +52,19 @@ onMounted(()=>{
 通过`arrow` 设置,默认右边，通过`down`设置为下边
 
 ```html
-<uv-cell-group card>
-  <uv-cell
+<lz-cell-group card>
+  <lz-cell
     arrow
     title="test"
     value="内容"
   />
-  <uv-cell
+  <lz-cell
     arrow
     arrow-direction="down"
     title="test"
     value="内容"
   />
-</uv-cell-group>
+</lz-cell-group>
 ```
 
 ## 使用插槽
@@ -72,14 +72,14 @@ onMounted(()=>{
 `title`设置左边的标题插槽，`value`设置右边内容插槽
 
 ```html
-<uv-cell>
+<lz-cell>
   <template #title>
     自定义title
   </template>
   <template #value>
     自定义value
   </template>
-</uv-cell>
+</lz-cell>
 ```
 ## props
 
@@ -107,15 +107,15 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-cell-after-right: 15px;
-  --uv-cell-after-left: 15px;
-  --uv-cell-after-border-bottom: 1px solid #f5f6f7;
-  --uv-cell-clickable-bg-color: #f2f3f5;
-  --uv-cell-content-padding: 10px 16px;
-  --uv-cell-content-title-margin-right: 20px;
-  --uv-cell-content-value-color: #969799;
-  --uv-cell-content-value-slot-text-align: right;
-  --uv-cell-content-justify-content: space-between;
-  --uv-cell-tips-color: #ee0a24;
-  --uv-cell-tips-font-size: 13px;
+  --lz-cell-after-right: 15px;
+  --lz-cell-after-left: 15px;
+  --lz-cell-after-border-bottom: 1px solid #f5f6f7;
+  --lz-cell-clickable-bg-color: #f2f3f5;
+  --lz-cell-content-padding: 10px 16px;
+  --lz-cell-content-title-margin-right: 20px;
+  --lz-cell-content-value-color: #969799;
+  --lz-cell-content-value-slot-text-align: right;
+  --lz-cell-content-justify-content: space-between;
+  --lz-cell-tips-color: #ee0a24;
+  --lz-cell-tips-font-size: 13px;
 ```

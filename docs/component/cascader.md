@@ -28,7 +28,7 @@ onMounted(()=>{
 </template>
 
 <script setup>
-import { uvButton, uvCascader, Toast } from 'uv-ui'
+import { uvButton, uvCascader, Toast } from 'lz-ui'
 import { ref } from 'vue'
 
 const cascaderRef = ref(null)
@@ -115,7 +115,7 @@ const list = [
 </template>
 
 <script setup>
-import { uvButton, uvCascader, Toast } from 'uv-ui'
+import { uvButton, uvCascader, Toast } from 'lz-ui'
 import { ref } from 'vue'
 
 const cascaderRef1 = ref(null)
@@ -183,10 +183,10 @@ const list1 = ref([
 ## css变量
 
 ```css
-  --uv-cascader-height: 70vh;
-  --uv-cascader-content-padding: 10px 0;
-  --uv-cascader-content-item-padding: 10px 16px;
-  --uv-cascader-content-item-font-size: 14px;
-  --uv-cascader-content-item-color: #323233;
-  --uv-cascader-content-item-acitve-bg-color: #f2f3f5;
+  --lz-cascader-height: 70vh;
+  --lz-cascader-content-padding: 10px 0;
+  --lz-cascader-content-item-padding: 10px 16px;
+  --lz-cascader-content-item-font-size: 14px;
+  --lz-cascader-content-item-color: #323233;
+  --lz-cascader-content-item-acitve-bg-color: #f2f3f5;
 ```

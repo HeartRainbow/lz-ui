@@ -1,9 +1,9 @@
 <template>
-  <div class="uv-qr-code">
-    <div v-if="iconUrl" class="uv-qr-code-img-warp" :style="{width:iconSize+'px',height:iconSize+'px'}">
+  <div class="lz-qr-code">
+    <div v-if="iconUrl" class="lz-qr-code-img-warp" :style="{width:iconSize+'px',height:iconSize+'px'}">
       <img
         :src="iconUrl"
-        class="uv-qr-code-img-logo"
+        class="lz-qr-code-img-logo"
       >
     </div>
     <div ref="QrCodeRef" />
@@ -81,12 +81,12 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-qr-code: 0;
+  --lz-qr-code: 0;
 }
-.uv-qr-code {
+.lz-qr-code {
   position: relative;
   display: inline-block;
-  .uv-qr-code-img-warp {
+  .lz-qr-code-img-warp {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -97,7 +97,7 @@ export default {
     transform: translate(-50%, -50%);
     box-shadow: 0 0 12px rgb(0 0 0 / 12%);
   }
-  .uv-qr-code-img-logo {
+  .lz-qr-code-img-logo {
     width: 100%;
     height: 100%;
     border-radius: 4px;

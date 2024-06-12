@@ -1,6 +1,6 @@
 <template>
   <div
-    class="uv-swipe-item"
+    class="lz-swipe-item"
     :style="{transform: `translateX(${context.transform}px)`}"
     ref="swipeItemRef"
   >
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss">
-.uv-swipe-item {
+.lz-swipe-item {
   position: relative;
   width: 100%;
   img {

@@ -1,26 +1,26 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-button
+      <lz-button
         type="primary"
         @click="show=true"
       >
         显示遮罩层
-      </uv-button>
-      <uv-overlay
+      </lz-button>
+      <lz-overlay
         :show="show"
         z-index="2"
         @click="show = false"
       />
     </demoBlock>
     <demoBlock title="嵌入内容">
-      <uv-button
+      <lz-button
         type="primary"
         @click="show1=true"
       >
         打开
-      </uv-button>
-      <uv-overlay
+      </lz-button>
+      <lz-overlay
         :show="show1"
         @click="show1 = false"
       >
@@ -29,14 +29,14 @@
             test
           </div>
         </div>
-      </uv-overlay>
+      </lz-overlay>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvOverlay, uvButton } from 'uv-ui'
+import { uvOverlay, uvButton } from 'lz-ui'
 import { ref } from 'vue'
 const show = ref(false)
 const show1 = ref(false)

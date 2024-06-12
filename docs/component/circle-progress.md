@@ -143,11 +143,11 @@ const gradientColor = {
 ## css变量
 
 ```css
-  --uv-circle-progress-size: 100px;
-  --uv-circle-progress-layer-color: #ffffff;
-  --uv-circle-progress-hover-color: #1989fa;
-  --uv-circle-progress-svg-z-index: 1;
-  --uv-circle-progress-text-font-size: 14px;
-  --uv-circle-progress-text-font-weight: 700;
-  --uv-circle-progress-text-color: #323233;
+  --lz-circle-progress-size: 100px;
+  --lz-circle-progress-layer-color: #ffffff;
+  --lz-circle-progress-hover-color: #1989fa;
+  --lz-circle-progress-svg-z-index: 1;
+  --lz-circle-progress-text-font-size: 14px;
+  --lz-circle-progress-text-font-weight: 700;
+  --lz-circle-progress-text-color: #323233;
 ```

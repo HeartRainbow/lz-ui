@@ -2,7 +2,7 @@
 ### 安装
 
 ```
-npm install uv-ui
+npm install lz-ui
 ```
 
 ### 使用
@@ -10,20 +10,20 @@ npm install uv-ui
 #### 1.全量使用 main.js中导入
 
 ```
-import uvUI from 'uv-ui'
-import 'uv-ui/es/style.css'
+import LZUI from 'lz-ui'
+import 'lz-ui/es/style.css'
 
-app.use(uvUI)
+app.use(LZUI)
 ```
 
 #### 2.按需加载 用什么导入什么，样式需要先引入到main.js
 
 ```
-import 'uv-ui/es/style.css'
+import 'lz-ui/es/style.css'
 ```
 
-预览地址：https://monsterwx.gitee.io/uv-ui/
+预览地址：https://monsterwx.gitee.io/lz-ui/
 
-github :https://github.com/monsterxwx/uv-ui
+github :https://github.com/HeartRainbow/lz-ui
 
-gitee :https://gitee.com/monsterwx/uv-ui
+gitee :https://gitee.com/monsterwx/lz-ui

@@ -1,7 +1,7 @@
 <template>
-  <div class="uv-circle-progress" :style="{width:size+'px',height:size+'px'}">
+  <div class="lz-circle-progress" :style="{width:size+'px',height:size+'px'}">
     <svg
-      class="uv-circle-progress-svg"
+      class="lz-circle-progress-svg"
       :viewBox="`0 0 ${viewBoxSize} ${viewBoxSize}`"
       :style="svgStyle"
     >
@@ -22,12 +22,12 @@
         </linearGradient>
       </defs>
       <!-- 轨道 -->
-      <path class="uv-circle-progress-layer" :style="layerStyle" :d="path" />
+      <path class="lz-circle-progress-layer" :style="layerStyle" :d="path" />
       <!-- 进度 -->
-      <path class="uv-circle-progress-hover" :style="hoverStyle" :d="path" />
+      <path class="lz-circle-progress-hover" :style="hoverStyle" :d="path" />
     </svg>
     <slot>
-      <div class="uv-circle-progress-text">
+      <div class="lz-circle-progress-text">
         {{ text }}
       </div>
     </slot>
@@ -100,7 +100,7 @@ const emit = defineEmits(['update:currentRate'])
 
 let uid = 0
 
-const id = `uv-circle-${uid++}`
+const id = `lz-circle-${uid++}`
 
 function getPath (clockwise, viewBoxSize) {
   const sweepFlag = clockwise ? 1 : 0
@@ -208,43 +208,43 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-circle-progress-size: 100px;
-  --uv-circle-progress-layer-color: #ffffff;
-  --uv-circle-progress-hover-color: #1989fa;
-  --uv-circle-progress-svg-z-index: 1;
-  --uv-circle-progress-text-font-size: 14px;
-  --uv-circle-progress-text-font-weight: 700;
-  --uv-circle-progress-text-color: #323233;
+  --lz-circle-progress-size: 100px;
+  --lz-circle-progress-layer-color: #ffffff;
+  --lz-circle-progress-hover-color: #1989fa;
+  --lz-circle-progress-svg-z-index: 1;
+  --lz-circle-progress-text-font-size: 14px;
+  --lz-circle-progress-text-font-weight: 700;
+  --lz-circle-progress-text-color: #323233;
 }
-.uv-circle-progress {
+.lz-circle-progress {
   position: relative;
   display: inline-block;
-  width: var(--uv-circle-progress-size);
-  height: var(--uv-circle-progress-size);
+  width: var(--lz-circle-progress-size);
+  height: var(--lz-circle-progress-size);
   text-align: center;
   &-svg {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: var(--uv-circle-progress-svg-z-index);
+    z-index: var(--lz-circle-progress-svg-z-index);
     width: 100%;
     height: 100%;
   }
   &-layer {
-    stroke: var(--uv-circle-progress-layer-color);
+    stroke: var(--lz-circle-progress-layer-color);
   }
   &-hover {
     fill: none;
-    stroke: var(--uv-circle-progress-hover-color);
+    stroke: var(--lz-circle-progress-hover-color);
     stroke-linecap: round;
   }
   &-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: var(--uv-circle-progress-text-font-size);
-    font-weight: var(--uv-circle-progress-text-font-weight);
-    color: var(--uv-circle-progress-text-color);
+    font-size: var(--lz-circle-progress-text-font-size);
+    font-weight: var(--lz-circle-progress-text-font-weight);
+    color: var(--lz-circle-progress-text-color);
     transform: translate(-50%, -50%);
   }
 }

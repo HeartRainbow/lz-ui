@@ -12,8 +12,8 @@ function capitalizeFirstLetter (str) {
 
 router.beforeEach((to, form) => {
   const menuStore = useCommonStore()
-  if (to.name === 'uv-ui') {
-    menuStore.currentTitle = 'UV-UI'
+  if (to.name === 'lz-ui') {
+    menuStore.currentTitle = 'LZ-UI'
   } else {
     menuStore.currentTitle = capitalizeFirstLetter(to.name)
   }

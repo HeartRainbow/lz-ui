@@ -6,12 +6,12 @@
       :style="{backgroundColor:bgColor,color:color}"
       @click="clickEvent"
     >
-      <div class="uv-button-content">
+      <div class="lz-button-content">
         <div
           v-if="icon && iconPosition==='left'"
-          class="uv-button-content-icon-left"
+          class="lz-button-content-icon-left"
         >
-          <uv-icon
+          <lz-icon
             :name="icon"
             :color="iconColor"
             :size="iconSize"
@@ -19,13 +19,13 @@
         </div>
         <div
           v-if="loading"
-          class="uv-button-content-loading"
+          class="lz-button-content-loading"
         /><slot />
         <div
           v-if="icon && iconPosition==='right'"
-          class="uv-button-content-icon-right"
+          class="lz-button-content-icon-right"
         >
-          <uv-icon
+          <lz-icon
             :name="icon"
             :color="iconColor"
             :size="iconSize"
@@ -97,13 +97,13 @@ const props = defineProps({
 const emit = defineEmits(['click'])
 const uvClass = computed(() => {
   return [
-    'uv-button',
-    props.type ? (props.disabled ? '' : `uv-button-${props.type}`) : '',
-    props.disabled ? `uv-button-${props.type}-disabled` : '',
-    props.round ? 'uv-button-round' : '',
-    props.square ? 'uv-button-square' : '',
-    props.size ? `uv-button-size-${props.size}` : '',
-    props.block ? 'uv-button-block' : ''
+    'lz-button',
+    props.type ? (props.disabled ? '' : `lz-button-${props.type}`) : '',
+    props.disabled ? `lz-button-${props.type}-disabled` : '',
+    props.round ? 'lz-button-round' : '',
+    props.square ? 'lz-button-square' : '',
+    props.size ? `lz-button-size-${props.size}` : '',
+    props.block ? 'lz-button-block' : ''
   ]
 })
 const clickEvent = () => {
@@ -118,47 +118,47 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-button-primary: #409eff;
-  --uv-button-success: #67c23a;
-  --uv-button-warning: #e6a23c;
-  --uv-button-error: #f56c6c;
-  --uv-button-info: #909399;
-  --uv-button-text: #303133;
-  --uv-button-border-radius: 4px;
-  --uv-button-font-size: 13px;
-  --uv-button-default-border: 1px solid #d9d9d9;
-  --uv-button-default-color: #333333;
-  --uv-button-default-hover-color: #0e80eb;
-  --uv-button-default-bg-color: #ffffff;
-  --uv-button-default-hover-bg-color: #ecf5ff;
-  --uv-button-loading-size: 15px;
-  --uv-button-size-mini-padding: 2px;
-  --uv-button-size-small-padding: 5px;
-  --uv-button-size-normal-padding: 10px;
+  --lz-button-primary: #409eff;
+  --lz-button-success: #67c23a;
+  --lz-button-warning: #e6a23c;
+  --lz-button-error: #f56c6c;
+  --lz-button-info: #909399;
+  --lz-button-text: #303133;
+  --lz-button-border-radius: 4px;
+  --lz-button-font-size: 13px;
+  --lz-button-default-border: 1px solid #d9d9d9;
+  --lz-button-default-color: #333333;
+  --lz-button-default-hover-color: #0e80eb;
+  --lz-button-default-bg-color: #ffffff;
+  --lz-button-default-hover-bg-color: #ecf5ff;
+  --lz-button-loading-size: 15px;
+  --lz-button-size-mini-padding: 2px;
+  --lz-button-size-small-padding: 5px;
+  --lz-button-size-normal-padding: 10px;
 }
 
-$primary: var(--uv-button-primary);
-$success: var(--uv-button-success);
-$warning: var(--uv-button-warning) ;
-$error: var(--uv-button-error) ;
-$info: var(--uv-button-info) ;
-$text: var(--uv-button-text) ;
-.uv-button {
-  font-size: var(--uv-button-font-size);
+$primary: var(--lz-button-primary);
+$success: var(--lz-button-success);
+$warning: var(--lz-button-warning) ;
+$error: var(--lz-button-error) ;
+$info: var(--lz-button-info) ;
+$text: var(--lz-button-text) ;
+.lz-button {
+  font-size: var(--lz-button-font-size);
   border: 0;
-  border-radius: var(--uv-button-border-radius);
+  border-radius: var(--lz-button-border-radius);
   white-space: nowrap;
   color: #ffffff;
   background: none;
   outline: none;
   cursor: pointer;
   &-default {
-    border: var(--uv-button-default-border);
-    color: var(--uv-button-default-color);
-    background: var(--uv-button-default-bg-color);
+    border: var(--lz-button-default-border);
+    color: var(--lz-button-default-color);
+    background: var(--lz-button-default-bg-color);
     &:hover {
-      color: var(--uv-button-default-hover-color);
-      background-color: var(--uv-button-default-hover-bg-color);
+      color: var(--lz-button-default-hover-color);
+      background-color: var(--lz-button-default-hover-bg-color);
       opacity: 0.8;
     }
     &:active {
@@ -166,9 +166,9 @@ $text: var(--uv-button-text) ;
     }
   }
   &-default-disabled {
-    border: var(--uv-button-default-border);
-    color: var(--uv-button-default-color);
-    background: var(--uv-button-default-bg-color);
+    border: var(--lz-button-default-border);
+    color: var(--lz-button-default-color);
+    background: var(--lz-button-default-bg-color);
     opacity: 0.5;
     cursor: no-drop;
   }
@@ -227,14 +227,14 @@ $text: var(--uv-button-text) ;
     @include disabled($warning);
   }
   &-size-normal {
-    padding: var(--uv-button-size-normal-padding);
+    padding: var(--lz-button-size-normal-padding);
   }
   &-size-small {
-    padding: var(--uv-button-size-small-padding);
+    padding: var(--lz-button-size-small-padding);
     font-size: 12px;
   }
   &-size-mini {
-    padding: var(--uv-button-size-mini-padding);
+    padding: var(--lz-button-size-mini-padding);
     font-size: 12px;
   }
   &-block {
@@ -245,7 +245,7 @@ $text: var(--uv-button-text) ;
       width: 95%;
     }
   }
-  .uv-button-content {
+  .lz-button-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,8 +258,8 @@ $text: var(--uv-button-text) ;
     &-loading {
       position: relative;
       margin-right: 5px;
-      width: var(--uv-button-loading-size);
-      height: var(--uv-button-loading-size);
+      width: var(--lz-button-loading-size);
+      height: var(--lz-button-loading-size);
       border: 2px solid #ffffff;
       border-top-color: #ffffff;
       border-right-color: transparent;

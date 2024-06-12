@@ -4,28 +4,28 @@
     position="bottom"
     v-bind="$attrs"
   >
-    <div class="uv-picker">
-      <div class="uv-picker-title">
+    <div class="lz-picker">
+      <div class="lz-picker-title">
         <div
-          class="uv-picker-title-left"
+          class="lz-picker-title-left"
           @click="cancleHandle"
         >
           {{ leftName }}
         </div>
         <slot name="title">
-          <div class="uv-picker-title-center">
+          <div class="lz-picker-title-center">
             {{ title }}
           </div>
         </slot>
         <div
-          class="uv-picker-title-right"
+          class="lz-picker-title-right"
           @click="confimHandle"
         >
           {{ rightName }}
         </div>
       </div>
-      <div class="uv-picker-content">
-        <div class="uv-picker-content-wrapper" />
+      <div class="lz-picker-content">
+        <div class="lz-picker-content-wrapper" />
         <PickerColumn
           v-for="(item,index) in calcList"
           :key="index"
@@ -172,51 +172,51 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-picker-title-btn-font-size: 14px;
-  --uv-picker-title-font-size: 16px;
-  --uv-picker-title-font-weight: 700;
-  --uv-picker-title-color: #323233;
-  --uv-picker-title-padding: 2px 0 12px;
-  --uv-picker-title-left-text-color: #969799;
-  --uv-picker-title-right-text-color: #576b95;
-  --uv-picker-content-height: 230px;
-  --uv-picker-content-wrapper-border-top-and-bottom: 1px solid #f7f8f9;
-  --uv-picker-content-wrapper-box-shadow: 0 0 5px #f7f8f9;
+  --lz-picker-title-btn-font-size: 14px;
+  --lz-picker-title-font-size: 16px;
+  --lz-picker-title-font-weight: 700;
+  --lz-picker-title-color: #323233;
+  --lz-picker-title-padding: 2px 0 12px;
+  --lz-picker-title-left-text-color: #969799;
+  --lz-picker-title-right-text-color: #576b95;
+  --lz-picker-content-height: 230px;
+  --lz-picker-content-wrapper-border-top-and-bottom: 1px solid #f7f8f9;
+  --lz-picker-content-wrapper-box-shadow: 0 0 5px #f7f8f9;
 }
-.uv-picker {
-  .uv-picker-title {
+.lz-picker {
+  .lz-picker-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--uv-picker-title-padding);
-    font-size: var(--uv-picker-title-btn-font-size);
-    .uv-picker-title-left {
-      color: var(--uv-picker-title-left-text-color);
+    padding: var(--lz-picker-title-padding);
+    font-size: var(--lz-picker-title-btn-font-size);
+    .lz-picker-title-left {
+      color: var(--lz-picker-title-left-text-color);
     }
-    .uv-picker-title-center {
-      font-size: var(--uv-picker-title-font-size);
-      font-weight: var(--uv-picker-title-font-weight);
-      color: var(--uv-picker-title-color);
+    .lz-picker-title-center {
+      font-size: var(--lz-picker-title-font-size);
+      font-weight: var(--lz-picker-title-font-weight);
+      color: var(--lz-picker-title-color);
     }
-    .uv-picker-title-right {
-      color: var(--uv-picker-title-right-text-color);
+    .lz-picker-title-right {
+      color: var(--lz-picker-title-right-text-color);
     }
   }
-  .uv-picker-content {
+  .lz-picker-content {
     position: relative;
     display: flex;
     overflow: hidden;
-    height: var(--uv-picker-content-height);
+    height: var(--lz-picker-content-height);
     cursor: grab;
-    .uv-picker-content-wrapper {
+    .lz-picker-content-wrapper {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 100%;
       height: 36px;
-      border-top: var(--uv-picker-content-wrapper-border-top-and-bottom);
-      border-bottom: var(--uv-picker-content-wrapper-border-top-and-bottom);
-      box-shadow: var(--uv-picker-content-wrapper-box-shadow);
+      border-top: var(--lz-picker-content-wrapper-border-top-and-bottom);
+      border-bottom: var(--lz-picker-content-wrapper-border-top-and-bottom);
+      box-shadow: var(--lz-picker-content-wrapper-box-shadow);
     }
   }
 }

@@ -8,7 +8,7 @@
           :key="item.name"
           @click="copyCode(item.name)"
         >
-          <uv-icon
+          <lz-icon
             size="30"
             :name="item.name"
           />
@@ -27,12 +27,12 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvIcon, Toast } from 'uv-ui'
+import { uvIcon, Toast } from 'lz-ui'
 import iconArr from './iconName.js'
 
 const copyCode = (name) => {
   const input = document.getElementById('inputCopy')
-  input.value = `<uv-icon
+  input.value = `<lz-icon
         size="30"
         name="${name}"
       />`

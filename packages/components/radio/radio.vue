@@ -1,27 +1,27 @@
 <template>
   <div
-    class="uv-radio"
+    class="lz-radio"
     ref="radioRef"
     :class="uvRadioClass"
     @click="change"
   >
     <div
       v-if="labelPosition==='left'"
-      class="uv-radio-left"
+      class="lz-radio-left"
     >
       <slot>
         {{ label }}
       </slot>
     </div>
     <div
-      class="uv-radio-icon"
+      class="lz-radio-icon"
       :style="uvStyle"
       :class="[
         (parentProps?.shape || props.shape) === 'round' ? 'round' : '',
         context.isSelect?'active':''
       ]"
     >
-      <uv-icon
+      <lz-icon
         v-if="context.isSelect"
         name="select"
         :color="disabled?'#c8c9cc':'#fff'"
@@ -30,7 +30,7 @@
     </div>
     <div
       v-if="labelPosition==='right'"
-      class="uv-radio-right"
+      class="lz-radio-right"
     >
       <slot>
         {{ label }}
@@ -96,8 +96,8 @@ const emit = defineEmits(['update:modelValue', 'change'])
 
 const uvRadioClass = computed(() => {
   return [
-    props.disabled ? 'uv-radio-disabled' : '',
-    props.spaceBetween ? 'uv-radio-space-between' : ''
+    props.disabled ? 'lz-radio-disabled' : '',
+    props.spaceBetween ? 'lz-radio-space-between' : ''
   ]
 })
 const uvStyle = computed(() => {
@@ -127,51 +127,51 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-radio-icon-border: 1px solid #c8c9cc;
-  --uv-radio-icon-active-border: 1px solid #1989fa;
-  --uv-radio-icon-active-bg-color: #1989fa;
-  --uv-radio-icon-disabled-border: 1px solid #c8c9cc;
-  --uv-radio-icon-disabled-bg-color: #ebedf0;
-  --uv-radio-text-margin: 8px;
-  --uv-radio-text-size: 14px;
-  --uv-radio-space-between-padding: 0 10px;
+  --lz-radio-icon-border: 1px solid #c8c9cc;
+  --lz-radio-icon-active-border: 1px solid #1989fa;
+  --lz-radio-icon-active-bg-color: #1989fa;
+  --lz-radio-icon-disabled-border: 1px solid #c8c9cc;
+  --lz-radio-icon-disabled-bg-color: #ebedf0;
+  --lz-radio-text-margin: 8px;
+  --lz-radio-text-size: 14px;
+  --lz-radio-space-between-padding: 0 10px;
 }
-.uv-radio {
+.lz-radio {
   display: flex;
   align-items: center;
-  .uv-radio-icon {
+  .lz-radio-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: var(--uv-radio-icon-border);
+    border: var(--lz-radio-icon-border);
     transition: all 0.3s;
   }
   .active {
-    border: var(--uv-radio-icon-active-border);
-    background-color: var(--uv-radio-icon-active-bg-color);
+    border: var(--lz-radio-icon-active-border);
+    background-color: var(--lz-radio-icon-active-bg-color);
   }
   .round {
     border-radius: 50%;
   }
-  .uv-radio-right {
-    margin-left: var(--uv-radio-text-margin);
-    font-size: var(--uv-radio-text-size);
+  .lz-radio-right {
+    margin-left: var(--lz-radio-text-margin);
+    font-size: var(--lz-radio-text-size);
   }
-  .uv-radio-left {
-    margin-right: var(--uv-radio-text-margin);
-    font-size: var(--uv-radio-text-size);
+  .lz-radio-left {
+    margin-right: var(--lz-radio-text-margin);
+    font-size: var(--lz-radio-text-size);
   }
 }
-.uv-radio-disabled {
+.lz-radio-disabled {
   cursor: no-drop;
   color: #c8c9cc;
-  .uv-radio-icon {
-    border: var(--uv-radio-icon-disabled-border) !important;
-    background-color: var(--uv-radio-icon-disabled-bg-color) !important;
+  .lz-radio-icon {
+    border: var(--lz-radio-icon-disabled-border) !important;
+    background-color: var(--lz-radio-icon-disabled-bg-color) !important;
   }
 }
-.uv-radio-space-between {
+.lz-radio-space-between {
   justify-content: space-between;
-  padding: var(--uv-radio-space-between-padding);
+  padding: var(--lz-radio-space-between-padding);
 }
 </style>

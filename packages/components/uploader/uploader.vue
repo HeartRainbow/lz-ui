@@ -1,26 +1,26 @@
 <template>
-  <div class="uv-uploader">
-    <div class="uv-uploader-wrapper">
+  <div class="lz-uploader">
+    <div class="lz-uploader-wrapper">
       <template v-for="(item,index) in modelValue">
         <div
-          class="uv-uploader-img-wrapper"
+          class="lz-uploader-img-wrapper"
           v-if="modelValue && previewImage"
           :key="index"
         >
           <img
             @click="clickPreview(item)"
             :src="item.content || item.url"
-            class="uv-uploader-img"
+            class="lz-uploader-img"
           >
-          <div v-if="item.status === 'uploading' || item.status === 'failed'" class="uv-uploader-mask">
-            <div v-if="item.status === 'uploading'" class="uv-uploader-uploading-wrapper">
-              <div class="uv-uploader-uploading" />
+          <div v-if="item.status === 'uploading' || item.status === 'failed'" class="lz-uploader-mask">
+            <div v-if="item.status === 'uploading'" class="lz-uploader-uploading-wrapper">
+              <div class="lz-uploader-uploading" />
               <div>
                 {{ item.message || '上传中...' }}
               </div>
             </div>
-            <div v-if="item.status === 'failed'" class="uv-uploader-failed-wrapper">
-              <uv-icon
+            <div v-if="item.status === 'failed'" class="lz-uploader-failed-wrapper">
+              <lz-icon
                 size="22"
                 name="close"
                 color="#fff"
@@ -30,11 +30,11 @@
               </div>
             </div>
           </div>
-          <div @click="deleteFile(item,index)" class="uv-uploader-delete" v-if="item.status !== 'uploading' && deletable">
+          <div @click="deleteFile(item,index)" class="lz-uploader-delete" v-if="item.status !== 'uploading' && deletable">
             <slot name="preview-delete">
-              <div class="uv-uploader-delete-shadow" />
-              <uv-icon
-                class="uv-uploader-delete-icon"
+              <div class="lz-uploader-delete-shadow" />
+              <lz-icon
+                class="lz-uploader-delete-icon"
                 size="14"
                 name="close"
                 color="#fff"
@@ -44,10 +44,10 @@
           <slot name="preview-cover" :item="item" :file="item.file" />
         </div>
       </template>
-      <div v-show="!(modelValue.length >= +maxCount)" class="uv-uploader-upload-wrapper" @click="clickUpload">
+      <div v-show="!(modelValue.length >= +maxCount)" class="lz-uploader-upload-wrapper" @click="clickUpload">
         <slot>
-          <div class="uv-uploader-upload">
-            <uv-icon
+          <div class="lz-uploader-upload">
+            <lz-icon
               size="26"
               name="photograph"
               :color="disabled? '#edeeef':'#dcdee0'"
@@ -56,7 +56,7 @@
         </slot>
         <input
           ref="inputRef"
-          class="uv-uploader-input"
+          class="lz-uploader-input"
           type="file"
           :disabled="disabled"
           @change="change"
@@ -251,58 +251,58 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-uploader-upload-size-width: 80px;
-  --uv-uploader-upload-size-height: 80px;
-  --uv-uploader-upload-gap: 8px;
-  --uv-uploader-border-radius: 6px;
-  --uv-uploader-delete-shadow-size: 20px;
-  --uv-uploader-delete-shadow-border-radius: 0 6px 0 6px;
-  --uv-uploader-delete-shadow-background: rgb(0 0 0 / 40%);
-  --uv-uploader-img-object-fit: cover;
-  --uv-uploader-upload-wrapper-bg-color: #f7f8fa;
-  --uv-uploader-mask-background: rgb(50 50 51 / 88%);
-  --uv-uploader-mask-color: #ffffff;
-  --uv-uploader-uploading-wrapper-gap: 10px;
-  --uv-uploader-uploading-wrapper-font-size: 12px;
-  --uv-uploader-uploading-size: 15px;
-  --uv-uploader-uploading-margin-right: 5px;
+  --lz-uploader-upload-size-width: 80px;
+  --lz-uploader-upload-size-height: 80px;
+  --lz-uploader-upload-gap: 8px;
+  --lz-uploader-border-radius: 6px;
+  --lz-uploader-delete-shadow-size: 20px;
+  --lz-uploader-delete-shadow-border-radius: 0 6px 0 6px;
+  --lz-uploader-delete-shadow-background: rgb(0 0 0 / 40%);
+  --lz-uploader-img-object-fit: cover;
+  --lz-uploader-upload-wrapper-bg-color: #f7f8fa;
+  --lz-uploader-mask-background: rgb(50 50 51 / 88%);
+  --lz-uploader-mask-color: #ffffff;
+  --lz-uploader-uploading-wrapper-gap: 10px;
+  --lz-uploader-uploading-wrapper-font-size: 12px;
+  --lz-uploader-uploading-size: 15px;
+  --lz-uploader-uploading-margin-right: 5px;
 }
-.uv-uploader {
+.lz-uploader {
   position: relative;
   display: inline-block;
-  .uv-uploader-wrapper {
+  .lz-uploader-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--uv-uploader-upload-gap);
-    .uv-uploader-img-wrapper {
+    gap: var(--lz-uploader-upload-gap);
+    .lz-uploader-img-wrapper {
       position: relative;
       overflow: hidden;
-      width: var(--uv-uploader-upload-size-width);
-      height: var(--uv-uploader-upload-size-height);
-      border-radius: var(--uv-uploader-border-radius);
-      .uv-uploader-delete {
+      width: var(--lz-uploader-upload-size-width);
+      height: var(--lz-uploader-upload-size-height);
+      border-radius: var(--lz-uploader-border-radius);
+      .lz-uploader-delete {
         position: absolute;
         top: 0;
         right: 0;
-        .uv-uploader-delete-shadow {
-          width: var(--uv-uploader-delete-shadow-size);
-          height: var(--uv-uploader-delete-shadow-size);
-          border-radius: var(--uv-uploader-delete-shadow-border-radius);
-          background: var(--uv-uploader-delete-shadow-background);
+        .lz-uploader-delete-shadow {
+          width: var(--lz-uploader-delete-shadow-size);
+          height: var(--lz-uploader-delete-shadow-size);
+          border-radius: var(--lz-uploader-delete-shadow-border-radius);
+          background: var(--lz-uploader-delete-shadow-background);
         }
-        .uv-uploader-delete-icon {
+        .lz-uploader-delete-icon {
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
         }
       }
-      .uv-uploader-img {
+      .lz-uploader-img {
         width: 100%;
         height: 100%;
-        object-fit: var(--uv-uploader-img-object-fit);
+        object-fit: var(--lz-uploader-img-object-fit);
       }
-      .uv-uploader-mask {
+      .lz-uploader-mask {
         position: absolute;
         top: 0;
         right: 0;
@@ -311,50 +311,50 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--uv-uploader-mask-color);
-        background: var(--uv-uploader-mask-background);
+        color: var(--lz-uploader-mask-color);
+        background: var(--lz-uploader-mask-background);
         flex-direction: column;
-        .uv-uploader-uploading-wrapper {
+        .lz-uploader-uploading-wrapper {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: var(--uv-uploader-uploading-wrapper-gap);
-          font-size: var(--uv-uploader-uploading-wrapper-font-size);
-          .uv-uploader-uploading {
+          gap: var(--lz-uploader-uploading-wrapper-gap);
+          font-size: var(--lz-uploader-uploading-wrapper-font-size);
+          .lz-uploader-uploading {
             position: relative;
-            margin-right: var(--uv-uploader-uploading-margin-right);
-            width: var(--uv-uploader-uploading-size);
-            height: var(--uv-uploader-uploading-size);
-            border: 2px solid var(--uv-uploader-mask-color);
-            border-top-color: var(--uv-uploader-mask-color);
+            margin-right: var(--lz-uploader-uploading-margin-right);
+            width: var(--lz-uploader-uploading-size);
+            height: var(--lz-uploader-uploading-size);
+            border: 2px solid var(--lz-uploader-mask-color);
+            border-top-color: var(--lz-uploader-mask-color);
             border-right-color: transparent;
             border-bottom-color: transparent;
             border-radius: 100%;
             animation: circle infinite  0.75s linear;
           }
         }
-        .uv-uploader-failed-wrapper {
+        .lz-uploader-failed-wrapper {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: var(--uv-uploader-uploading-wrapper-gap);
-          font-size: var(--uv-uploader-uploading-wrapper-font-size);
+          gap: var(--lz-uploader-uploading-wrapper-gap);
+          font-size: var(--lz-uploader-uploading-wrapper-font-size);
         }
       }
     }
-    .uv-uploader-upload-wrapper {
+    .lz-uploader-upload-wrapper {
       position: relative;
       display: inline-block;
-      border-radius: var(--uv-uploader-border-radius);
-      background-color: var(--uv-uploader-upload-wrapper-bg-color);
-      .uv-uploader-upload {
+      border-radius: var(--lz-uploader-border-radius);
+      background-color: var(--lz-uploader-upload-wrapper-bg-color);
+      .lz-uploader-upload {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: var(--uv-uploader-upload-size-width);
-        height: var(--uv-uploader-upload-size-height);
+        width: var(--lz-uploader-upload-size-width);
+        height: var(--lz-uploader-upload-size-height);
       }
-      .uv-uploader-input {
+      .lz-uploader-input {
         position: absolute;
         top: 0;
         left: 0;

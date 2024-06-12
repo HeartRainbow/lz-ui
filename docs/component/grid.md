@@ -14,14 +14,14 @@ onMounted(()=>{
 通过 `clickable` 设置
 
 ```html
-<uv-grid clickable>
-  <uv-grid-item
+<lz-grid clickable>
+  <lz-grid-item
     v-for="item in 8"
     :key="item"
     :text="'文字'+item"
     icon-name="modular"
   />
-</uv-grid>
+</lz-grid>
 ```
 
 ##  自定义列数
@@ -29,14 +29,14 @@ onMounted(()=>{
 通过 `columnNum` 设置
 
  ```html
-<uv-grid column-num="3">
-  <uv-grid-item
+<lz-grid column-num="3">
+  <lz-grid-item
     v-for="item in 9"
     :key="item"
     :text="'文字'+item"
     icon-name="modular"
   />
-</uv-grid>
+</lz-grid>
  ```
 
 ## 格子间距
@@ -44,14 +44,14 @@ onMounted(()=>{
 通过 `gutter` 设置
 
  ```html
-<uv-grid gutter="10">
-  <uv-grid-item
+<lz-grid gutter="10">
+  <lz-grid-item
     v-for="item in 8"
     :key="item"
     :text="'文字'+item"
     icon-name="modular"
   />
-</uv-grid>
+</lz-grid>
  ```
 
 ## 内容横排
@@ -59,15 +59,15 @@ onMounted(()=>{
 通过 `direction` 设置，默认为 `column`，可设置为 `row` ,通过传入 `reverse` 可以将文字和图标反转
 
  ```html
-<uv-grid direction="row" reverse>
-  <uv-grid-item
+<lz-grid direction="row" reverse>
+  <lz-grid-item
     v-for="item in 8"
     :key="item"
     :text="'文字'+item"
     icon-name="modular"
     @click="handleClick(item)"
   />
-</uv-grid>
+</lz-grid>
  ```
 
 ## grid props
@@ -104,11 +104,11 @@ onMounted(()=>{
 ## grid-item css变量
 
 ```css
-  --uv-grid-item-content-padding: 16px 8px;
-  --uv-grid-item-content-active-bg-color: #f2f3f5;
-  --uv-grid-item-content-text-white-space: nowrap;
-  --uv-grid-item-content-text-font-size: 12px;
-  --uv-grid-item-content-text-color: #323233;
-  --uv-grid-item-content-text-margin: 8px;
-  --uv-grid-item-border: 1px solid #f7f8f9;
+  --lz-grid-item-content-padding: 16px 8px;
+  --lz-grid-item-content-active-bg-color: #f2f3f5;
+  --lz-grid-item-content-text-white-space: nowrap;
+  --lz-grid-item-content-text-font-size: 12px;
+  --lz-grid-item-content-text-color: #323233;
+  --lz-grid-item-content-text-margin: 8px;
+  --lz-grid-item-border: 1px solid #f7f8f9;
 ```

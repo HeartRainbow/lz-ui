@@ -12,7 +12,7 @@ onMounted(()=>{
 ## 基本使用
 
 ```html
-<uv-search placeholder="请输入内容" />
+<lz-search placeholder="请输入内容" />
 ```
 
 ## 修改背景色
@@ -20,7 +20,7 @@ onMounted(()=>{
 通过 `bgColor` 设置
 
 ```html
-<uv-search bg-color="#4fc08d" />
+<lz-search bg-color="#4fc08d" />
 ```
 
 ## 修改搜索框的背景色
@@ -28,7 +28,7 @@ onMounted(()=>{
 通过 `searchBgColor` 设置
 
 ```html
-<uv-search bg-color="#f6f7f9" search-bg-color="#fff" />
+<lz-search bg-color="#f6f7f9" search-bg-color="#fff" />
 ```
 
 ## 搜索框圆角
@@ -36,7 +36,7 @@ onMounted(()=>{
 通过 `round` 设置
 
 ```html
-<uv-search round />
+<lz-search round />
 ```
 
 ## 是否禁用
@@ -44,7 +44,7 @@ onMounted(()=>{
 通过 `disabled` 设置
 
 ```html
-<uv-search disabled />
+<lz-search disabled />
 ```
 
 ## 搜索框内容对齐
@@ -52,7 +52,7 @@ onMounted(()=>{
 通过 `inputAlign` 设置,默认为 `left`,可选 `center` `right`
 
 ```html
-<uv-search input-align="center" />
+<lz-search input-align="center" />
 ```
 
 ## 显示可清除图标
@@ -60,7 +60,7 @@ onMounted(()=>{
 通过 `clearable` 设置
 
 ```html
-<uv-search v-model="value" clearable />
+<lz-search v-model="value" clearable />
 ```
 
 ## props
@@ -87,13 +87,13 @@ onMounted(()=>{
 ## css 变量
 
 ```css
---uv-search-padding: 10px;
---uv-search-content-padding: 2px 10px;
---uv-search-content-border-radius: 4px;
---uv-search-input-placeholder-color: #d3c9d6;
---uv-search-input-padding: 8px;
---uv-search-input-font-size: 14px;
---uv-search-input-border-radius: 4px;
---uv-search-input-disabled-color: #d3c9d6;
---uv-search-content-round-border-radius: 40px;
+--lz-search-padding: 10px;
+--lz-search-content-padding: 2px 10px;
+--lz-search-content-border-radius: 4px;
+--lz-search-input-placeholder-color: #d3c9d6;
+--lz-search-input-padding: 8px;
+--lz-search-input-font-size: 14px;
+--lz-search-input-border-radius: 4px;
+--lz-search-input-disabled-color: #d3c9d6;
+--lz-search-content-round-border-radius: 40px;
 ```

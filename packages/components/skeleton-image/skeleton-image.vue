@@ -1,6 +1,6 @@
 <template>
-  <div class="uv-skeleton-image">
-    <uv-icon
+  <div class="lz-skeleton-image">
+    <lz-icon
       :size="iconSize"
       name="photo"
       :color="iconColor"
@@ -29,16 +29,16 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-skeleton-image-size: 96px;
-  --uv-skeleton-image-bg-color: #f2f3f5;
+  --lz-skeleton-image-size: 96px;
+  --lz-skeleton-image-bg-color: #f2f3f5;
 }
-.uv-skeleton-image {
+.lz-skeleton-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: var(--uv-skeleton-image-size);
-  height: var(--uv-skeleton-image-size);
-  background-color: var(--uv-skeleton-image-bg-color);
+  width: var(--lz-skeleton-image-size);
+  height: var(--lz-skeleton-image-size);
+  background-color: var(--lz-skeleton-image-bg-color);
 }
 
 </style>

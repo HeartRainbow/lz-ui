@@ -1,40 +1,40 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-table
+      <lz-table
         :data="tableData"
         :columns="columns"
       />
     </demoBlock>
     <demoBlock title="插槽">
-      <uv-table
+      <lz-table
         :data="tableData"
         :columns="columns"
       >
         <template #Date="scope">
-          <uv-button
+          <lz-button
             type="warning"
             size="mini"
           >
             {{ scope.data.title }}
-          </uv-button>
+          </lz-button>
         </template>
         <template #name="scope">
-          <uv-button
+          <lz-button
             type="primary"
             size="mini"
           >
             {{ scope.data }}
-          </uv-button>
+          </lz-button>
         </template>
-      </uv-table>
+      </lz-table>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvTable, uvButton } from 'uv-ui'
+import { uvTable, uvButton } from 'lz-ui'
 const columns = [
   {
     title: 'Date',

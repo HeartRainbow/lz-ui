@@ -33,17 +33,17 @@
       >
         <div style="display: flex;">
           <div style="margin-right: 10px;">
-            <uv-icon
+            <lz-icon
               size="30"
               name="help"
             />
           </div>
           <div style="flex: 1 0;">
             <div style="margin-bottom: 12px;font-size: 18px;font-weight: 700;">
-              关于 uv-ui
+              关于 lz-ui
             </div>
             <div style="line-height: 1.5;">
-              uv-ui 是一套轻量、可定制的移动端 Vue 组件库，提供了丰富的组件，帮助开发者快速搭建移动应用。
+              lz-ui 是一套轻量、可定制的移动端 Vue 组件库，提供了丰富的组件，帮助开发者快速搭建移动应用。
             </div>
           </div>
         </div>
@@ -53,12 +53,12 @@
       <uvSkeleton>
         <template #template>
           <div :style="{ display: 'flex', width: '100%' }">
-            <uv-skeleton-image />
+            <lz-skeleton-image />
             <div :style="{ flex: 1, marginLeft: '16px' }">
-              <uv-skeleton-paragraph row-width="60%" />
-              <uv-skeleton-paragraph />
-              <uv-skeleton-paragraph />
-              <uv-skeleton-paragraph />
+              <lz-skeleton-paragraph row-width="60%" />
+              <lz-skeleton-paragraph />
+              <lz-skeleton-paragraph />
+              <lz-skeleton-paragraph />
             </div>
           </div>
         </template>
@@ -69,7 +69,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvSkeleton, uvSkeletonImage, uvSkeletonParagraph, uvSwitch, uvIcon } from 'uv-ui'
+import { uvSkeleton, uvSkeletonImage, uvSkeletonParagraph, uvSwitch, uvIcon } from 'lz-ui'
 import { ref } from 'vue'
 
 const isLoading = ref(false)

@@ -6,7 +6,7 @@
     round
     v-bind="popupProps"
   >
-    <div class="uv-cascader">
+    <div class="lz-cascader">
       <uvTab
         v-if="show"
         color="#969799"
@@ -18,21 +18,21 @@
         shrink
         v-bind="tabProps"
       />
-      <div class="uv-cascader-content" ref="contentRef">
+      <div class="lz-cascader-content" ref="contentRef">
         <div
-          class="uv-cascader-content-list"
+          class="lz-cascader-content-list"
           @touchstart="touchstart"
           @touchmove="touchmove"
           @touchend="touchend"
           ref="contentListRef"
           :style="{width: `${listWidth}px`,transform: `translateX(${transformX}px)`}"
         >
-          <div class="uv-cascader-content-item-warp" v-for="(item,index) in tabs" :key="index">
+          <div class="lz-cascader-content-item-warp" v-for="(item,index) in tabs" :key="index">
             <div
               @click="tabItemClick(chil)"
-              class="uv-cascader-content-item"
+              class="lz-cascader-content-item"
               v-for="(chil,idx) in item.options"
-              :class="chil[valueKey]===item.selected?.[valueKey] ?'uv-cascader-content-active-item':''"
+              :class="chil[valueKey]===item.selected?.[valueKey] ?'lz-cascader-content-active-item':''"
               :key="idx"
             >
               <div>{{ chil[labelKey] }}</div>
@@ -109,7 +109,7 @@ watch([() => show.value, () => tabs.value.length], () => {
   if (show.value) {
     nextTick(() => {
       pageWidth.value = contentRef.value.offsetWidth
-      itemDomList.value = contentRef.value.querySelectorAll('.uv-cascader-content-item-warp')
+      itemDomList.value = contentRef.value.querySelectorAll('.lz-cascader-content-item-warp')
     })
   }
 })
@@ -293,50 +293,50 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-cascader-height: 70vh;
-  --uv-cascader-content-padding: 10px 0;
-  --uv-cascader-content-item-padding: 10px 16px;
-  --uv-cascader-content-item-font-size: 14px;
-  --uv-cascader-content-item-color: #323233;
-  --uv-cascader-content-item-acitve-bg-color: #f2f3f5;
+  --lz-cascader-height: 70vh;
+  --lz-cascader-content-padding: 10px 0;
+  --lz-cascader-content-item-padding: 10px 16px;
+  --lz-cascader-content-item-font-size: 14px;
+  --lz-cascader-content-item-color: #323233;
+  --lz-cascader-content-item-acitve-bg-color: #f2f3f5;
 }
 .cascader-popup {
-  --uv-popup-content-title-padding: 10px 16px;
+  --lz-popup-content-title-padding: 10px 16px;
 }
-.uv-cascader {
+.lz-cascader {
   display: flex;
   width: 100%;
-  height: var(--uv-cascader-height);
+  height: var(--lz-cascader-height);
   flex-direction: column;
-  .uv-cascader-content {
+  .lz-cascader-content {
     overflow: hidden;
-    padding: var(--uv-cascader-content-padding);
+    padding: var(--lz-cascader-content-padding);
     width: 100%;
     min-height: 0;
     flex: 1 0;
-    .uv-cascader-content-list {
+    .lz-cascader-content-list {
       position: relative;
       display: flex;
       height: 100%;
-      .uv-cascader-content-item-warp {
+      .lz-cascader-content-item-warp {
         position: relative;
         display: flex;
         overflow: auto;
         width: 100%;
         flex-direction: column;
-        .uv-cascader-content-item {
+        .lz-cascader-content-item {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: var(--uv-cascader-content-item-padding);
+          padding: var(--lz-cascader-content-item-padding);
           width: 100%;
-          font-size: var(--uv-cascader-content-item-font-size);
-          color: var(--uv-cascader-content-item-color);
+          font-size: var(--lz-cascader-content-item-font-size);
+          color: var(--lz-cascader-content-item-color);
           &:active {
-            background-color: var(--uv-cascader-content-item-acitve-bg-color);
+            background-color: var(--lz-cascader-content-item-acitve-bg-color);
           }
         }
-        .uv-cascader-content-active-item {
+        .lz-cascader-content-active-item {
           font-weight: 700;
           color: #1989fa;
         }

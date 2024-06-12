@@ -12,23 +12,23 @@ onMounted(()=>{
 ## 基本使用
 
 ```html
-<uv-swipe>
-  <uv-swipe-item>
+<lz-swipe>
+  <lz-swipe-item>
     <div class="test color1">
       1
     </div>
-  </uv-swipe-item>
-  <uv-swipe-item>
+  </lz-swipe-item>
+  <lz-swipe-item>
     <div class="test color2">
       2
     </div>
-  </uv-swipe-item>
-  <uv-swipe-item>
+  </lz-swipe-item>
+  <lz-swipe-item>
     <div class="test color3">
       3
     </div>
-  </uv-swipe-item>
-</uv-swipe>
+  </lz-swipe-item>
+</lz-swipe>
 ```
 
 

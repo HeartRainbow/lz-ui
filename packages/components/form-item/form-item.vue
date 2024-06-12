@@ -1,6 +1,6 @@
 <template>
   <uvCell
-    class="uv-form-item"
+    class="lz-form-item"
     ref="formItemRef"
     v-bind="$attrs"
     :arrow="arrow"
@@ -188,11 +188,11 @@ export default {
 }
 </script>
 <style lang="scss">
-.uv-form-item {
-  --uv-cell-content-justify-content: flex-start;
-  --uv-cell-content-value-slot-text-align: left;
-  --uv-input-height: 24px;
-  .uv-cell-content-value {
+.lz-form-item {
+  --lz-cell-content-justify-content: flex-start;
+  --lz-cell-content-value-slot-text-align: left;
+  --lz-input-height: 24px;
+  .lz-cell-content-value {
     width: 100%;
   }
 }

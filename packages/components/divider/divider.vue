@@ -1,7 +1,7 @@
 <template>
   <div
-    class="uv-divider"
-    :class="[hairline?'uv-divider-hairline':'',dashed?'uv-divider-dashed':'',position==='left'?'uv-divider-left':'',position==='right'?'uv-divider-right':'']"
+    class="lz-divider"
+    :class="[hairline?'lz-divider-hairline':'',dashed?'lz-divider-dashed':'',position==='left'?'lz-divider-left':'',position==='right'?'lz-divider-right':'']"
   >
     <slot />
   </div>
@@ -34,59 +34,59 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-divider-margin: 16px 0;
-  --uv-divider-font-size: 14px;
-  --uv-divider-border-color: #ebedf0;
-  --uv-divider-color: #969799;
-  --uv-divider-line-height: 1px;
-  --uv-divider-content-distance: 10px;
-  --uv-divider-left-line-max-width: 10%;
-  --uv-divider-right-line-max-width: 10%;
+  --lz-divider-margin: 16px 0;
+  --lz-divider-font-size: 14px;
+  --lz-divider-border-color: #ebedf0;
+  --lz-divider-color: #969799;
+  --lz-divider-line-height: 1px;
+  --lz-divider-content-distance: 10px;
+  --lz-divider-left-line-max-width: 10%;
+  --lz-divider-right-line-max-width: 10%;
 }
-.uv-divider {
+.lz-divider {
   display: flex;
   align-items: center;
-  margin: var(--uv-divider-margin);
-  font-size: var(--uv-divider-font-size);
+  margin: var(--lz-divider-margin);
+  font-size: var(--lz-divider-font-size);
   border-style: solid;
   border-width: 0;
-  border-color: var(--uv-divider-border-color);
-  color: var(--uv-divider-color);
+  border-color: var(--lz-divider-border-color);
+  color: var(--lz-divider-color);
   &::before,
   &::after {
     box-sizing: border-box;
     display: block;
-    height: var(--uv-divider-line-height);
+    height: var(--lz-divider-line-height);
     border-style: inherit;
-    border-width: var(--uv-divider-line-height) 0 0;
+    border-width: var(--lz-divider-line-height) 0 0;
     border-color: inherit;
     content: "";
     flex: 1;
   }
   &::before {
-    margin-right: var(--uv-divider-content-distance);
+    margin-right: var(--lz-divider-content-distance);
   }
   &::after {
-    margin-left: var(--uv-divider-content-distance);
+    margin-left: var(--lz-divider-content-distance);
   }
 }
-.uv-divider-hairline {
+.lz-divider-hairline {
   &::before,
   &::after {
     transform: scaleY(0.5);
   }
 }
-.uv-divider-dashed {
+.lz-divider-dashed {
   border-style: dashed;
 }
-.uv-divider-left {
+.lz-divider-left {
   &::before {
-    max-width: var(--uv-divider-left-line-max-width);
+    max-width: var(--lz-divider-left-line-max-width);
   }
 }
-.uv-divider-right {
+.lz-divider-right {
   &::after {
-    max-width: var(--uv-divider-right-line-max-width);
+    max-width: var(--lz-divider-right-line-max-width);
   }
 }
 </style>

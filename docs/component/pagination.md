@@ -14,7 +14,7 @@ onMounted(()=>{
 通过 `v-model` 绑定活跃的 `index` ，通过 `list` 传入需要显示的子项列表
 
 ```html
-<uv-pagination v-model="activeIndex" @change="change" :total="100"/>
+<lz-pagination v-model="activeIndex" @change="change" :total="100"/>
 ```
 
 ##  替换翻页按钮
@@ -22,7 +22,7 @@ onMounted(()=>{
 通过 `prevText` 设置上一页，通过 `nextText` 设置下一页，也可以使用插槽 `prev` 自定义上一页，通过 `next` 自定义下一页
 
  ```html
-<uv-pagination v-model="activeIndex"  prev-text="上一页" next-text="下一页" :total="100"/>
+<lz-pagination v-model="activeIndex"  prev-text="上一页" next-text="下一页" :total="100"/>
  ```
 
 
@@ -47,14 +47,14 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-pagination-font-size: 14px;
-  --uv-pagination-content-item-size: 34px;
-  --uv-pagination-content-item-color: #606266;
-  --uv-pagination-content-item-gap: 8px;
-  --uv-pagination-content-item-border-radius: 2px;
-  --uv-pagination-content-item-active-color: #ffffff;
-  --uv-pagination-content-item-bg-color: #f0f2f5;
-  --uv-pagination-content-item-acitve-bg-color: #409eff;
-  --uv-pagination-disabled-color: #bbbec4;
-  --uv-pagination-text-padding: 0 5px;
+  --lz-pagination-font-size: 14px;
+  --lz-pagination-content-item-size: 34px;
+  --lz-pagination-content-item-color: #606266;
+  --lz-pagination-content-item-gap: 8px;
+  --lz-pagination-content-item-border-radius: 2px;
+  --lz-pagination-content-item-active-color: #ffffff;
+  --lz-pagination-content-item-bg-color: #f0f2f5;
+  --lz-pagination-content-item-acitve-bg-color: #409eff;
+  --lz-pagination-disabled-color: #bbbec4;
+  --lz-pagination-text-padding: 0 5px;
 ```

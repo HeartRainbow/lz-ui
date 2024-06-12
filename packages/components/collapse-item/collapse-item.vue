@@ -1,6 +1,6 @@
 <template>
   <div
-    class="uv-collapse-item"
+    class="lz-collapse-item"
   >
     <div
       class="collapse-item-title"
@@ -20,7 +20,7 @@
           class="collapse-item-arrow"
           :class="isActive?'collapse':''"
         >
-          <uv-icon
+          <lz-icon
             size="16"
             :color="disabled?'#c8c9cc':'#969799'"
             name="arrow-down"
@@ -108,26 +108,26 @@ export default {
 </script>
 <style lang="scss">
 :root {
-  --uv-collapse-item-border-bottom: 1px solid #f5f6f7;
-  --uv-collapse-item-font-size: 14px;
-  --uv-collapse-item-title-padding: 10px 0;
-  --uv-collapse-item-content-padding: 12px 0;
-  --uv-collapse-item-bottom-line-border-bottom: 1px solid #f5f6f7;
-  --uv-collapse-item-transition-time: 0.3s;
+  --lz-collapse-item-border-bottom: 1px solid #f5f6f7;
+  --lz-collapse-item-font-size: 14px;
+  --lz-collapse-item-title-padding: 10px 0;
+  --lz-collapse-item-content-padding: 12px 0;
+  --lz-collapse-item-bottom-line-border-bottom: 1px solid #f5f6f7;
+  --lz-collapse-item-transition-time: 0.3s;
 }
-.uv-collapse-item {
-  font-size: var(--uv-collapse-item-font-size);
-  border-bottom: var(--uv-collapse-item-border-bottom);
+.lz-collapse-item {
+  font-size: var(--lz-collapse-item-font-size);
+  border-bottom: var(--lz-collapse-item-border-bottom);
   .collapse-item-title {
     display: flex;
     justify-content: space-between;
-    padding: var(--uv-collapse-item-title-padding);
+    padding: var(--lz-collapse-item-title-padding);
     .collapse-item-right {
       display: flex;
       align-items: center;
       .collapse-item-arrow {
         margin-left: 10px;
-        transition: all var(--uv-collapse-item-transition-time);
+        transition: all var(--lz-collapse-item-transition-time);
       }
       .collapse {
         transform: rotate(-180deg);
@@ -138,13 +138,13 @@ export default {
     color: #c8c9cc;
   }
   .collapse-item-bottom-line {
-    border-bottom: var(--uv-collapse-item-bottom-line-border-bottom);
+    border-bottom: var(--lz-collapse-item-bottom-line-border-bottom);
   }
   .collapse-item-content-wrapper {
     overflow: hidden;
-    transition: height var(--uv-collapse-item-transition-time) ease-in-out;
+    transition: height var(--lz-collapse-item-transition-time) ease-in-out;
     .collapse-item-content {
-      padding: var(--uv-collapse-item-content-padding);
+      padding: var(--lz-collapse-item-content-padding);
     }
   }
 }

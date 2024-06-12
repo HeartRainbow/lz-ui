@@ -1,35 +1,35 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-popover
+      <lz-popover
         v-model="test"
         :list="list"
         key-name="name"
       >
         <template #reference>
-          <uv-button @click="test=true">
+          <lz-button @click="test=true">
             打开
-          </uv-button>
+          </lz-button>
         </template>
-      </uv-popover>
+      </lz-popover>
     </demoBlock>
     <demoBlock title="配置渲染列表">
-      <uv-popover
+      <lz-popover
         v-model="test1"
         :list="list"
         key-name="name"
       >
         <template #reference>
           <div style="margin-left: 100px;">
-            <uv-button @click="test1=true">
+            <lz-button @click="test1=true">
               打开
-            </uv-button>
+            </lz-button>
           </div>
         </template>
-      </uv-popover>
+      </lz-popover>
     </demoBlock>
     <demoBlock title="禁止点击外部关闭">
-      <uv-popover
+      <lz-popover
         v-model="test2"
         :list="list"
         close-on-click-action
@@ -38,22 +38,22 @@
       >
         <template #reference>
           <div style="margin-left: 200px;">
-            <uv-button @click="test2=true">
+            <lz-button @click="test2=true">
               打开
-            </uv-button>
+            </lz-button>
           </div>
         </template>
-      </uv-popover>
+      </lz-popover>
     </demoBlock>
     <demoBlock title="自定义内容">
-      <uv-popover
+      <lz-popover
         v-model="test3"
       >
         <template #reference>
           <div style="margin-left: 20px;">
-            <uv-button @click="test3=true">
+            <lz-button @click="test3=true">
               打开
-            </uv-button>
+            </lz-button>
           </div>
         </template>
         <template #default>
@@ -63,14 +63,14 @@
             <div>我们能够享受的只有无法分割的此刻</div>
           </div>
         </template>
-      </uv-popover>
+      </lz-popover>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvPopover, uvButton } from 'uv-ui'
+import { uvPopover, uvButton } from 'lz-ui'
 import { ref } from 'vue'
 const test = ref(false)
 const test1 = ref(false)

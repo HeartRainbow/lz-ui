@@ -1,13 +1,13 @@
 <template>
   <div
-    class="uv-tab-bar-item"
+    class="lz-tab-bar-item"
     ref="tabBarItemRef"
     :style="{color:context.isActive?activeColor:inactiveColor,backgroundColor:context.isActive?activeBgColor:''}"
     @click="handleClickItem"
   >
-    <div class="uv-tab-bar-item-icon">
+    <div class="lz-tab-bar-item-icon">
       <slot name="icon">
-        <uv-icon
+        <lz-icon
           :size="iconSize"
           :name="iconName"
           :color="context.isActive?activeColor:inactiveColor"
@@ -16,7 +16,7 @@
       </slot>
     </div>
 
-    <div class="uv-tab-bar-item-text">
+    <div class="lz-tab-bar-item-text">
       <slot name="text">
         {{ text }}
       </slot>
@@ -76,19 +76,19 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-tab-bar-item-font-size: 12px;
-  --uv-tab-bar-item-text-margin-top: 5px;
+  --lz-tab-bar-item-font-size: 12px;
+  --lz-tab-bar-item-text-margin-top: 5px;
 }
-.uv-tab-bar-item {
+.lz-tab-bar-item {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: var(--uv-tab-bar-item-font-size);
+  font-size: var(--lz-tab-bar-item-font-size);
   flex: 1;
   flex-direction: column;
-  .uv-tab-bar-item-text {
-    margin-top: var(--uv-tab-bar-item-text-margin-top);
+  .lz-tab-bar-item-text {
+    margin-top: var(--lz-tab-bar-item-text-margin-top);
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="uv-grid"
+    class="lz-grid"
     :style="{paddingLeft:gutter+'px' }"
     ref="uvGridRef"
   >
@@ -53,7 +53,7 @@ export default {
 }
 </script>
 <style lang="scss">
-.uv-grid {
+.lz-grid {
   display: flex;
   flex-wrap: wrap;
 }

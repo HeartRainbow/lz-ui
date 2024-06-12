@@ -53,7 +53,7 @@ onMounted(()=>{
 <uvEmpty>
   我是自定义内容
   <div style="margin-top: 10px;">
-    <uv-button>按钮</uv-button>
+    <lz-button>按钮</lz-button>
   </div>
 </uvEmpty>
 ```
@@ -75,7 +75,7 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-empty-label-margin-top: 16px;
-  --uv-empty-label-font-size: 14px;
-  --uv-empty-label-color: #969799;
+  --lz-empty-label-margin-top: 16px;
+  --lz-empty-label-font-size: 14px;
+  --lz-empty-label-color: #969799;
 ```

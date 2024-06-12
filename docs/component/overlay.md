@@ -14,7 +14,7 @@ onMounted(()=>{
 通过 `show` 控制显示和隐藏，通过 `zIndex` 控制显示的层级
 
 ```html
-<uv-overlay
+<lz-overlay
   :show="show"
   z-index="2"
   @click="show = false"
@@ -26,7 +26,7 @@ onMounted(()=>{
 通过默认插槽进行插入内容
 
  ```html
-<uv-overlay
+<lz-overlay
   :show="show1"
   @click="show1 = false"
 >
@@ -35,7 +35,7 @@ onMounted(()=>{
       test
     </div>
   </div>
-</uv-overlay>
+</lz-overlay>
  ```
 
 
@@ -52,5 +52,5 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-overlay-transition-time: 0.5s;
+  --lz-overlay-transition-time: 0.5s;
 ```

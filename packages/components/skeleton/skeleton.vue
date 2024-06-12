@@ -1,9 +1,9 @@
 <template>
-  <div class="uv-skeleton">
-    <div v-if="loading" class="uv-skeleton-content" :class="[animate?'uv-skeleton-animate':'']">
+  <div class="lz-skeleton">
+    <div v-if="loading" class="lz-skeleton-content" :class="[animate?'lz-skeleton-animate':'']">
       <slot name="template">
         <uvSkeletonAvatar :avatar-shape="avatarShape" v-if="avatar" />
-        <div class="uv-skeleton-content-right">
+        <div class="lz-skeleton-content-right">
           <uvSkeletonTitle :round="round" v-if="title" :title-width="titleWidth" />
           <uvSkeletonParagraph
             :round="round"
@@ -90,27 +90,27 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-skeleton-duration: 1.2s;
-  --uv-skeleton-border-radius: 999px;
-  --uv-skeleton-blink-opacity: 0.6;
+  --lz-skeleton-duration: 1.2s;
+  --lz-skeleton-border-radius: 999px;
+  --lz-skeleton-blink-opacity: 0.6;
 }
-.uv-skeleton {
-  .uv-skeleton-content {
+.lz-skeleton {
+  .lz-skeleton-content {
     display: flex;
-    .uv-skeleton-content-right {
+    .lz-skeleton-content-right {
       flex: 1 0;
     }
   }
   &-animate {
     animation:
-      uv-skeleton-blink var(--uv-skeleton-duration) ease-in-out
+      lz-skeleton-blink var(--lz-skeleton-duration) ease-in-out
       infinite;
   }
 }
 
-@keyframes uv-skeleton-blink {
+@keyframes lz-skeleton-blink {
   50% {
-    opacity: var(--uv-skeleton-blink-opacity);
+    opacity: var(--lz-skeleton-blink-opacity);
   }
 }
 

@@ -16,12 +16,12 @@ onMounted(()=>{
 ```vue
 <template>
   <div>
-    <uv-button
+    <lz-button
       type="primary"
       @click="openDialog"
     >
       打开dialog
-    </uv-button>
+    </lz-button>
   </div>
 </template>
 
@@ -64,21 +64,21 @@ const openDialog = () => {
 ## css变量
 
 ```css
-  --uv-dialog-width: 90%;
-  --uv-dialog-min-height: 100px;
-  --uv-dialog-border-radius: 16px;
-  --uv-dialog-bg-color: #ffffff;
-  --uv-dialog-transition-time: 0.3s;
-  --uv-dialog-title-padding: 15px 0 10px;
-  --uv-dialog-title-text-align: center;
-  --uv-dialog-title-color: #323233;
-  --uv-dialog-content-padding: 8px 24px 26px;
-  --uv-dialog-content-font-size: 14px;
-  --uv-dialog-content-color: #646566;
-  --uv-dialog-bottom-button-height: 48px;
-  --uv-dialog-bottom-button-border-top: 1px solid #f7f8f9;
-  --uv-dialog-bottom-button-center-line-color: #f7f8f9;
-  --uv-dialog-confim-active-bg-color: #e6e6e6;
-  --uv-dialog-cancle-bg-color: #e6e6e6;
-  --uv-dialog-button-undisabled-color: #646566;
+  --lz-dialog-width: 90%;
+  --lz-dialog-min-height: 100px;
+  --lz-dialog-border-radius: 16px;
+  --lz-dialog-bg-color: #ffffff;
+  --lz-dialog-transition-time: 0.3s;
+  --lz-dialog-title-padding: 15px 0 10px;
+  --lz-dialog-title-text-align: center;
+  --lz-dialog-title-color: #323233;
+  --lz-dialog-content-padding: 8px 24px 26px;
+  --lz-dialog-content-font-size: 14px;
+  --lz-dialog-content-color: #646566;
+  --lz-dialog-bottom-button-height: 48px;
+  --lz-dialog-bottom-button-border-top: 1px solid #f7f8f9;
+  --lz-dialog-bottom-button-center-line-color: #f7f8f9;
+  --lz-dialog-confim-active-bg-color: #e6e6e6;
+  --lz-dialog-cancle-bg-color: #e6e6e6;
+  --lz-dialog-button-undisabled-color: #646566;
 ```

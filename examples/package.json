@@ -1,5 +1,5 @@
 {
-  "name": "uv-ui-examples",
+  "name": "lz-ui-examples",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

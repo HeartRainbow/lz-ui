@@ -13,8 +13,8 @@ const ToastVNode = (options) => {
   document.body.appendChild(container) // 添加到body上
   const clear = () => {
     const dom = vm.el
-    if (dom.querySelector('.uv-toast-value')) {
-      dom.querySelector('.uv-toast-value')?.classList.add('remove') // 销毁时添加淡入淡出效果
+    if (dom.querySelector('.lz-toast-value')) {
+      dom.querySelector('.lz-toast-value')?.classList.add('remove') // 销毁时添加淡入淡出效果
       const t = setTimeout(() => { // 淡入淡出效果之后删除dom节点
         render(null, container)
         document.body.removeChild(container)

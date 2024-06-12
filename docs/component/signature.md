@@ -55,16 +55,16 @@ onMounted(()=>{
 ## css变量
 
 ```css
-  --uv-signature-default-gap: 5px;
-  --uv-signature-content-border: 1px dotted #dadada;
-  --uv-signature-content-border-radius: 8px;
-  --uv-signature-content-bg-color: #ffffff;
-  --uv-signature-footer-button-text-padding: 8px 16px;
-  --uv-signature-footer-button-text-size: 12px;
-  --uv-signature-footer-button-border-radius: 4px;
-  --uv-signature-footer-clear-button-border: 1px solid #dcdee0;
-  --uv-signature-footer-clear-button-color: #323233;
-  --uv-signature-footer-clear-button-bg-color: #ffffff;
-  --uv-signature-footer-confim-button-color: #ffffff;
-  --uv-signature-footer-confim-button-bg-color: #1989fa;
+  --lz-signature-default-gap: 5px;
+  --lz-signature-content-border: 1px dotted #dadada;
+  --lz-signature-content-border-radius: 8px;
+  --lz-signature-content-bg-color: #ffffff;
+  --lz-signature-footer-button-text-padding: 8px 16px;
+  --lz-signature-footer-button-text-size: 12px;
+  --lz-signature-footer-button-border-radius: 4px;
+  --lz-signature-footer-clear-button-border: 1px solid #dcdee0;
+  --lz-signature-footer-clear-button-color: #323233;
+  --lz-signature-footer-clear-button-bg-color: #ffffff;
+  --lz-signature-footer-confim-button-color: #ffffff;
+  --lz-signature-footer-confim-button-bg-color: #1989fa;
 ```

@@ -1,13 +1,13 @@
 <template>
   <div
-    class="uv-swipe"
+    class="lz-swipe"
     ref="swiperRef"
   >
     <div
       @touchstart="touchstart"
       @touchmove="touchmove"
       @touchend="touchend"
-      class="uv-swipe-list"
+      class="lz-swipe-list"
       :style="{
         width: `${listWidth}px`,
         transform: `translateX(${transformX}px)`,
@@ -16,12 +16,12 @@
     >
       <slot />
     </div>
-    <div class="uv-swipe-indicators">
+    <div class="lz-swipe-indicators">
       <div
         v-for="(item,idx) in fields"
         :key="idx"
-        :class="state.activeIndex%childrenNum===idx?'uv-swipe-indicators-item-active':''"
-        class="uv-swipe-indicators-item"
+        :class="state.activeIndex%childrenNum===idx?'lz-swipe-indicators-item-active':''"
+        class="lz-swipe-indicators-item"
       />
     </div>
   </div>
@@ -182,17 +182,17 @@ export default {
 </script>
 
 <style lang="scss">
-.uv-swipe {
+.lz-swipe {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: auto;
-  .uv-swipe-list {
+  .lz-swipe-list {
     position: relative;
     display: flex;
     height: 100%;
   }
-  .uv-swipe-indicators {
+  .lz-swipe-indicators {
     position: absolute;
     bottom: 12px;
     left: 50%;
@@ -200,7 +200,7 @@ export default {
     align-items: center;
     transform: translateX(-50%);
     gap: 6px;
-    .uv-swipe-indicators-item {
+    .lz-swipe-indicators-item {
       width: 5px;
       height: 5px;
       border-radius: 50%;
@@ -208,7 +208,7 @@ export default {
       opacity: 0.3;
       transition: all 0.3s;
     }
-    .uv-swipe-indicators-item-active {
+    .lz-swipe-indicators-item-active {
       background-color: #ffffff;
       opacity: 1;
     }

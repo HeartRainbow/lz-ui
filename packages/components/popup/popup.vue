@@ -1,26 +1,26 @@
 <template>
-  <div class="uv-popup" @touchmove.prevent>
+  <div class="lz-popup" @touchmove.prevent>
     <overLay
       :overlay="overlay"
       :show="modelValue"
       @click="closePop"
     />
-    <Transition :name="'uv-popup-slide-'+position">
+    <Transition :name="'lz-popup-slide-'+position">
       <div
         v-show="modelValue"
         :class="uvClass"
         :style="{height:height,backgroundColor:bgColor,padding:padding?'10px':'none'}"
       >
-        <div class="uv-popup-content">
-          <div class="uv-popup-content-top" v-if="title || close">
-            <div v-if="title" class="uv-popup-content-title">
+        <div class="lz-popup-content">
+          <div class="lz-popup-content-top" v-if="title || close">
+            <div v-if="title" class="lz-popup-content-title">
               {{ title }}
             </div>
             <div
               v-if="close"
-              class="uv-popup-content-close"
+              class="lz-popup-content-close"
             >
-              <uv-icon
+              <lz-icon
                 @click="closeEvent"
                 name="close"
                 size="28"
@@ -28,21 +28,21 @@
               />
             </div>
           </div>
-          <div class="uv-popup-content-item">
+          <div class="lz-popup-content-item">
             <slot />
           </div>
           <div
             v-if="action"
-            class="uv-popup-content-button"
+            class="lz-popup-content-button"
           >
             <div
-              class="uv-popup-content-button-cancle"
+              class="lz-popup-content-button-cancle"
               @click.stop="cancleEvent"
             >
               {{ leftName }}
             </div>
             <div
-              class="uv-popup-content-button-confim"
+              class="lz-popup-content-button-confim"
               @click.stop="confimEvent"
             >
               {{ rightName }}
@@ -116,9 +116,9 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue', 'cancle', 'confim', 'close'])
 const uvClass = computed(() => {
   return [
-    'uv-popup-wrap',
-    props.position ? `uv-popup-${props.position}` : '',
-    props.round ? `uv-popup-${props.position}-round` : ''
+    'lz-popup-wrap',
+    props.position ? `lz-popup-${props.position}` : '',
+    props.round ? `lz-popup-${props.position}-round` : ''
   ]
 })
 
@@ -147,154 +147,154 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-popup-transition-time: 0.3s;
-  --uv-popup-border-radius: 16px;
-  --uv-popup-left-right-max-width: 70%;
-  --uv-popup-button-font-size: 14px;
-  --uv-popup-button-border-radius: 6px;
-  --uv-popup-button-padding: 12px 45px;
-  --uv-popup-button-box-shadow: rgb(0 0 0 / 15%) 0 2px 8px;
-  --uv-popup-button-confim-color: #ffffff;
-  --uv-popup-button-cancle-color: #1fa45d;
-  --uv-popup-button-confim-bg-color: #07c160;
-  --uv-popup-button-cancle-bg-color: #f0f0f0;
-  --uv-popup-content-top-height: 30px;
-  --uv-popup-content-title-font-size: 16px;
-  --uv-popup-content-title-font-weight: 700;
-  --uv-popup-content-title-color: #323233;
-  --uv-popup-content-title-padding: 0;
+  --lz-popup-transition-time: 0.3s;
+  --lz-popup-border-radius: 16px;
+  --lz-popup-left-right-max-width: 70%;
+  --lz-popup-button-font-size: 14px;
+  --lz-popup-button-border-radius: 6px;
+  --lz-popup-button-padding: 12px 45px;
+  --lz-popup-button-box-shadow: rgb(0 0 0 / 15%) 0 2px 8px;
+  --lz-popup-button-confim-color: #ffffff;
+  --lz-popup-button-cancle-color: #1fa45d;
+  --lz-popup-button-confim-bg-color: #07c160;
+  --lz-popup-button-cancle-bg-color: #f0f0f0;
+  --lz-popup-content-top-height: 30px;
+  --lz-popup-content-title-font-size: 16px;
+  --lz-popup-content-title-font-weight: 700;
+  --lz-popup-content-title-color: #323233;
+  --lz-popup-content-title-padding: 0;
 }
-.uv-popup {
-  .uv-popup-bottom {
+.lz-popup {
+  .lz-popup-bottom {
     bottom: 0;
     left: 0;
     width: 100%;
   }
-  .uv-popup-bottom-round {
-    border-radius: var(--uv-popup-border-radius)  var(--uv-popup-border-radius) 0 0;
+  .lz-popup-bottom-round {
+    border-radius: var(--lz-popup-border-radius)  var(--lz-popup-border-radius) 0 0;
   }
-  .uv-popup-top {
+  .lz-popup-top {
     top: 0;
     left: 0;
     width: 100%;
   }
-  .uv-popup-top-round {
-    border-radius: 0 0 var(--uv-popup-border-radius)  var(--uv-popup-border-radius);
+  .lz-popup-top-round {
+    border-radius: 0 0 var(--lz-popup-border-radius)  var(--lz-popup-border-radius);
   }
-  .uv-popup-center {
+  .lz-popup-center {
     top: 50%;
     left: 50%;
     min-width: 50px;
     min-height: 50px;
     transform: translate(-50%, -50%);
   }
-  .uv-popup-center-round {
-    border-radius: var(--uv-popup-border-radius);
+  .lz-popup-center-round {
+    border-radius: var(--lz-popup-border-radius);
   }
-  .uv-popup-left {
+  .lz-popup-left {
     top: 0;
     left: 0;
-    max-width: var(--uv-popup-left-right-max-width);
+    max-width: var(--lz-popup-left-right-max-width);
     min-height: 100%;
   }
-  .uv-popup-left-round {
-    border-radius: 0  var(--uv-popup-border-radius)  var(--uv-popup-border-radius) 0;
+  .lz-popup-left-round {
+    border-radius: 0  var(--lz-popup-border-radius)  var(--lz-popup-border-radius) 0;
   }
-  .uv-popup-right {
+  .lz-popup-right {
     top: 0;
     right: 0;
-    max-width: var(--uv-popup-left-right-max-width);
+    max-width: var(--lz-popup-left-right-max-width);
     min-height: 100%;
   }
-  .uv-popup-right-round {
-    border-radius: var(--uv-popup-border-radius)   0 0 var(--uv-popup-border-radius);
+  .lz-popup-right-round {
+    border-radius: var(--lz-popup-border-radius)   0 0 var(--lz-popup-border-radius);
   }
-  .uv-popup-wrap {
+  .lz-popup-wrap {
     position: fixed;
     z-index: 2;
     overflow-y: auto;
     max-height: 100%;
-    transition: transform var(--uv-popup-transition-time);
-    .uv-popup-content {
-      .uv-popup-content-top {
+    transition: transform var(--lz-popup-transition-time);
+    .lz-popup-content {
+      .lz-popup-content-top {
         position: relative;
         display: flex;
         align-items: center;
-        height: var(--uv-popup-content-top-height);
-        .uv-popup-content-title {
-          padding: var(--uv-popup-content-title-padding);
-          font-size: var(--uv-popup-content-title-font-size);
-          font-weight: var(--uv-popup-content-title-font-weight);
-          color: var(--uv-popup-content-title-color);
+        height: var(--lz-popup-content-top-height);
+        .lz-popup-content-title {
+          padding: var(--lz-popup-content-title-padding);
+          font-size: var(--lz-popup-content-title-font-size);
+          font-weight: var(--lz-popup-content-title-font-weight);
+          color: var(--lz-popup-content-title-color);
         }
-        .uv-popup-content-close {
+        .lz-popup-content-close {
           position: absolute;
           top: 0;
           right: 0;
         }
       }
-      .uv-popup-content-button {
+      .lz-popup-content-button {
         display: flex;
         justify-content: space-around;
         align-items: center;
         padding-top: 10px;
 
         @mixin base-button() {
-          padding: var(--uv-popup-button-padding);
-          font-size: var(--uv-popup-button-font-size);
-          border-radius: var(--uv-popup-button-border-radius);
+          padding: var(--lz-popup-button-padding);
+          font-size: var(--lz-popup-button-font-size);
+          border-radius: var(--lz-popup-button-border-radius);
           text-align: center;
           white-space: nowrap;
-          box-shadow: var(--uv-popup-button-box-shadow);
+          box-shadow: var(--lz-popup-button-box-shadow);
         }
-        .uv-popup-content-button-confim {
+        .lz-popup-content-button-confim {
           @include base-button;
 
-          color: var(--uv-popup-button-confim-color);
-          background-color: var(--uv-popup-button-confim-bg-color);
+          color: var(--lz-popup-button-confim-color);
+          background-color: var(--lz-popup-button-confim-bg-color);
         }
-        .uv-popup-content-button-cancle {
+        .lz-popup-content-button-cancle {
           @include base-button;
 
           margin-right: 10px;
-          color: var(--uv-popup-button-cancle-color);
-          background-color: var(--uv-popup-button-cancle-bg-color);
+          color: var(--lz-popup-button-cancle-color);
+          background-color: var(--lz-popup-button-cancle-bg-color);
         }
       }
     }
   }
-  .uv-popup-slide-top-enter-active,
-  .uv-popup-slide-center-enter-active,
-  .uv-popup-slide-left-enter-active,
-  .uv-popup-slide-right-enter-active,
-  .uv-popup-slide-bottom-enter-active {
+  .lz-popup-slide-top-enter-active,
+  .lz-popup-slide-center-enter-active,
+  .lz-popup-slide-left-enter-active,
+  .lz-popup-slide-right-enter-active,
+  .lz-popup-slide-bottom-enter-active {
     transition-timing-function: ease-out;
   }
-  .uv-popup-slide-top-leave-active,
-  .uv-popup-slide-center-enter-active,
-  .uv-popup-slide-left-leave-active,
-  .uv-popup-slide-right-leave-active,
-  .uv-popup-slide-bottom-leave-active {
+  .lz-popup-slide-top-leave-active,
+  .lz-popup-slide-center-enter-active,
+  .lz-popup-slide-left-leave-active,
+  .lz-popup-slide-right-leave-active,
+  .lz-popup-slide-bottom-leave-active {
     transition-timing-function: ease-in;
   }
-  .uv-popup-slide-top-enter-from,
-  .uv-popup-slide-top-leave-active {
+  .lz-popup-slide-top-enter-from,
+  .lz-popup-slide-top-leave-active {
     transform: translate3d(0, -100%, 0);
   }
-  .uv-popup-slide-right-enter-from,
-  .uv-popup-slide-right-leave-active {
+  .lz-popup-slide-right-enter-from,
+  .lz-popup-slide-right-leave-active {
     transform: translate3d(100%, 0, 0);
   }
-  .uv-popup-slide-bottom-enter-from,
-  .uv-popup-slide-bottom-leave-active {
+  .lz-popup-slide-bottom-enter-from,
+  .lz-popup-slide-bottom-leave-active {
     transform: translate3d(0, 100%, 0);
   }
-  .uv-popup-slide-left-enter-from,
-  .uv-popup-slide-left-leave-active {
+  .lz-popup-slide-left-enter-from,
+  .lz-popup-slide-left-leave-active {
     transform: translate3d(-100%, 0, 0);
   }
-  .uv-popup-slide-center-enter-from,
-  .uv-popup-slide-center-leave-active {
+  .lz-popup-slide-center-enter-from,
+  .lz-popup-slide-center-leave-active {
     opacity: 0;
   }
 }

@@ -4,9 +4,9 @@
       <div style="margin-bottom: 10px;font-size: 14px;">
         当前值：{{ value }}
       </div>
-      <uv-button @click="openPicker">
+      <lz-button @click="openPicker">
         打开picker
-      </uv-button>
+      </lz-button>
       <uvDatetimePicker
         round
         ref="uvdateRef"
@@ -18,9 +18,9 @@
       <div style="margin-bottom: 10px;font-size: 14px;">
         当前值：{{ value1 }}
       </div>
-      <uv-button @click="openPicker1">
+      <lz-button @click="openPicker1">
         打开picker
-      </uv-button>
+      </lz-button>
       <uvDatetimePicker
         round
         ref="uvdateRef1"
@@ -33,9 +33,9 @@
       <div style="margin-bottom: 10px;font-size: 14px;">
         当前值：{{ value2 }}
       </div>
-      <uv-button @click="openPicker2">
+      <lz-button @click="openPicker2">
         打开picker
-      </uv-button>
+      </lz-button>
       <uvDatetimePicker
         round
         ref="uvdateRef2"
@@ -48,9 +48,9 @@
       <div style="margin-bottom: 10px;font-size: 14px;">
         当前值：{{ value3 }}
       </div>
-      <uv-button @click="openPicker3">
+      <lz-button @click="openPicker3">
         打开picker
-      </uv-button>
+      </lz-button>
       <uvDatetimePicker
         round
         ref="uvdateRef3"
@@ -63,9 +63,9 @@
       <div style="margin-bottom: 10px;font-size: 14px;">
         当前值：{{ value4 }}
       </div>
-      <uv-button @click="openPicker4">
+      <lz-button @click="openPicker4">
         打开picker
-      </uv-button>
+      </lz-button>
       <uvDatetimePicker
         round
         ref="uvdateRef4"
@@ -78,9 +78,9 @@
       <div style="margin-bottom: 10px;font-size: 14px;">
         当前值：{{ value5 }}
       </div>
-      <uv-button @click="openPicker5">
+      <lz-button @click="openPicker5">
         打开picker
-      </uv-button>
+      </lz-button>
       <uvDatetimePicker
         round
         ref="uvdateRef5"
@@ -94,7 +94,7 @@
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { uvDatetimePicker, uvButton } from 'uv-ui'
+import { uvDatetimePicker, uvButton } from 'lz-ui'
 import { ref } from 'vue'
 const uvdateRef = ref(null)
 const uvdateRef1 = ref(null)

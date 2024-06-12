@@ -1,6 +1,6 @@
 <template>
   <div
-    class="uv-checkbox-group"
+    class="lz-checkbox-group"
     :style="{flexDirection:direction==='column'? 'column':'row'}"
   >
     <slot />
@@ -90,11 +90,11 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-checkbox-group-gap: 10px;
+  --lz-checkbox-group-gap: 10px;
 }
-.uv-checkbox-group {
+.lz-checkbox-group {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--uv-checkbox-group-gap);
+  gap: var(--lz-checkbox-group-gap);
 }
 </style>

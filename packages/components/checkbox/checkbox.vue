@@ -1,27 +1,27 @@
 <template>
   <div
-    class="uv-check-box"
+    class="lz-check-box"
     ref="checkboxRef"
     :class="uvCheckBoxClass"
     @click="change"
   >
     <div
       v-if="labelPosition==='left'"
-      class="uv-check-box-left"
+      class="lz-check-box-left"
     >
       <slot>
         {{ label }}
       </slot>
     </div>
     <div
-      class="uv-check-box-icon"
+      class="lz-check-box-icon"
       :style="uvStyle"
       :class="[
         (parentProps?.shape || props.shape) === 'round' ? 'round' : '',
         context.isSelect?'active':''
       ]"
     >
-      <uv-icon
+      <lz-icon
         v-if="context.isSelect"
         name="select"
         :color="disabled?'#c8c9cc':'#fff'"
@@ -30,7 +30,7 @@
     </div>
     <div
       v-if="labelPosition==='right'"
-      class="uv-check-box-right"
+      class="lz-check-box-right"
     >
       <slot>
         {{ label }}
@@ -95,8 +95,8 @@ const emit = defineEmits(['update:modelValue', 'change'])
 
 const uvCheckBoxClass = computed(() => {
   return [
-    props.disabled ? 'uv-check-box-disabled' : '',
-    props.spaceBetween ? 'uv-check-box-space-between' : ''
+    props.disabled ? 'lz-check-box-disabled' : '',
+    props.spaceBetween ? 'lz-check-box-space-between' : ''
   ]
 })
 const uvStyle = computed(() => {
@@ -125,51 +125,51 @@ export default {
 </script>
 <style lang="scss">
 :root {
-  --uv-check-box-icon-border: 1px solid #c8c9cc;
-  --uv-check-box-icon-active-border: 1px solid #1989fa;
-  --uv-check-box-icon-active-bg-color: #1989fa;
-  --uv-check-box-icon-disabled-border: 1px solid #c8c9cc;
-  --uv-check-box-icon-disabled-bg-color: #ebedf0;
-  --uv-check-box-text-margin: 8px;
-  --uv-check-box-text-size: 14px;
-  --uv-check-box-space-between-padding: 0 10px;
+  --lz-check-box-icon-border: 1px solid #c8c9cc;
+  --lz-check-box-icon-active-border: 1px solid #1989fa;
+  --lz-check-box-icon-active-bg-color: #1989fa;
+  --lz-check-box-icon-disabled-border: 1px solid #c8c9cc;
+  --lz-check-box-icon-disabled-bg-color: #ebedf0;
+  --lz-check-box-text-margin: 8px;
+  --lz-check-box-text-size: 14px;
+  --lz-check-box-space-between-padding: 0 10px;
 }
-.uv-check-box {
+.lz-check-box {
   display: flex;
   align-items: center;
-  .uv-check-box-icon {
+  .lz-check-box-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: var(--uv-check-box-icon-border);
+    border: var(--lz-check-box-icon-border);
     transition: all 0.3s;
   }
   .active {
-    border: var(--uv-check-box-icon-active-border);
-    background-color: var(--uv-check-box-icon-active-bg-color);
+    border: var(--lz-check-box-icon-active-border);
+    background-color: var(--lz-check-box-icon-active-bg-color);
   }
   .round {
     border-radius: 50%;
   }
-  .uv-check-box-right {
-    margin-left: var(--uv-check-box-text-margin);
-    font-size: var(--uv-check-box-text-size);
+  .lz-check-box-right {
+    margin-left: var(--lz-check-box-text-margin);
+    font-size: var(--lz-check-box-text-size);
   }
-  .uv-check-box-left {
-    margin-right: var(--uv-check-box-text-margin);
-    font-size: var(--uv-check-box-text-size);
+  .lz-check-box-left {
+    margin-right: var(--lz-check-box-text-margin);
+    font-size: var(--lz-check-box-text-size);
   }
 }
-.uv-check-box-disabled {
+.lz-check-box-disabled {
   cursor: no-drop;
   color: #c8c9cc;
-  .uv-check-box-icon {
-    border: var(--uv-check-box-icon-disabled-border) !important;
-    background-color: var(--uv-check-box-icon-disabled-bg-color) !important;
+  .lz-check-box-icon {
+    border: var(--lz-check-box-icon-disabled-border) !important;
+    background-color: var(--lz-check-box-icon-disabled-bg-color) !important;
   }
 }
-.uv-check-box-space-between {
+.lz-check-box-space-between {
   justify-content: space-between;
-  padding: var(--uv-check-box-space-between-padding);
+  padding: var(--lz-check-box-space-between-padding);
 }
 </style>

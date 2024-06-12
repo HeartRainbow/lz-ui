@@ -1,20 +1,20 @@
 <template>
   <div
-    class="uv-grid-item "
+    class="lz-grid-item "
     ref="gridItemRef"
     :style="rootStyle"
     :class="rootClass"
     @click="clickEvent"
   >
     <div
-      class="uv-grid-item-content"
+      class="lz-grid-item-content"
       :style="contentStyle"
       :class="contentClass"
     >
       <slot>
         <div>
           <slot name="icon">
-            <uv-icon
+            <lz-icon
               :size="iconSize"
               :name="iconName"
               :color="iconColor"
@@ -22,7 +22,7 @@
             />
           </slot>
         </div>
-        <div class="uv-grid-item-content-text">
+        <div class="lz-grid-item-content-text">
           <slot name="text">
             {{ text }}
           </slot>
@@ -84,8 +84,8 @@ const rootStyle = computed(() => {
 const rootClass = computed(() => {
   const { border, clickable } = parentProps
   const classList = [
-    border ? 'uv-grid-item-border' : '',
-    clickable ? 'uv-grid-item-clickable' : ''
+    border ? 'lz-grid-item-border' : '',
+    clickable ? 'lz-grid-item-clickable' : ''
   ]
   return classList
 })
@@ -101,8 +101,8 @@ const contentStyle = computed(() => {
 const contentClass = computed(() => {
   const { direction, reverse } = parentProps
   const classList = [
-    direction === 'column' ? 'uv-grid-item-content-direction-column' : 'uv-grid-item-content-direction-row',
-    reverse ? `uv-grid-item-content-direction-${direction}-reverse` : ''
+    direction === 'column' ? 'lz-grid-item-content-direction-column' : 'lz-grid-item-content-direction-row',
+    reverse ? `lz-grid-item-content-direction-${direction}-reverse` : ''
   ]
   return classList
 })
@@ -119,63 +119,63 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-grid-item-content-padding: 16px 8px;
-  --uv-grid-item-content-active-bg-color: #f2f3f5;
-  --uv-grid-item-content-text-white-space: nowrap;
-  --uv-grid-item-content-text-font-size: 12px;
-  --uv-grid-item-content-text-color: #323233;
-  --uv-grid-item-content-text-margin: 8px;
-  --uv-grid-item-border: 1px solid #f7f8f9;
+  --lz-grid-item-content-padding: 16px 8px;
+  --lz-grid-item-content-active-bg-color: #f2f3f5;
+  --lz-grid-item-content-text-white-space: nowrap;
+  --lz-grid-item-content-text-font-size: 12px;
+  --lz-grid-item-content-text-color: #323233;
+  --lz-grid-item-content-text-margin: 8px;
+  --lz-grid-item-border: 1px solid #f7f8f9;
 }
-.uv-grid-item {
-  .uv-grid-item-content {
+.lz-grid-item {
+  .lz-grid-item-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--uv-grid-item-content-padding);
+    padding: var(--lz-grid-item-content-padding);
     width: 100%;
-    .uv-grid-item-content-text {
-      font-size: var(--uv-grid-item-content-text-font-size);
-      white-space: var(--uv-grid-item-content-text-white-space);
-      color: var(--uv-grid-item-content-text-color);
+    .lz-grid-item-content-text {
+      font-size: var(--lz-grid-item-content-text-font-size);
+      white-space: var(--lz-grid-item-content-text-white-space);
+      color: var(--lz-grid-item-content-text-color);
     }
   }
-  .uv-grid-item-content-direction-column {
+  .lz-grid-item-content-direction-column {
     flex-direction: column;
-    .uv-grid-item-content-text {
-      margin-top: var(--uv-grid-item-content-text-margin);
+    .lz-grid-item-content-text {
+      margin-top: var(--lz-grid-item-content-text-margin);
     }
   }
-  .uv-grid-item-content-direction-column-reverse {
+  .lz-grid-item-content-direction-column-reverse {
     flex-direction: column-reverse;
-    .uv-grid-item-content-text {
+    .lz-grid-item-content-text {
       margin: 0;
-      margin-bottom: var(--uv-grid-item-content-text-margin);
+      margin-bottom: var(--lz-grid-item-content-text-margin);
     }
   }
-  .uv-grid-item-content-direction-row {
+  .lz-grid-item-content-direction-row {
     flex-direction: row;
-    .uv-grid-item-content-text {
-      margin-left: var(--uv-grid-item-content-text-margin);
+    .lz-grid-item-content-text {
+      margin-left: var(--lz-grid-item-content-text-margin);
     }
   }
-  .uv-grid-item-content-direction-row-reverse {
+  .lz-grid-item-content-direction-row-reverse {
     flex-direction: row-reverse;
-    .uv-grid-item-content-text {
+    .lz-grid-item-content-text {
       margin: 0;
-      margin-right: var(--uv-grid-item-content-text-margin);
+      margin-right: var(--lz-grid-item-content-text-margin);
     }
   }
 }
-.uv-grid-item-clickable {
-  .uv-grid-item-content {
+.lz-grid-item-clickable {
+  .lz-grid-item-content {
     &:active {
-      background-color: var(--uv-grid-item-content-active-bg-color) !important;
+      background-color: var(--lz-grid-item-content-active-bg-color) !important;
     }
   }
 }
-.uv-grid-item-border {
-  border-right: var(--uv-grid-item-border);
-  border-bottom: var(--uv-grid-item-border);
+.lz-grid-item-border {
+  border-right: var(--lz-grid-item-border);
+  border-bottom: var(--lz-grid-item-border);
 }
 </style>

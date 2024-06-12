@@ -1,49 +1,49 @@
 <template>
   <div>
     <demoBlock title="基本使用">
-      <uv-button
+      <lz-button
         type="primary"
         @click="openToast"
       >
         打开toast
-      </uv-button>
+      </lz-button>
     </demoBlock>
     <demoBlock title="不同状态">
       <div class="flex">
-        <uv-button
+        <lz-button
           type="primary"
           @click="openToast1('success')"
         >
           成功状态
-        </uv-button>
-        <uv-button
+        </lz-button>
+        <lz-button
           type="primary"
           @click="openToast1('error')"
         >
           失败状态
-        </uv-button>
-        <uv-button
+        </lz-button>
+        <lz-button
           type="primary"
           @click="openToast1('loading')"
         >
           等待状态
-        </uv-button>
+        </lz-button>
       </div>
     </demoBlock>
     <demoBlock title="其他配置">
-      <uv-button
+      <lz-button
         type="primary"
         @click="openToast2"
       >
         6s后调用clear关闭
-      </uv-button>
+      </lz-button>
     </demoBlock>
   </div>
 </template>
 
 <script setup>
 import demoBlock from '../../../demo/demo-block.vue'
-import { Toast, uvButton } from 'uv-ui'
+import { Toast, uvButton } from 'lz-ui'
 
 const openToast = () => {
   Toast({

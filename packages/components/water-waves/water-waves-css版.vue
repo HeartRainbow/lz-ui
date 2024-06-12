@@ -1,20 +1,20 @@
 <template>
   <div
-    class="uv-water-waves"
+    class="lz-water-waves"
     :style="waterWavesStyles"
   >
     <div
-      class="uv-water-waves-content"
+      class="lz-water-waves-content"
       :style="{color:color}"
     >
       <slot />
     </div>
     <div
-      class="uv-water-waves-item1"
+      class="lz-water-waves-item1"
       :style="{top:wavesTopList.item1}"
     />
     <div
-      class="uv-water-waves-item2"
+      class="lz-water-waves-item2"
       :style="{top:wavesTopList.item2}"
     />
   </div>
@@ -84,20 +84,20 @@ export default {
 
 <style>
 :root {
-  --uv-water-waves-box-shadow: #00eef2 0 0 32px inset;
-  --uv-water-waves-content-z-index: 10;
-  --uv-water-waves-item1-bg-color: #33cfff;
-  --uv-water-waves-item2-bg-color: #0eaffe;
-  --uv-water-waves-animation-duration: 8s;
-  --uv-water-waves-item1-opacity: 0.7;
-  --uv-water-waves-item2-opacity: 0.5;
-  --uv-water-waves-item1-border-radius: 42%;
-  --uv-water-waves-item2-border-radius: 40%;
+  --lz-water-waves-box-shadow: #00eef2 0 0 32px inset;
+  --lz-water-waves-content-z-index: 10;
+  --lz-water-waves-item1-bg-color: #33cfff;
+  --lz-water-waves-item2-bg-color: #0eaffe;
+  --lz-water-waves-animation-duration: 8s;
+  --lz-water-waves-item1-opacity: 0.7;
+  --lz-water-waves-item2-opacity: 0.5;
+  --lz-water-waves-item1-border-radius: 42%;
+  --lz-water-waves-item2-border-radius: 40%;
 }
 </style>
 
 <style lang="scss" scoped>
-.uv-water-waves {
+.lz-water-waves {
   position: relative;
   display: flex;
   justify-content: center;
@@ -108,35 +108,35 @@ export default {
   height: 200px;
   border-radius: 50%;
   text-align: center;
-  box-shadow: var(--uv-water-waves-box-shadow);
+  box-shadow: var(--lz-water-waves-box-shadow);
   animation: water-waves linear infinite;
-  .uv-water-waves-content {
+  .lz-water-waves-content {
     position: relative;
-    z-index: var(--uv-water-waves-content-z-index);
+    z-index: var(--lz-water-waves-content-z-index);
   }
-  .uv-water-waves-item1 {
+  .lz-water-waves-item1 {
     position: absolute;
     top: 90%;
     left: -25%;
     width: 200%;
     height: 200%;
-    border-radius: var(--uv-water-waves-item1-border-radius);
-    background-color: var(--uv-water-waves-item1-bg-color);
-    opacity: var(--uv-water-waves-item1-opacity);
+    border-radius: var(--lz-water-waves-item1-border-radius);
+    background-color: var(--lz-water-waves-item1-bg-color);
+    opacity: var(--lz-water-waves-item1-opacity);
     animation: inherit;
-    animation-duration: var(--uv-water-waves-animation-duration);
+    animation-duration: var(--lz-water-waves-animation-duration);
   }
-  .uv-water-waves-item2 {
+  .lz-water-waves-item2 {
     position: absolute;
     top: 95%;
     left: -35%;
     width: 200%;
     height: 200%;
-    border-radius: var(--uv-water-waves-item2-border-radius);
-    background-color: var(--uv-water-waves-item2-bg-color);
-    opacity: var(--uv-water-waves-item2-opacity);
+    border-radius: var(--lz-water-waves-item2-border-radius);
+    background-color: var(--lz-water-waves-item2-bg-color);
+    opacity: var(--lz-water-waves-item2-opacity);
     animation: inherit;
-    animation-duration: var(--uv-water-waves-animation-duration);
+    animation-duration: var(--lz-water-waves-animation-duration);
   }
 
   @keyframes water-waves {

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="uv-radio-group"
+    class="lz-radio-group"
     :style="{flexDirection:direction==='column'? 'column':'row'}"
   >
     <slot />
@@ -62,11 +62,11 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-radio-group-gap: 10px;
+  --lz-radio-group-gap: 10px;
 }
-.uv-radio-group {
+.lz-radio-group {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--uv-radio-group-gap);
+  gap: var(--lz-radio-group-gap);
 }
 </style>

@@ -12,7 +12,7 @@ onMounted(()=>{
 ## 基本使用
 
 ```html
-<uv-slider v-model="test" />
+<lz-slider v-model="test" />
 ```
 
 ## 进度条激活态和非激活态颜色
@@ -20,7 +20,7 @@ onMounted(()=>{
 通过 `activeColor` 设置
 
 ```html
-<uv-slider active-color="red" v-model="test" />
+<lz-slider active-color="red" v-model="test" />
 ```
 
 ## 进度条高度和按钮大小
@@ -28,7 +28,7 @@ onMounted(()=>{
 通过 `barHeight` 和 `buttonSize` 设置
 
 ```html
-<uv-slider bar-height="6" button-size="28" v-model="test" />
+<lz-slider bar-height="6" button-size="28" v-model="test" />
 ```
 
 ## 禁用滑块
@@ -36,7 +36,7 @@ onMounted(()=>{
 通过 `disabled` 设置
 
 ```html
-<uv-slider disabled v-model="test" />
+<lz-slider disabled v-model="test" />
 ```
 
 ## 最大最小值
@@ -44,7 +44,7 @@ onMounted(()=>{
 通过 `max` 和 `min` 设置
 
 ```html
-<uv-slider :max="60" :min="30" v-model="test" />
+<lz-slider :max="60" :min="30" v-model="test" />
 ```
 
 ## 自定义滑块按钮
@@ -52,11 +52,11 @@ onMounted(()=>{
 通过插槽名 `button` 设置
 
 ```html
-<uv-slider v-model="test">
+<lz-slider v-model="test">
   <template #button>
     <div class="diyButton">{{ test }}</div>
   </template>
-</uv-slider>
+</lz-slider>
 ```
 
 ## 显示可清除图标
@@ -64,7 +64,7 @@ onMounted(()=>{
 通过 `clearable` 设置
 
 ```html
-<uv-search v-model="value" clearable />
+<lz-search v-model="value" clearable />
 ```
 
 ## props
@@ -90,11 +90,11 @@ onMounted(()=>{
 ## css 变量
 
 ```css
---uv-slider-height: 3px;
---uv-slider-border-radius: 50px;
---uv-slider-circle-content-size: 24px;
---uv-slider-circle-content-bg-color: #ffffff;
---uv-slider-circle-content-box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
---uv-slider-value-disabled-bg-color: #88c0fa !important;
---uv-slider-disabled-circle-content-box-shadow: 0 1px 2px rgb(0 0 0 / 40%);
+--lz-slider-height: 3px;
+--lz-slider-border-radius: 50px;
+--lz-slider-circle-content-size: 24px;
+--lz-slider-circle-content-bg-color: #ffffff;
+--lz-slider-circle-content-box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
+--lz-slider-value-disabled-bg-color: #88c0fa !important;
+--lz-slider-disabled-circle-content-box-shadow: 0 1px 2px rgb(0 0 0 / 40%);
 ```

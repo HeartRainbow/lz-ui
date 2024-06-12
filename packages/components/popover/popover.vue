@@ -8,28 +8,28 @@
     </span>
     <Transition name="popover">
       <div
-        class="uv-popover"
+        class="lz-popover"
         ref="popoverRef"
         style=""
         v-show="modelValue"
       >
         <div
           :class="[
-            showPositon==='bottom'?'uv-popover-arrow-top':'uv-popover-arrow-bottom',
-            showArrowPostion==='left'?'uv-popover-arrow-left':'uv-popover-arrow-right'
+            showPositon==='bottom'?'lz-popover-arrow-top':'lz-popover-arrow-bottom',
+            showArrowPostion==='left'?'lz-popover-arrow-left':'lz-popover-arrow-right'
           ]"
         />
-        <div class="uv-popover-content">
+        <div class="lz-popover-content">
           <slot>
             <div
-              class="uv-popover-content-item"
-              :class="item.disabled?'uv-popover-content-item-disabled':''"
+              class="lz-popover-content-item"
+              :class="item.disabled?'lz-popover-content-item-disabled':''"
               v-for="(item,index) in list"
               :key="keyName ? item[keyName] : index"
               @click="selectItemClick(item)"
             >
               <div
-                class="uv-popover-content-item-text"
+                class="lz-popover-content-item-text"
               >
                 {{ keyName ? item[keyName] : index }}
               </div>
@@ -38,7 +38,7 @@
         </div>
       </div>
     </Transition>
-    <uv-overlay
+    <lz-overlay
       :show="modelValue"
       :overlay="false"
       @click="closePopover"
@@ -125,26 +125,26 @@ export default {
 </script>
 <style lang="scss">
 :root {
-  --uv-popover-z-index: 2000;
-  --uv-popover-color: #323233;
-  --uv-popover-bg-color: #ffffff;
-  --uv-popover-content-box-shadow: 0 2px 12px rgb(50 50 51 / 12%);
-  --uv-popover-content-border-radius: 8px;
-  --uv-popover-content-item-padding: 0 16px;
-  --uv-popover-content-item-width: 128px;
-  --uv-popover-content-item-height: 44px;
-  --uv-popover-content-item-active-bg-color: #f2f3f5;
-  --uv-popover-transition-time: 0.15s;
-  --uv-popover-arrow-postion-distance: 25px;
-  --uv-popover-content-item-text-border-bottom: 1px solid #f7f8f9;
+  --lz-popover-z-index: 2000;
+  --lz-popover-color: #323233;
+  --lz-popover-bg-color: #ffffff;
+  --lz-popover-content-box-shadow: 0 2px 12px rgb(50 50 51 / 12%);
+  --lz-popover-content-border-radius: 8px;
+  --lz-popover-content-item-padding: 0 16px;
+  --lz-popover-content-item-width: 128px;
+  --lz-popover-content-item-height: 44px;
+  --lz-popover-content-item-active-bg-color: #f2f3f5;
+  --lz-popover-transition-time: 0.15s;
+  --lz-popover-arrow-postion-distance: 25px;
+  --lz-popover-content-item-text-border-bottom: 1px solid #f7f8f9;
 }
-.uv-popover {
+.lz-popover {
   position: absolute;
-  z-index: var(--uv-popover-z-index);
+  z-index: var(--lz-popover-z-index);
   display: inline-block;
-  color: var(--uv-popover-color);
-  transition: all var(--uv-popover-transition-time);
-  .uv-popover-arrow-top {
+  color: var(--lz-popover-color);
+  transition: all var(--lz-popover-transition-time);
+  .lz-popover-arrow-top {
     position: absolute;
     top: -12px;
     width: 0;
@@ -152,53 +152,53 @@ export default {
     line-height: 0;
     border-top: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 6px solid var(--uv-popover-bg-color);
+    border-bottom: 6px solid var(--lz-popover-bg-color);
     border-left: 6px solid transparent;
   }
-  .uv-popover-arrow-bottom {
+  .lz-popover-arrow-bottom {
     position: absolute;
     bottom: -12px;
     width: 0;
     height: 0;
     line-height: 0;
-    border-top: 6px solid var(--uv-popover-bg-color);
+    border-top: 6px solid var(--lz-popover-bg-color);
     border-right: 6px solid transparent;
     border-bottom: 6px solid transparent;
     border-left: 6px solid transparent;
   }
-  .uv-popover-arrow-left {
-    left: var(--uv-popover-arrow-postion-distance);
+  .lz-popover-arrow-left {
+    left: var(--lz-popover-arrow-postion-distance);
   }
-  .uv-popover-arrow-right {
-    right: var(--uv-popover-arrow-postion-distance);
+  .lz-popover-arrow-right {
+    right: var(--lz-popover-arrow-postion-distance);
   }
-  .uv-popover-content {
+  .lz-popover-content {
     overflow: hidden;
-    border-radius: var(--uv-popover-content-border-radius);
-    background: var(--uv-popover-bg-color);
-    box-shadow: var(--uv-popover-content-box-shadow);
-    .uv-popover-content-item {
-      padding: var(--uv-popover-content-item-padding);
-      width: var(--uv-popover-content-item-width);
-      height: var(--uv-popover-content-item-height);
+    border-radius: var(--lz-popover-content-border-radius);
+    background: var(--lz-popover-bg-color);
+    box-shadow: var(--lz-popover-content-box-shadow);
+    .lz-popover-content-item {
+      padding: var(--lz-popover-content-item-padding);
+      width: var(--lz-popover-content-item-width);
+      height: var(--lz-popover-content-item-height);
       &:active {
-        background-color: var(--uv-popover-content-item-active-bg-color);
+        background-color: var(--lz-popover-content-item-active-bg-color);
       }
-      .uv-popover-content-item-text {
+      .lz-popover-content-item-text {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         flex: 1;
-        border-bottom: var(--uv-popover-content-item-text-border-bottom);
+        border-bottom: var(--lz-popover-content-item-text-border-bottom);
       }
       &:last-child {
-        .uv-popover-content-item-text {
+        .lz-popover-content-item-text {
           border-bottom: none;
         }
       }
     }
-    .uv-popover-content-item-disabled {
+    .lz-popover-content-item-disabled {
       color: #c8c9cc;
       &:active {
         background-color: initial;

@@ -1,7 +1,7 @@
 <template>
-  <div class="uv-text-ellipsis" ref="textEllipsisRef">
+  <div class="lz-text-ellipsis" ref="textEllipsisRef">
     {{ expanded?content:text }}
-    <span @click="clickAction" class="uv-text-ellipsis-action-text">
+    <span @click="clickAction" class="lz-text-ellipsis-action-text">
       {{ expanded ? collapseText : expandText }}
     </span>
   </div>
@@ -120,19 +120,19 @@ export default {
 
 <style lang="scss">
 :root {
-  --uv-text-ellipsis-action-text-color: #1989fa;
-  --uv-text-ellipsis-line-height: 1.6;
-  --uv-text-ellipsis-color: #323233;
-  --uv-text-ellipsis-font-size: 14px;
+  --lz-text-ellipsis-action-text-color: #1989fa;
+  --lz-text-ellipsis-line-height: 1.6;
+  --lz-text-ellipsis-color: #323233;
+  --lz-text-ellipsis-font-size: 14px;
 }
-.uv-text-ellipsis {
-  font-size: var(--uv-text-ellipsis-font-size);
+.lz-text-ellipsis {
+  font-size: var(--lz-text-ellipsis-font-size);
   white-space: pre-wrap;
-  color: var(--uv-text-ellipsis-color);
-  line-height: var(--uv-text-ellipsis-line-height);
+  color: var(--lz-text-ellipsis-color);
+  line-height: var(--lz-text-ellipsis-line-height);
   word-break: break-word;
-  .uv-text-ellipsis-action-text {
-    color: var(--uv-text-ellipsis-action-text-color);
+  .lz-text-ellipsis-action-text {
+    color: var(--lz-text-ellipsis-action-text-color);
   }
 }
 
