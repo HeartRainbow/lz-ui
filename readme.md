@@ -22,8 +22,4 @@ app.use(LZUI)
 import 'lz-ui/es/style.css'
 ```
 
-预览地址：https://monsterwx.gitee.io/lz-ui/
-
 github :https://github.com/HeartRainbow/lz-ui
-
-gitee :https://gitee.com/monsterwx/lz-ui
