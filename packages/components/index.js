@@ -1,3 +1,6 @@
+import '../utils/index'
+import '../hooks/index'
+import directives from '../directives/index';
 import uvButton from './button'
 import uvInput from './input'
 import uvIcon from './icon'
@@ -62,9 +65,7 @@ import uvProgress from './progress'
 import uvCircleProgress from './circle-progress'
 import uvUploader from './uploader'
 import uvCascader from './cascader'
-import uvFloatingPanel from './floating-panel'
-import uvSliderVertify from './slider-vertify'
-import uvQrCode from './qr-code'
+import Widget from './widget'
 
 const components = [
   uvButton,
@@ -131,15 +132,15 @@ const components = [
   uvCircleProgress,
   uvUploader,
   uvCascader,
-  uvFloatingPanel,
-  uvSliderVertify,
-  uvQrCode
+  Widget,
 ]
 
-const install = (Vue) => {
+const install = (app) => {
   components.forEach(component => {
-    Vue.component(component.name, component)
-  })
+    app.component(component.name, component)
+  });
+
+  app.use(directives); // 注册自定义指令
 }
 
 export {
@@ -207,9 +208,9 @@ export {
   uvCircleProgress,
   uvUploader,
   uvCascader,
-  uvFloatingPanel,
-  uvSliderVertify,
-  uvQrCode
+  Widget,
+
+  directives
 }
 
 export default install
